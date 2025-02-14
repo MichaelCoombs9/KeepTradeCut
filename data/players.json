@@ -5,7 +5,7 @@
         "Age": "28",
         "Team": "SF",
         "Name": "Logan Webb",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/a/af25c562_mlbam.jpg"
     },
     {
@@ -14,7 +14,7 @@
         "Age": "34",
         "Team": "Phi",
         "Name": "Zack Wheeler",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/c/ceefd163_mlbam.jpg"
     },
     {
@@ -23,7 +23,7 @@
         "Age": "31",
         "Team": "Phi",
         "Name": "Aaron Nola",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/6/62b4d109_mlbam.jpg"
     },
     {
@@ -32,7 +32,7 @@
         "Age": "30",
         "Team": "Ari",
         "Name": "Corbin Burnes",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/3/3903d794_mlbam.jpg"
     },
     {
@@ -41,7 +41,7 @@
         "Age": "29",
         "Team": "SD",
         "Name": "Dylan Cease",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/b/be2c9d78_mlbam.jpg"
     },
     {
@@ -50,7 +50,7 @@
         "Age": "28",
         "Team": "Was",
         "Name": "Jake Irvin",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/2/2f51c7ab_mlbam.jpg"
     },
     {
@@ -59,7 +59,7 @@
         "Age": "33",
         "Team": "NYN",
         "Name": "Sean Manaea",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/e/edc85cb6_mlbam.jpg"
     },
     {
@@ -68,7 +68,7 @@
         "Age": "28",
         "Team": "Phi",
         "Name": "Cristopher Sanchez",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -77,7 +77,7 @@
         "Age": "26",
         "Team": "Ari",
         "Name": "Brandon Pfaadt",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/4/4ffb4f07_mlbam.jpg"
     },
     {
@@ -86,7 +86,7 @@
         "Age": "28",
         "Team": "Cin",
         "Name": "Brady Singer",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/f/f9231d10_mlbam.jpg"
     },
     {
@@ -95,7 +95,7 @@
         "Age": "29",
         "Team": "Pit",
         "Name": "Mitch Keller",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/f/fbd94e66_mlbam.jpg"
     },
     {
@@ -104,7 +104,7 @@
         "Age": "36",
         "Team": "Atl",
         "Name": "Chris Sale",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/b/be790f8a_mlbam.jpg"
     },
     {
@@ -113,7 +113,7 @@
         "Age": "32",
         "Team": "StL",
         "Name": "Erick Fedde",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/4/49f9de62_mlbam.jpg"
     },
     {
@@ -122,7 +122,7 @@
         "Age": "30",
         "Team": "Mil",
         "Name": "Nestor Cortes",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -131,7 +131,7 @@
         "Age": "28",
         "Team": "Mil",
         "Name": "Freddy Peralta",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/7/71ab5f47_mlbam.jpg"
     },
     {
@@ -140,7 +140,7 @@
         "Age": "29",
         "Team": "SD",
         "Name": "Michael King",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -149,7 +149,7 @@
         "Age": "31",
         "Team": "ChN",
         "Name": "Shota Imanaga",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/2/2d8e2236_mlbam.jpg"
     },
     {
@@ -158,7 +158,7 @@
         "Age": "36",
         "Team": "StL",
         "Name": "Miles Mikolas",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/a/a6fddfb0_mlbam.jpg"
     },
     {
@@ -167,7 +167,7 @@
         "Age": "28",
         "Team": "NYN",
         "Name": "Griffin Canning",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/1/148e6900_mlbam.jpg"
     },
     {
@@ -176,7 +176,7 @@
         "Age": "34",
         "Team": "ChN",
         "Name": "Colin Rea",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/9/972e9d50_mlbam.jpg"
     },
     {
@@ -185,7 +185,7 @@
         "Age": "35",
         "Team": "StL",
         "Name": "Sonny Gray",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/b/b6bd85ea_mlbam.jpg"
     },
     {
@@ -194,7 +194,7 @@
         "Age": "26",
         "Team": "Was",
         "Name": "MacKenzie Gore",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/a/a6c4d634_mlbam.jpg"
     },
     {
@@ -203,7 +203,7 @@
         "Age": "33",
         "Team": "ChN",
         "Name": "Jameson Taillon",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/a/a9bc5cff_mlbam.jpg"
     },
     {
@@ -212,7 +212,7 @@
         "Age": "31",
         "Team": "Col",
         "Name": "Austin Gomber",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/0/09c6f3dd_mlbam.jpg"
     },
     {
@@ -221,7 +221,7 @@
         "Age": "28",
         "Team": "Col",
         "Name": "Ryan Feltner",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/7/7c5d0a52_mlbam.jpg"
     },
     {
@@ -230,7 +230,7 @@
         "Age": "29",
         "Team": "Mil",
         "Name": "Aaron Civale",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/6/603a3487_mlbam.jpg"
     },
     {
@@ -239,7 +239,7 @@
         "Age": "25",
         "Team": "Was",
         "Name": "Mitchell Parker",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/5/596325b0_mlbam.jpg"
     },
     {
@@ -248,7 +248,7 @@
         "Age": "32",
         "Team": "NYN",
         "Name": "Frankie Montas",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/a/a654630c_mlbam.jpg"
     },
     {
@@ -257,7 +257,7 @@
         "Age": "29",
         "Team": "Phi",
         "Name": "Ranger Suarez",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -266,7 +266,7 @@
         "Age": "27",
         "Team": "Ari",
         "Name": "Ryne Nelson",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/0/0ad706b3_mlbam.jpg"
     },
     {
@@ -275,7 +275,7 @@
         "Age": "25",
         "Team": "Cin",
         "Name": "Hunter Greene",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/b/b1b6d23a_mlbam.jpg"
     },
     {
@@ -284,7 +284,7 @@
         "Age": "29",
         "Team": "Ari",
         "Name": "Zac Gallen",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/f/f76307d1_mlbam.jpg"
     },
     {
@@ -293,7 +293,7 @@
         "Age": "27",
         "Team": "ChN",
         "Name": "Javier Assad",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/0/02bf2bb2_mlbam.jpg"
     },
     {
@@ -302,7 +302,7 @@
         "Age": "28",
         "Team": "SD",
         "Name": "Matt Waldron",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/0/0598e9f6_mlbam.jpg"
     },
     {
@@ -311,7 +311,7 @@
         "Age": "34",
         "Team": "Cin",
         "Name": "Nick Martinez",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -320,7 +320,7 @@
         "Age": "28",
         "Team": "Pit",
         "Name": "Bailey Falter",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -329,7 +329,7 @@
         "Age": "26",
         "Team": "LAD",
         "Name": "Gavin Stone",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -338,7 +338,7 @@
         "Age": "25",
         "Team": "Cin",
         "Name": "Andrew Abbott",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -347,7 +347,7 @@
         "Age": "26",
         "Team": "Mil",
         "Name": "Tobias Myers",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -356,7 +356,7 @@
         "Age": "31",
         "Team": "Atl",
         "Name": "Reynaldo Lopez",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -365,7 +365,7 @@
         "Age": "29",
         "Team": "ChN",
         "Name": "Justin Steele",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -374,7 +374,7 @@
         "Age": "31",
         "Team": "LAD",
         "Name": "Tyler Glasnow",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -383,7 +383,7 @@
         "Age": "22",
         "Team": "Pit",
         "Name": "Paul Skenes",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -392,7 +392,7 @@
         "Age": "23",
         "Team": "SF",
         "Name": "Kyle Harrison",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -401,7 +401,7 @@
         "Age": "23",
         "Team": "Pit",
         "Name": "Jared Jones",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -410,7 +410,7 @@
         "Age": "26",
         "Team": "StL",
         "Name": "Andre Pallante",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -419,7 +419,7 @@
         "Age": "29",
         "Team": "NYN",
         "Name": "David Peterson",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -428,7 +428,7 @@
         "Age": "32",
         "Team": "Ari",
         "Name": "Jordan Montgomery",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -437,7 +437,7 @@
         "Age": "24",
         "Team": "Atl",
         "Name": "Spencer Schwellenbach",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -446,7 +446,7 @@
         "Age": "27",
         "Team": "Cin",
         "Name": "Nick Lodolo",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -455,7 +455,7 @@
         "Age": "31",
         "Team": "Col",
         "Name": "Kyle Freeland",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -464,7 +464,7 @@
         "Age": "28",
         "Team": "SF",
         "Name": "Jordan Hicks",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -473,7 +473,7 @@
         "Age": "32",
         "Team": "LAD",
         "Name": "Blake Snell",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -482,7 +482,7 @@
         "Age": "32",
         "Team": "SD",
         "Name": "Joe Musgrove",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -491,7 +491,7 @@
         "Age": "26",
         "Team": "SD",
         "Name": "Randy Vasquez",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -500,7 +500,7 @@
         "Age": "27",
         "Team": "Mia",
         "Name": "Edward Cabrera",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -509,7 +509,7 @@
         "Age": "27",
         "Team": "Cin",
         "Name": "Carson Spiers",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -518,7 +518,7 @@
         "Age": "42",
         "Team": "SF",
         "Name": "Justin Verlander",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -527,7 +527,7 @@
         "Age": "26",
         "Team": "LAD",
         "Name": "Yoshinobu Yamamoto",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -536,7 +536,7 @@
         "Age": "24",
         "Team": "Was",
         "Name": "DJ Herz",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -545,7 +545,7 @@
         "Age": "25",
         "Team": "Mia",
         "Name": "Ryan Weathers",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -554,7 +554,7 @@
         "Age": "25",
         "Team": "StL",
         "Name": "Matthew Liberatore",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -563,7 +563,7 @@
         "Age": "32",
         "Team": "Phi",
         "Name": "Taijuan Walker",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -572,7 +572,7 @@
         "Age": "25",
         "Team": "StL",
         "Name": "Roddery Munoz",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -581,7 +581,7 @@
         "Age": "38",
         "Team": "SD",
         "Name": "Yu Darvish",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -590,7 +590,7 @@
         "Age": "27",
         "Team": "Was",
         "Name": "Michael Soroka",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -599,7 +599,7 @@
         "Age": "27",
         "Team": "Cin",
         "Name": "Graham Ashcraft",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -608,7 +608,7 @@
         "Age": "31",
         "Team": "NYN",
         "Name": "Paul Blackburn",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -617,7 +617,7 @@
         "Age": "31",
         "Team": "Phi",
         "Name": "Joe Ross",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -626,7 +626,7 @@
         "Age": "27",
         "Team": "NYN",
         "Name": "Jose Butto",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -635,7 +635,7 @@
         "Age": "36",
         "Team": "Ari",
         "Name": "Merrill Kelly",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -644,7 +644,7 @@
         "Age": "29",
         "Team": "NYN",
         "Name": "Tylor Megill",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -653,7 +653,7 @@
         "Age": "23",
         "Team": "SF",
         "Name": "Hayden Birdsong",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -662,7 +662,7 @@
         "Age": "27",
         "Team": "LAD",
         "Name": "Landon Knack",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -671,7 +671,7 @@
         "Age": "25",
         "Team": "Mia",
         "Name": "Valente Bellozo",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -680,7 +680,7 @@
         "Age": "27",
         "Team": "SF",
         "Name": "Erik Miller",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -689,7 +689,7 @@
         "Age": "33",
         "Team": "Was",
         "Name": "Trevor Williams",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -698,7 +698,7 @@
         "Age": "27",
         "Team": "Phi",
         "Name": "Jesus Luzardo",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -707,7 +707,7 @@
         "Age": "35",
         "Team": "Cin",
         "Name": "Brent Suter",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
     },
     {
@@ -716,7 +716,2221 @@
         "Age": "29",
         "Team": "Atl",
         "Name": "Grant Holmes",
-        "Position": "Pitcher",
+        "Position": "SP",
         "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
-    }
-]
+    },
+        {
+            "Number": "81",
+            "Hand": "R",
+            "Age": "24",
+            "Team": "Phi",
+            "Name": "Orion Kerkering",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/7/759a25f5_mlbam.jpg"
+        },
+        {
+            "Number": "82",
+            "Hand": "L",
+            "Age": "31",
+            "Team": "Mil",
+            "Name": "Jared Koenig",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/a/a3830611_mlbam.jpg"
+        },
+        {
+            "Number": "83",
+            "Hand": "L",
+            "Age": "34",
+            "Team": "Ari",
+            "Name": "Joe Mantiply",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/7/7e4f5711_mlbam.jpg"
+        },
+        {
+            "Number": "84",
+            "Hand": "R",
+            "Age": "23",
+            "Team": "Col",
+            "Name": "Anthony Molina",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/0/0b98c99f_mlbam.jpg"
+        },
+        {
+            "Number": "85",
+            "Hand": "R",
+            "Age": "26",
+            "Team": "Mia",
+            "Name": "Max Meyer",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/f/f7c66cf0_mlbam.jpg"
+        },
+        {
+            "Number": "86",
+            "Hand": "R",
+            "Age": "26",
+            "Team": "LAD",
+            "Name": "Bobby Miller",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/2/2bb8a047_mlbam.jpg"
+        },
+        {
+            "Number": "87",
+            "Hand": "R",
+            "Age": "27",
+            "Team": "SF",
+            "Name": "Keaton Winn",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/2/23c2099a_mlbam.jpg"
+        },
+        {
+            "Number": "88",
+            "Hand": "R",
+            "Age": "25",
+            "Team": "ChN",
+            "Name": "Ben Brown",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/d/dcbbfab8_mlbam.jpg"
+        },
+        {
+            "Number": "89",
+            "Hand": "R",
+            "Age": "28",
+            "Team": "SD",
+            "Name": "Bryan Hoeing",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/7/725375fc_mlbam.jpg"
+        },
+        {
+            "Number": "90",
+            "Hand": "R",
+            "Age": "25",
+            "Team": "SF",
+            "Name": "Randy Rodriguez",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "91",
+            "Hand": "R",
+            "Age": "28",
+            "Team": "LAD",
+            "Name": "Michael Grove",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/e/e2c9af16_mlbam.jpg"
+        },
+        {
+            "Number": "92",
+            "Hand": "R",
+            "Age": "26",
+            "Team": "Pit",
+            "Name": "Carmen Mlodzinski",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/4/47dd296d_mlbam.jpg"
+        },
+        {
+            "Number": "93",
+            "Hand": "R",
+            "Age": "26",
+            "Team": "SF",
+            "Name": "Landen Roupp",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/b/b222e89c_mlbam.jpg"
+        },
+        {
+            "Number": "94",
+            "Hand": "L",
+            "Age": "32",
+            "Team": "Ari",
+            "Name": "Eduardo Rodriguez",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "95",
+            "Hand": "R",
+            "Age": "25",
+            "Team": "Atl",
+            "Name": "Bryce Elder",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/6/6622f351_mlbam.jpg"
+        },
+        {
+            "Number": "96",
+            "Hand": "R",
+            "Age": "27",
+            "Team": "StL",
+            "Name": "Kyle Leahy",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/c/cc367284_mlbam.jpg"
+        },
+        {
+            "Number": "97",
+            "Hand": "R",
+            "Age": "30",
+            "Team": "SF",
+            "Name": "Spencer Bivens",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/8/86501fa5_mlbam.jpg"
+        },
+        {
+            "Number": "98",
+            "Hand": "R",
+            "Age": "25",
+            "Team": "NYN",
+            "Name": "Christian Scott",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/1/15476964_mlbam.jpg"
+        },
+        {
+            "Number": "99",
+            "Hand": "L",
+            "Age": "25",
+            "Team": "ChN",
+            "Name": "Jordan Wicks",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/5/5cb7bcff_mlbam.jpg"
+        },
+        {
+            "Number": "100",
+            "Hand": "L",
+            "Age": "33",
+            "Team": "StL",
+            "Name": "Steven Matz",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/9/9820bad7_mlbam.jpg"
+        },
+        {
+            "Number": "101",
+            "Hand": "R",
+            "Age": "27",
+            "Team": "SD",
+            "Name": "Jhony Brito",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/6/609315d6_mlbam.jpg"
+        },
+        {
+            "Number": "102",
+            "Hand": "L",
+            "Age": "26",
+            "Team": "Mil",
+            "Name": "DL Hall",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/c/cea6a9ea_mlbam.jpg"
+        },
+        {
+            "Number": "103",
+            "Hand": "R",
+            "Age": "26",
+            "Team": "Mia",
+            "Name": "Xzavion Curry",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/4/4f891cd2_mlbam.jpg"
+        },
+        {
+            "Number": "104",
+            "Hand": "L",
+            "Age": "34",
+            "Team": "ChN",
+            "Name": "Matthew Boyd",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "105",
+            "Hand": "L",
+            "Age": "27",
+            "Team": "Ari",
+            "Name": "Tommy Henry",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/4/4e1bd668_mlbam.jpg"
+        },
+        {
+            "Number": "106",
+            "Hand": "L",
+            "Age": "27",
+            "Team": "Mia",
+            "Name": "Braxton Garrett",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/f/f5e26c8f_mlbam.jpg"
+        },
+        {
+            "Number": "107",
+            "Hand": "R",
+            "Age": "27",
+            "Team": "Phi",
+            "Name": "Tyler Phillips",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/4/4fa4e97a_mlbam.jpg"
+        },
+        {
+            "Number": "108",
+            "Hand": "L",
+            "Age": "24",
+            "Team": "LAD",
+            "Name": "Justin Wrobleski",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/5/5b4ddc81_milb.jpg"
+        },
+        {
+            "Number": "109",
+            "Hand": "R",
+            "Age": "25",
+            "Team": "SF",
+            "Name": "Mason Black",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/2/2e2cffdc_mlbam.jpg"
+        },
+        {
+            "Number": "110",
+            "Hand": "R",
+            "Age": "27",
+            "Team": "Col",
+            "Name": "Tanner Gordon",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/6/68c267b5_mlbam.jpg"
+        },
+        {
+            "Number": "111",
+            "Hand": "R",
+            "Age": "23",
+            "Team": "Mia",
+            "Name": "Adam Mazur",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/c/c9f11b4e_mlbam.jpg"
+        },
+        {
+            "Number": "112",
+            "Hand": "R",
+            "Age": "28",
+            "Team": "Phi",
+            "Name": "Kyle Tyler",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/0/049c342d_mlbam.jpg"
+        },
+        {
+            "Number": "113",
+            "Hand": "R",
+            "Age": "23",
+            "Team": "Cin",
+            "Name": "Julian Aguiar",
+            "Position": "SP",
+            "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/2/27b3954f_mlbam.jpg"
+        },
+        {
+            "Number": "114",
+            "Hand": "L",
+            "Age": "33",
+            "Team": "SF",
+            "Name": "Robbie Ray",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "115",
+            "Hand": "R",
+            "Age": "23",
+            "Team": "Cin",
+            "Name": "Rhett Lowder",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "116",
+            "Hand": "R",
+            "Age": "24",
+            "Team": "Col",
+            "Name": "Bradley Blalock",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "117",
+            "Hand": "R",
+            "Age": "30",
+            "Team": "ChN",
+            "Name": "Keegan Thompson",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "118",
+            "Hand": "R",
+            "Age": "27",
+            "Team": "Atl",
+            "Name": "Davis Daniel",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "119",
+            "Hand": "R",
+            "Age": "28",
+            "Team": "Cin",
+            "Name": "Tony Santillan",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "120",
+            "Hand": "R",
+            "Age": "26",
+            "Team": "Mia",
+            "Name": "George Soriano",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "121",
+            "Hand": "L",
+            "Age": "26",
+            "Team": "Mil",
+            "Name": "Aaron Ashby",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "122",
+            "Hand": "R",
+            "Age": "24",
+            "Team": "Ari",
+            "Name": "Yilber Diaz",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "123",
+            "Hand": "R",
+            "Age": "37",
+            "Team": "LAD",
+            "Name": "Ryan Brasier",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "124",
+            "Hand": "L",
+            "Age": "25",
+            "Team": "Mil",
+            "Name": "Robert Gasser",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "125",
+            "Hand": "L",
+            "Age": "24",
+            "Team": "ChN",
+            "Name": "Luke Little",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "126",
+            "Hand": "R",
+            "Age": "30",
+            "Team": "ChN",
+            "Name": "Cody Poteet",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "127",
+            "Hand": "R",
+            "Age": "24",
+            "Team": "StL",
+            "Name": "Michael McGreevy",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "128",
+            "Hand": "R",
+            "Age": "26",
+            "Team": "LAD",
+            "Name": "River Ryan",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "129",
+            "Hand": "R",
+            "Age": "26",
+            "Team": "Col",
+            "Name": "Jeff Criswell",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "130",
+            "Hand": "L",
+            "Age": "23",
+            "Team": "Ari",
+            "Name": "Blake Walston",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "131",
+            "Hand": "L",
+            "Age": "27",
+            "Team": "StL",
+            "Name": "Zack Thompson",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "132",
+            "Hand": "R",
+            "Age": "27",
+            "Team": "Cin",
+            "Name": "Yosver Zulueta",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "133",
+            "Hand": "R",
+            "Age": "28",
+            "Team": "SF",
+            "Name": "Tristan Beck",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "134",
+            "Hand": "L",
+            "Age": "26",
+            "Team": "Cin",
+            "Name": "Brandon Williamson",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "135",
+            "Hand": "R",
+            "Age": "25",
+            "Team": "Phi",
+            "Name": "Max Lazar",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "136",
+            "Hand": "L",
+            "Age": "27",
+            "Team": "Mia",
+            "Name": "Anthony Veneziano",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "137",
+            "Hand": "R",
+            "Age": "26",
+            "Team": "Phi",
+            "Name": "Michael Mercado",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "138",
+            "Hand": "R",
+            "Age": "30",
+            "Team": "Col",
+            "Name": "Antonio Senzatela",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "139",
+            "Hand": "R",
+            "Age": "23",
+            "Team": "Mil",
+            "Name": "Carlos Rodriguez",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "140",
+            "Hand": "L",
+            "Age": "28",
+            "Team": "Ari",
+            "Name": "Kyle Nelson",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "141",
+            "Hand": "R",
+            "Age": "27",
+            "Team": "ChN",
+            "Name": "Caleb Kilian",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "142",
+            "Hand": "R",
+            "Age": "25",
+            "Team": "Col",
+            "Name": "Jaden Hill",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "143",
+            "Hand": "R",
+            "Age": "27",
+            "Team": "Cin",
+            "Name": "Casey Legumina",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "144",
+            "Hand": "R",
+            "Age": "26",
+            "Team": "Atl",
+            "Name": "Spencer Strider",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "145",
+            "Hand": "R",
+            "Age": "27",
+            "Team": "Was",
+            "Name": "Josiah Gray",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "146",
+            "Hand": "R",
+            "Age": "25",
+            "Team": "Was",
+            "Name": "Jackson Rutledge",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "147",
+            "Hand": "R",
+            "Age": "26",
+            "Team": "LAD",
+            "Name": "Ben Casparius",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "148",
+            "Hand": "R",
+            "Age": "30",
+            "Team": "StL",
+            "Name": "Riley O'Brien",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "149",
+            "Hand": "R",
+            "Age": "27",
+            "Team": "Atl",
+            "Name": "Connor Gillispie",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "150",
+            "Hand": "L",
+            "Age": "33",
+            "Team": "ChN",
+            "Name": "Rob Zastryzny",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "151",
+            "Hand": "R",
+            "Age": "25",
+            "Team": "StL",
+            "Name": "Gordon Graceffo",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "152",
+            "Hand": "R",
+            "Age": "23",
+            "Team": "Atl",
+            "Name": "Hurston Waldrep",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "153",
+            "Hand": "R",
+            "Age": "26",
+            "Team": "LAD",
+            "Name": "Kyle Hurt",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "154",
+            "Hand": "R",
+            "Age": "32",
+            "Team": "NYN",
+            "Name": "Kodai Senga",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "155",
+            "Hand": "R",
+            "Age": "22",
+            "Team": "Atl",
+            "Name": "AJ Smith-Shawver",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "156",
+            "Hand": "R",
+            "Age": "30",
+            "Team": "Col",
+            "Name": "German Marquez",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "157",
+            "Hand": "R",
+            "Age": "22",
+            "Team": "LAD",
+            "Name": "Edgardo Henriquez",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "158",
+            "Hand": "R",
+            "Age": "25",
+            "Team": "Pit",
+            "Name": "Mike Burrows",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "159",
+            "Hand": "R",
+            "Age": "25",
+            "Team": "Cin",
+            "Name": "Owen White",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "160",
+            "Hand": "R",
+            "Age": "24",
+            "Team": "SF",
+            "Name": "Trevor McDonald",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "161",
+            "Hand": "R",
+            "Age": "22",
+            "Team": "Ari",
+            "Name": "Cristian Mena",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "162",
+            "Hand": "R",
+            "Age": "26",
+            "Team": "Phi",
+            "Name": "Seth Johnson",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "163",
+            "Hand": "L",
+            "Age": "26",
+            "Team": "Atl",
+            "Name": "Dylan Dodd",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+        {
+            "Number": "164",
+            "Hand": "R",
+            "Age": "25",
+            "Team": "Cin",
+            "Name": "Lyon Richardson",
+            "Position": "SP",
+            "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+        },
+            {
+                "Number": "166",
+                "Hand": "R",
+                "Age": "32",
+                "Team": "Mil",
+                "Name": "Brandon Woodruff",
+                "Position": "SP",
+                "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/5/5091436e_mlbam.jpg"
+            },
+            {
+                "Number": "167",
+                "Hand": "R",
+                "Age": "30",
+                "Team": "LAD",
+                "Name": "Shohei Ohtani",
+                "Position": "SP",
+                "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/2/270bfa31_mlbam.jpg"
+            },
+            {
+                "Number": "168",
+                "Hand": "R",
+                "Age": "30",
+                "Team": "LAD",
+                "Name": "Tony Gonsolin",
+                "Position": "SP",
+                "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/2/2ebb6c80_mlbam.jpg"
+            },
+            {
+                "Number": "169",
+                "Hand": "R",
+                "Age": "27",
+                "Team": "Pit",
+                "Name": "Johan Oviedo",
+                "Position": "SP",
+                "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/3/3ebe510b_mlbam.jpg"
+            },
+            {
+                "Number": "170",
+                "Hand": "R",
+                "Age": "33",
+                "Team": "NYN",
+                "Name": "Dylan Covey",
+                "Position": "SP",
+                "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/5/5ca14585_mlbam.jpg"
+            },
+            {
+                "Number": "171",
+                "Hand": "R",
+                "Age": "26",
+                "Team": "Atl",
+                "Name": "Ian Anderson",
+                "Position": "SP",
+                "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/9/9f7b77c1_mlbam.jpg"
+            },
+            {
+                "Number": "172",
+                "Hand": "R",
+                "Age": "27",
+                "Team": "LAD",
+                "Name": "Dustin May",
+                "Position": "SP",
+                "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/d/dd026552_mlbam.jpg"
+            },
+            {
+                "Number": "173",
+                "Hand": "R",
+                "Age": "22",
+                "Team": "Mia",
+                "Name": "Eury Pérez",
+                "Position": "SP",
+                "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/6/6677ec75_mlbam.jpg"
+            },
+            {
+                "Number": "174",
+                "Hand": "R",
+                "Age": "27",
+                "Team": "Ari",
+                "Name": "Drey Jameson",
+                "Position": "SP",
+                "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/1/1e63a21a_mlbam.jpg"
+            },
+            {
+                "Number": "175",
+                "Hand": "R",
+                "Age": "25",
+                "Team": "LAD",
+                "Name": "Emmet Sheehan",
+                "Position": "SP",
+                "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/c/cb8bdbef_mlbam.jpg"
+            },
+            {
+                "Number": "176",
+                "Hand": "R",
+                "Age": "27",
+                "Team": "NYN",
+                "Name": "Max Kranick",
+                "Position": "SP",
+                "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/a/a82f954b_mlbam.jpg"
+            },
+            {
+                "Number": "177",
+                "Hand": "R",
+                "Age": "27",
+                "Team": "Mil",
+                "Name": "Elvin Rodriguez",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "178",
+                "Hand": "R",
+                "Age": "23",
+                "Team": "Cin",
+                "Name": "Connor Phillips",
+                "Position": "SP",
+                "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/1/17809c9d_mlbam.jpg"
+            },
+            {
+                "Number": "179",
+                "Hand": "R",
+                "Age": "26",
+                "Team": "Was",
+                "Name": "Cade Cavalli",
+                "Position": "SP",
+                "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/5/51913bf3_mlbam.jpg"
+            },
+            {
+                "Number": "180",
+                "Hand": "R",
+                "Age": "23",
+                "Team": "Mil",
+                "Name": "Jacob Misiorowski",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "181",
+                "Hand": "R",
+                "Age": "23",
+                "Team": "Mil",
+                "Name": "Logan Henderson",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "182",
+                "Hand": "R",
+                "Age": "26",
+                "Team": "Mil",
+                "Name": "Chad Patrick",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "183",
+                "Hand": "L",
+                "Age": "26",
+                "Team": "Mil",
+                "Name": "Connor Thomas",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "184",
+                "Hand": "R",
+                "Age": "21",
+                "Team": "Atl",
+                "Name": "Owen Murphy",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "185",
+                "Hand": "R",
+                "Age": "21",
+                "Team": "Atl",
+                "Name": "J.R. Ritchie",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "186",
+                "Hand": "R",
+                "Age": "23",
+                "Team": "Atl",
+                "Name": "Drue Hackenberg",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "194",
+                "Hand": "L",
+                "Age": "21",
+                "Team": "LAD",
+                "Name": "Jackson Ferris",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "195",
+                "Hand": "R",
+                "Age": "26",
+                "Team": "LAD",
+                "Name": "Nick Frasso",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "196",
+                "Hand": "R",
+                "Age": "23",
+                "Team": "LAD",
+                "Name": "Roki Sasaki",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "197",
+                "Hand": "R",
+                "Age": "25",
+                "Team": "Was",
+                "Name": "Cole Henry",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "198",
+                "Hand": "R",
+                "Age": "21",
+                "Team": "Was",
+                "Name": "Travis Sykora",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "199",
+                "Hand": "R",
+                "Age": "21",
+                "Team": "Was",
+                "Name": "Jarlin Susana",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "200",
+                "Hand": "R",
+                "Age": "22",
+                "Team": "Was",
+                "Name": "Andry Lara",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "201",
+                "Hand": "R",
+                "Age": "28",
+                "Team": "NYN",
+                "Name": "Justin Hagenman",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "202",
+                "Hand": "R",
+                "Age": "23",
+                "Team": "NYN",
+                "Name": "Brandon Sproat",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "203",
+                "Hand": "R",
+                "Age": "23",
+                "Team": "NYN",
+                "Name": "Blade Tidwell",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "204",
+                "Hand": "R",
+                "Age": "21",
+                "Team": "NYN",
+                "Name": "Jonah Tong",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "205",
+                "Hand": "R",
+                "Age": "23",
+                "Team": "NYN",
+                "Name": "Nolan McLean",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "206",
+                "Hand": "R",
+                "Age": "21",
+                "Team": "Phi",
+                "Name": "Moises Chace",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "207",
+                "Hand": "R",
+                "Age": "23",
+                "Team": "Phi",
+                "Name": "Mick Abel",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "208",
+                "Hand": "R",
+                "Age": "22",
+                "Team": "Phi",
+                "Name": "Andrew Painter",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "209",
+                "Hand": "R",
+                "Age": "23",
+                "Team": "Phi",
+                "Name": "Jean Cabrera",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "210",
+                "Hand": "R",
+                "Age": "22",
+                "Team": "Pit",
+                "Name": "Bubba Chandler",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "211",
+                "Hand": "R",
+                "Age": "23",
+                "Team": "Pit",
+                "Name": "Thomas Harrington",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+            {
+                "Number": "212",
+                "Hand": "R",
+                "Age": "25",
+                "Team": "Pit",
+                "Name": "Braxton Ashcraft",
+                "Position": "SP",
+                "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+            },
+                {
+                    "Number": "230",
+                    "Hand": "R",
+                    "Age": "34",
+                    "Team": "Was",
+                    "Name": "Derek Law",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/9/990563c1_mlbam.jpg"
+                },
+                {
+                    "Number": "231",
+                    "Hand": "R",
+                    "Age": "27",
+                    "Team": "SF",
+                    "Name": "Sean Hjelle",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/f/f39d4a44_mlbam.jpg"
+                },
+                {
+                    "Number": "232",
+                    "Hand": "R",
+                    "Age": "29",
+                    "Team": "SF",
+                    "Name": "Ryan Walker",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/3/33d9dc1b_mlbam.jpg"
+                },
+                {
+                    "Number": "233",
+                    "Hand": "R",
+                    "Age": "33",
+                    "Team": "SD",
+                    "Name": "Jason Adam",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/1/1e4697b8_mlbam.jpg"
+                },
+                {
+                    "Number": "234",
+                    "Hand": "R",
+                    "Age": "25",
+                    "Team": "Col",
+                    "Name": "Victor Vodnik",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/1/1c48c5b4_mlbam.jpg"
+                },
+                {
+                    "Number": "235",
+                    "Hand": "R",
+                    "Age": "23",
+                    "Team": "Ari",
+                    "Name": "Justin Martinez",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/6/669c5ecb_mlbam.jpg"
+                },
+                {
+                    "Number": "236",
+                    "Hand": "L",
+                    "Age": "33",
+                    "Team": "Phi",
+                    "Name": "Tanner Banks",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/b/bf1466fa_mlbam.jpg"
+                },
+                {
+                    "Number": "237",
+                    "Hand": "L",
+                    "Age": "30",
+                    "Team": "LAD",
+                    "Name": "Tanner Scott",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/a/a8449253_mlbam.jpg"
+                },
+                {
+                    "Number": "238",
+                    "Hand": "R",
+                    "Age": "29",
+                    "Team": "Pit",
+                    "Name": "Dennis Santana",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/a/a1a6de90_mlbam.jpg"
+                },
+                {
+                    "Number": "239",
+                    "Hand": "L",
+                    "Age": "30",
+                    "Team": "Ari",
+                    "Name": "A.J. Puk",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "240",
+                    "Hand": "R",
+                    "Age": "34",
+                    "Team": "SF",
+                    "Name": "Tyler Rogers",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/3/3187bf02_mlbam.jpg"
+                },
+                {
+                    "Number": "241",
+                    "Hand": "R",
+                    "Age": "27",
+                    "Team": "Mia",
+                    "Name": "Declan Cronin",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/c/c42d4e43_mlbam.jpg"
+                },
+                {
+                    "Number": "242",
+                    "Hand": "R",
+                    "Age": "31",
+                    "Team": "Ari",
+                    "Name": "Kevin Ginkel",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/c/c23af3f5_mlbam.jpg"
+                },
+                {
+                    "Number": "243",
+                    "Hand": "R",
+                    "Age": "35",
+                    "Team": "Atl",
+                    "Name": "Raisel Iglesias",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/5/582b62b3_mlbam.jpg"
+                },
+                {
+                    "Number": "244",
+                    "Hand": "R",
+                    "Age": "29",
+                    "Team": "LAD",
+                    "Name": "Michael Kopech",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/f/fec0fb04_mlbam.jpg"
+                },
+                {
+                    "Number": "245",
+                    "Hand": "R",
+                    "Age": "30",
+                    "Team": "Atl",
+                    "Name": "Joe Jimenez",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "246",
+                    "Hand": "L",
+                    "Age": "27",
+                    "Team": "Pit",
+                    "Name": "Joey Wentz",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/3/3df47064_mlbam.jpg"
+                },
+                {
+                    "Number": "247",
+                    "Hand": "R",
+                    "Age": "26",
+                    "Team": "StL",
+                    "Name": "Ryan Fernandez",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/b/b22adf81_mlbam.jpg"
+                },
+                {
+                    "Number": "248",
+                    "Hand": "R",
+                    "Age": "30",
+                    "Team": "StL",
+                    "Name": "Ryan Helsley",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/5/5bbb5c1c_mlbam.jpg"
+                },
+                {
+                    "Number": "249",
+                    "Hand": "L",
+                    "Age": "29",
+                    "Team": "LAD",
+                    "Name": "Alex Vesia",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/1/1320c5bb_mlbam.jpg"
+                },
+                {
+                    "Number": "250",
+                    "Hand": "R",
+                    "Age": "32",
+                    "Team": "Ari",
+                    "Name": "Ryan Thompson",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/7/74526912_mlbam.jpg"
+                },
+                {
+                    "Number": "251",
+                    "Hand": "R",
+                    "Age": "28",
+                    "Team": "ChN",
+                    "Name": "Nate Pearson",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/1/109e3364_mlbam.jpg"
+                },
+                {
+                    "Number": "252",
+                    "Hand": "R",
+                    "Age": "34",
+                    "Team": "SD",
+                    "Name": "Robert Suarez",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/8/856092e1_mlbam.jpg"
+                },
+                {
+                    "Number": "253",
+                    "Hand": "R",
+                    "Age": "34",
+                    "Team": "Col",
+                    "Name": "Tyler Kinley",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/9/910abaf7_mlbam.jpg"
+                },
+                {
+                    "Number": "254",
+                    "Hand": "L",
+                    "Age": "26",
+                    "Team": "SD",
+                    "Name": "Adrian Morejon",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "255",
+                    "Hand": "R",
+                    "Age": "32",
+                    "Team": "NYN",
+                    "Name": "Clay Holmes",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/0/0679c52f_mlbam.jpg"
+                },
+                {
+                    "Number": "256",
+                    "Hand": "L",
+                    "Age": "33",
+                    "Team": "Phi",
+                    "Name": "Matt Strahm",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/a/ad689bd5_mlbam.jpg"
+                },
+                {
+                    "Number": "257",
+                    "Hand": "L",
+                    "Age": "29",
+                    "Team": "SD",
+                    "Name": "Yuki Matsui",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/0/0fbb5290_mlbam.jpg"
+                },
+                {
+                    "Number": "258",
+                    "Hand": "L",
+                    "Age": "27",
+                    "Team": "Mil",
+                    "Name": "Bryan Hudson",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/3/3b45f258_mlbam.jpg"
+                },
+                {
+                    "Number": "259",
+                    "Hand": "R",
+                    "Age": "29",
+                    "Team": "ChN",
+                    "Name": "Tyson Miller",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/9/95701e32_mlbam.jpg"
+                },
+                {
+                    "Number": "260",
+                    "Hand": "L",
+                    "Age": "29",
+                    "Team": "Phi",
+                    "Name": "Jose Alvarado",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "261",
+                    "Hand": "R",
+                    "Age": "26",
+                    "Team": "SD",
+                    "Name": "Jeremiah Estrada",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/0/053ff133_mlbam.jpg"
+                },
+                {
+                    "Number": "262",
+                    "Hand": "L",
+                    "Age": "34",
+                    "Team": "SF",
+                    "Name": "Taylor Rogers",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/5/5eb99975_mlbam.jpg"
+                },
+                {
+                    "Number": "263",
+                    "Hand": "L",
+                    "Age": "30",
+                    "Team": "StL",
+                    "Name": "John King",
+                    "Position": "RP",
+                    "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/8/81a8de23_mlbam.jpg"
+                },
+                {
+                    "Number": "264",
+                    "Hand": "R",
+                    "Age": "30",
+                    "Team": "Col",
+                    "Name": "Justin Lawrence",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "265",
+                    "Hand": "L",
+                    "Age": "30",
+                    "Team": "Atl",
+                    "Name": "Dylan Lee",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "266",
+                    "Hand": "R",
+                    "Age": "27",
+                    "Team": "Ari",
+                    "Name": "Bryce Jarvis",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "267",
+                    "Hand": "R",
+                    "Age": "31",
+                    "Team": "Mil",
+                    "Name": "Joel Payamps",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "268",
+                    "Hand": "R",
+                    "Age": "27",
+                    "Team": "SF",
+                    "Name": "Camilo Doval",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "269",
+                    "Hand": "L",
+                    "Age": "28",
+                    "Team": "StL",
+                    "Name": "JoJo Romero",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "270",
+                    "Hand": "R",
+                    "Age": "30",
+                    "Team": "Pit",
+                    "Name": "David Bednar",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "271",
+                    "Hand": "R",
+                    "Age": "28",
+                    "Team": "Mil",
+                    "Name": "Nick Mears",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "272",
+                    "Hand": "R",
+                    "Age": "32",
+                    "Team": "NYN",
+                    "Name": "Reed Garrett",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "273",
+                    "Hand": "R",
+                    "Age": "28",
+                    "Team": "Cin",
+                    "Name": "Alexis Diaz",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "274",
+                    "Hand": "R",
+                    "Age": "33",
+                    "Team": "Atl",
+                    "Name": "Pierce Johnson",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "275",
+                    "Hand": "L",
+                    "Age": "31",
+                    "Team": "Atl",
+                    "Name": "Aaron Bummer",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "276",
+                    "Hand": "R",
+                    "Age": "30",
+                    "Team": "LAD",
+                    "Name": "Evan Phillips",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "277",
+                    "Hand": "R",
+                    "Age": "26",
+                    "Team": "Pit",
+                    "Name": "Kyle Nicolas",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "278",
+                    "Hand": "L",
+                    "Age": "28",
+                    "Team": "Pit",
+                    "Name": "Caleb Ferguson",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "279",
+                    "Hand": "R",
+                    "Age": "29",
+                    "Team": "Mia",
+                    "Name": "Calvin Faucher",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "280",
+                    "Hand": "R",
+                    "Age": "32",
+                    "Team": "Was",
+                    "Name": "Jorge Lopez",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "281",
+                    "Hand": "R",
+                    "Age": "30",
+                    "Team": "Mia",
+                    "Name": "Anthony Bender",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "282",
+                    "Hand": "R",
+                    "Age": "30",
+                    "Team": "Ari",
+                    "Name": "Seth Martinez",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "283",
+                    "Hand": "R",
+                    "Age": "31",
+                    "Team": "NYN",
+                    "Name": "Edwin Diaz",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "284",
+                    "Hand": "R",
+                    "Age": "29",
+                    "Team": "Pit",
+                    "Name": "Colin Holderman",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "285",
+                    "Hand": "R",
+                    "Age": "28",
+                    "Team": "Mil",
+                    "Name": "Elvis Peguero",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "286",
+                    "Hand": "R",
+                    "Age": "30",
+                    "Team": "Phi",
+                    "Name": "Jose Ruiz",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "287",
+                    "Hand": "R",
+                    "Age": "35",
+                    "Team": "NYN",
+                    "Name": "Huascar Brazoban",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "288",
+                    "Hand": "L",
+                    "Age": "31",
+                    "Team": "LAD",
+                    "Name": "Anthony Banda",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "289",
+                    "Hand": "L",
+                    "Age": "26",
+                    "Team": "Mia",
+                    "Name": "Andrew Nardi",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "290",
+                    "Hand": "L",
+                    "Age": "38",
+                    "Team": "ChN",
+                    "Name": "Caleb Thielbar",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "291",
+                    "Hand": "R",
+                    "Age": "36",
+                    "Team": "LAD",
+                    "Name": "Blake Treinen",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "292",
+                    "Hand": "R",
+                    "Age": "27",
+                    "Team": "SD",
+                    "Name": "Stephen Kolek",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "293",
+                    "Hand": "R",
+                    "Age": "31",
+                    "Team": "Mil",
+                    "Name": "Trevor Megill",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "294",
+                    "Hand": "R",
+                    "Age": "24",
+                    "Team": "ChN",
+                    "Name": "Porter Hodge",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "295",
+                    "Hand": "R",
+                    "Age": "28",
+                    "Team": "ChN",
+                    "Name": "Eli Morgan",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "296",
+                    "Hand": "R",
+                    "Age": "29",
+                    "Team": "Mia",
+                    "Name": "Jesus Tinoco",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "297",
+                    "Hand": "R",
+                    "Age": "29",
+                    "Team": "Col",
+                    "Name": "Jake Bird",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "298",
+                    "Hand": "L",
+                    "Age": "33",
+                    "Team": "SD",
+                    "Name": "Wandy Peralta",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "299",
+                    "Hand": "R",
+                    "Age": "33",
+                    "Team": "Cin",
+                    "Name": "Emilio Pagan",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "300",
+                    "Hand": "L",
+                    "Age": "33",
+                    "Team": "Cin",
+                    "Name": "Sam Moll",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "301",
+                    "Hand": "L",
+                    "Age": "30",
+                    "Team": "NYN",
+                    "Name": "Danny Young",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "302",
+                    "Hand": "R",
+                    "Age": "28",
+                    "Team": "NYN",
+                    "Name": "Dedniel Nunez",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "303",
+                    "Hand": "L",
+                    "Age": "31",
+                    "Team": "NYN",
+                    "Name": "A.J. Minter",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "304",
+                    "Hand": "R",
+                    "Age": "27",
+                    "Team": "StL",
+                    "Name": "Chris Roycroft",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "305",
+                    "Hand": "L",
+                    "Age": "25",
+                    "Team": "Was",
+                    "Name": "Jose A. Ferrer",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "306",
+                    "Hand": "R",
+                    "Age": "22",
+                    "Team": "Col",
+                    "Name": "Angel Chivilli",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "307",
+                    "Hand": "R",
+                    "Age": "26",
+                    "Team": "Was",
+                    "Name": "Eduardo Salazar",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "308",
+                    "Hand": "R",
+                    "Age": "27",
+                    "Team": "Mil",
+                    "Name": "Grant Anderson",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "309",
+                    "Hand": "R",
+                    "Age": "27",
+                    "Team": "ChN",
+                    "Name": "Ethan Roberts",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "310",
+                    "Hand": "R",
+                    "Age": "32",
+                    "Team": "ChN",
+                    "Name": "Matt Festa",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "311",
+                    "Hand": "R",
+                    "Age": "29",
+                    "Team": "NYN",
+                    "Name": "Sean Reid-Foley",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "312",
+                    "Hand": "L",
+                    "Age": "27",
+                    "Team": "StL",
+                    "Name": "Bailey Horn",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "313",
+                    "Hand": "L",
+                    "Age": "26",
+                    "Team": "Was",
+                    "Name": "Joe LaSorsa",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "314",
+                    "Hand": "R",
+                    "Age": "28",
+                    "Team": "Atl",
+                    "Name": "Daysbel Hernandez",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "315",
+                    "Hand": "R",
+                    "Age": "33",
+                    "Team": "ChN",
+                    "Name": "Julian Merryweather",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "316",
+                    "Hand": "L",
+                    "Age": "28",
+                    "Team": "SD",
+                    "Name": "Tom Cosgrove",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "317",
+                    "Hand": "R",
+                    "Age": "25",
+                    "Team": "ChN",
+                    "Name": "Daniel Palencia",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "318",
+                    "Hand": "R",
+                    "Age": "26",
+                    "Team": "SD",
+                    "Name": "Alek Jacob",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "319",
+                    "Hand": "R",
+                    "Age": "24",
+                    "Team": "Mil",
+                    "Name": "Abner Uribe",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "320",
+                    "Hand": "R",
+                    "Age": "32",
+                    "Team": "Phi",
+                    "Name": "Jordan Romano",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "321",
+                    "Hand": "R",
+                    "Age": "31",
+                    "Team": "Col",
+                    "Name": "Jimmy Herget",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "322",
+                    "Hand": "L",
+                    "Age": "24",
+                    "Team": "Col",
+                    "Name": "Luis Peralta",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "323",
+                    "Hand": "R",
+                    "Age": "25",
+                    "Team": "Col",
+                    "Name": "Seth Halvorsen",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "324",
+                    "Hand": "R",
+                    "Age": "30",
+                    "Team": "Pit",
+                    "Name": "Peter Strzelecki",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "325",
+                    "Hand": "R",
+                    "Age": "27",
+                    "Team": "Pit",
+                    "Name": "Brett deGeus",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "326",
+                    "Hand": "R",
+                    "Age": "33",
+                    "Team": "NYN",
+                    "Name": "Kevin Herget",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "327",
+                    "Hand": "R",
+                    "Age": "26",
+                    "Team": "SD",
+                    "Name": "Sean Reynolds",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "328",
+                    "Hand": "R",
+                    "Age": "29",
+                    "Team": "NYN",
+                    "Name": "Austin Warren",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "329",
+                    "Hand": "R",
+                    "Age": "29",
+                    "Team": "Mia",
+                    "Name": "Lake Bachar",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "330",
+                    "Hand": "R",
+                    "Age": "26",
+                    "Team": "LAD",
+                    "Name": "Brusdar Graterol",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "331",
+                    "Hand": "R",
+                    "Age": "24",
+                    "Team": "ChN",
+                    "Name": "Jack Neely",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "332",
+                    "Hand": "R",
+                    "Age": "25",
+                    "Team": "Was",
+                    "Name": "Zach Brzykcy",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "333",
+                    "Hand": "R",
+                    "Age": "29",
+                    "Team": "NYN",
+                    "Name": "Tyler Zuber",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "334",
+                    "Hand": "R",
+                    "Age": "27",
+                    "Team": "Was",
+                    "Name": "Orlando Ribalta",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "335",
+                    "Hand": "R",
+                    "Age": "26",
+                    "Team": "StL",
+                    "Name": "Ryan Loutos",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "336",
+                    "Hand": "R",
+                    "Age": "27",
+                    "Team": "ChN",
+                    "Name": "Gavin Hollowell",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "337",
+                    "Hand": "L",
+                    "Age": "29",
+                    "Team": "Col",
+                    "Name": "Lucas Gilbreath",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "338",
+                    "Hand": "R",
+                    "Age": "26",
+                    "Team": "Atl",
+                    "Name": "Amos Willingham",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "339",
+                    "Hand": "R",
+                    "Age": "29",
+                    "Team": "NYN",
+                    "Name": "Luis Ortiz",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "340",
+                    "Hand": "L",
+                    "Age": "26",
+                    "Team": "Col",
+                    "Name": "Evan Justice",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "341",
+                    "Hand": "R",
+                    "Age": "27",
+                    "Team": "Was",
+                    "Name": "Mason Thompson",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "342",
+                    "Hand": "R",
+                    "Age": "29",
+                    "Team": "Pit",
+                    "Name": "Dauri Moreta",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "343",
+                    "Hand": "L",
+                    "Age": "30",
+                    "Team": "Atl",
+                    "Name": "Angel Perdomo",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "344",
+                    "Hand": "R",
+                    "Age": "28",
+                    "Team": "Phi",
+                    "Name": "Devin Sweet",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "345",
+                    "Hand": "R",
+                    "Age": "25",
+                    "Team": "Mil",
+                    "Name": "Craig Yoho",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "346",
+                    "Hand": "L",
+                    "Age": "28",
+                    "Team": "Mil",
+                    "Name": "Grant Wolfram",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "347",
+                    "Hand": "R",
+                    "Age": "27",
+                    "Team": "Atl",
+                    "Name": "Anderson Pilar",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "348",
+                    "Hand": "L",
+                    "Age": "26",
+                    "Team": "LAD",
+                    "Name": "Jack Dreyer",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "349",
+                    "Hand": "R",
+                    "Age": "25",
+                    "Team": "Was",
+                    "Name": "Evan Reifert",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "350",
+                    "Hand": "R",
+                    "Age": "26",
+                    "Team": "Pit",
+                    "Name": "Elvis Alvarado",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                },
+                {
+                    "Number": "351",
+                    "Hand": "R",
+                    "Age": "26",
+                    "Team": "StL",
+                    "Name": "Matt Svanson",
+                    "Position": "RP",
+                    "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current"
+                }
+            ]
