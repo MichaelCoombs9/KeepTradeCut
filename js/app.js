@@ -375,4 +375,65 @@ function createKTCModal() {
     `;
 
     return modal;
-} 
+}
+
+
+// async function mergeRankingsIntoPlayers() {
+//     try {
+//         // Load both JSON files
+//         const playersResponse = await fetch('./data/players.json');
+//         const rankingsResponse = await fetch('./data/rankings.json');
+        
+//         const players = await playersResponse.json();
+//         const rankings = await rankingsResponse.json();
+
+//         // Create a map of player names to their rankings
+//         const rankingsMap = new Map(
+//             rankings.map(rank => [rank['PLAYER NAME'].toLowerCase(), rank['RK']])
+//         );
+
+//         // Add rankings to players
+//         const updatedPlayers = players.map(player => ({
+//             ...player,
+//             Rank: rankingsMap.get(player.Name.toLowerCase()) || null
+//         }));
+
+//         // Log stats
+//         const rankedPlayers = updatedPlayers.filter(p => p.Rank !== null);
+//         console.log(`Successfully ranked ${rankedPlayers.length} out of ${players.length} players`);
+
+//         // Sort by rank (null ranks at the end)
+//         const sortedPlayers = updatedPlayers.sort((a, b) => {
+//             if (a.Rank === null && b.Rank === null) return 0;
+//             if (a.Rank === null) return 1;
+//             if (b.Rank === null) return -1;
+//             return parseInt(a.Rank) - parseInt(b.Rank);
+//         });
+
+//         return sortedPlayers;
+
+//     } catch (error) {
+//         console.error('Error merging rankings:', error);
+//         return null;
+//     }
+// }
+
+// // Add this function to save the merged data
+// async function saveMergedPlayers() {
+//     const mergedPlayers = await mergeRankingsIntoPlayers();
+//     if (!mergedPlayers) {
+//         console.error('Failed to merge players');
+//         return;
+//     }
+
+//     // Log some sample data to verify
+//     console.log('First 5 ranked players:', mergedPlayers.slice(0, 5));
+//     console.log('Last 5 ranked players:', mergedPlayers.slice(-5));
+
+//     // In a real environment, you would save this to a file
+//     // For now, we'll log it to console in a format you can copy
+//     console.log(JSON.stringify(mergedPlayers, null, 2));
+// }
+
+// // Run it
+// saveMergedPlayers(); 
