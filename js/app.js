@@ -3,14 +3,8 @@ let ALL_PLAYERS = [];
 
 async function loadPlayers() {
     try {
-        // Try different paths
-        const paths = [
-            '/data/players.json',
-            './data/players.json',
-            '../data/players.json',
-            'players.json'
-        ];
-
+        const paths = ['/data/players.json', './data/players.json', '../data/players.json', 'players.json'];
+        
         let response;
         for (const path of paths) {
             try {
@@ -25,11 +19,24 @@ async function loadPlayers() {
             throw new Error('Could not load players data');
         }
 
-        ALL_PLAYERS = await response.json();
-        console.log(`Loaded ${ALL_PLAYERS.length} players`);
+        let players = await response.json();
         
-        // Add random value and trend for each player
-        ALL_PLAYERS = ALL_PLAYERS.map(player => ({
+        // Add missing fields and clean up data
+        players = players.map((player, index) => ({
+            Number: player.Number || String(index + 1),  // Use index+1 if Number is missing
+            Hand: player.Hand || '-',                    // Use '-' if Hand is missing
+            Age: player.Age || '??',                     // Use '??' if Age is missing
+            Team: player.Team || 'FA',                   // Use 'FA' if Team is missing
+            Name: player.Name,
+            Position: player.Position || 'Unknown',      // Use 'Unknown' if Position is missing
+            Headshot: player.Headshot || 'https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current'
+        }));
+
+        // Remove duplicates based on Name (since Number might be auto-generated)
+        const uniquePlayers = Array.from(new Map(players.map(player => [player.Name, player])).values());
+        console.log(`Loaded ${uniquePlayers.length} unique players`);
+        
+        ALL_PLAYERS = uniquePlayers.map(player => ({
             ...player,
             id: player.Number,
             value: Math.floor(Math.random() * 2000) + 8000,
