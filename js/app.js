@@ -340,35 +340,37 @@ document.addEventListener('DOMContentLoaded', async () => {
 // Add this function back
 function createKTCModal() {
     const modal = document.createElement('div');
-    modal.className = 'fixed inset-0 bg-black/50 flex items-center justify-center z-50';
+    modal.className = 'fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4';
     modal.id = 'ktc-modal';
     
     modal.innerHTML = `
-        <div class="bg-white rounded-xl shadow-xl max-w-4xl w-full mx-4 p-8">
-            <div class="max-w-2xl mx-auto">
-                <h2 class="text-3xl font-bold text-center mb-4">Your Thoughts?</h2>
-                <p class="text-center text-gray-600 mb-2">
-                    KTC's values are crowdsourced from users like you.
-                </p>
-                <p class="text-center text-gray-600 mb-8">
-                    <span class="font-medium">Keep</span> the most valuable, 
-                    <span class="font-medium">Trade</span> the second in value, and 
-                    <span class="font-medium">Cut</span> the least valuable.
-                </p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="playerCards">
-                    <!-- Player cards will be inserted here -->
-                </div>
-
-                <div class="mt-8 text-center">
-                    <button id="submit-ktc" 
-                            class="w-full max-w-md bg-blue-600 text-white px-8 py-3 rounded-lg 
-                                   hover:bg-blue-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed">
-                        Submit for Dynasty Baseball
-                    </button>
-                    <p class="mt-4 text-sm text-blue-600 hover:underline cursor-pointer" id="skip-players">
-                        I don't know all of these players
+        <div class="bg-white rounded-xl shadow-xl w-full max-w-4xl mx-auto overflow-y-auto max-h-[90vh]">
+            <div class="p-4 sm:p-8">
+                <div class="max-w-2xl mx-auto">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-center mb-4">Your Thoughts?</h2>
+                    <p class="text-center text-gray-600 mb-2">
+                        KTC's values are crowdsourced from users like you.
                     </p>
+                    <p class="text-center text-gray-600 mb-8">
+                        <span class="font-medium">Keep</span> the most valuable, 
+                        <span class="font-medium">Trade</span> the second in value, and 
+                        <span class="font-medium">Cut</span> the least valuable.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8" id="playerCards">
+                        <!-- Player cards will be inserted here -->
+                    </div>
+
+                    <div class="mt-8 text-center">
+                        <button id="submit-ktc" 
+                                class="w-full max-w-md bg-blue-600 text-white px-8 py-3 rounded-lg 
+                                       hover:bg-blue-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed">
+                            Submit for Dynasty Baseball
+                        </button>
+                        <p class="mt-4 text-sm text-blue-600 hover:underline cursor-pointer" id="skip-players">
+                            I don't know all of these players
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

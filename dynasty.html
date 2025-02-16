@@ -22,20 +22,27 @@
                         <img src="logo.png" alt="Logo" class="h-8 w-8">
                         <span class="font-bold text-xl">BaseballTradeCalc</span>
                     </a>
-                    <div class="ml-10 flex items-center space-x-4">
+                    <div class="hidden md:flex ml-10 items-center space-x-4">
                         <a href="/dynasty.html" class="text-blue-600 font-medium">Dynasty Rankings</a>
                         <a href="#" class="text-gray-500 hover:text-gray-700">Power Rankings</a>
                         <a href="#" class="text-gray-500 hover:text-gray-700">Start/Sit Tool</a>
                     </div>
                 </div>
                 <div class="flex items-center gap-4">
-                    <div class="flex items-center gap-2">
+                    <div class="hidden sm:flex items-center gap-2">
                         <span class="text-gray-500">Superflex</span>
                         <button class="w-12 h-6 rounded-full bg-gray-200"></button>
                     </div>
-                    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg">
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm">
                         TE Premium is OFF
                     </button>
+                </div>
+            </div>
+            <div class="md:hidden border-t border-gray-200 py-2">
+                <div class="flex flex-wrap gap-4 py-2">
+                    <a href="/dynasty.html" class="text-blue-600 font-medium">Dynasty Rankings</a>
+                    <a href="#" class="text-gray-500">Power Rankings</a>
+                    <a href="#" class="text-gray-500">Start/Sit Tool</a>
                 </div>
             </div>
         </div>
@@ -45,9 +52,9 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <h1 class="text-3xl font-bold text-gray-900 mb-8">Dynasty Rankings</h1>
         
-        <!-- Filter Options -->
-        <div class="mb-6 border-b border-gray-200">
-            <nav class="flex space-x-8" aria-label="Position filters">
+        <!-- Filter Options - Make scrollable on mobile -->
+        <div class="mb-6 border-b border-gray-200 overflow-x-auto">
+            <nav class="flex space-x-8 min-w-max px-4" aria-label="Position filters">
                 <button class="filter-btn border-b-2 border-blue-600 text-blue-600 py-4 px-1 text-sm font-medium" data-position="Overall">
                     Overall
                 </button>
@@ -84,7 +91,7 @@
             </nav>
         </div>
 
-        <div class="bg-white rounded-lg shadow">
+        <div class="bg-white rounded-lg shadow -mx-4 sm:mx-0">
             <!-- Rankings Table -->
             <div class="overflow-x-auto">
                 <table class="min-w-full divide-y divide-gray-200">
