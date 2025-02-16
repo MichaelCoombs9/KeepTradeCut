@@ -219,4 +219,87 @@ document.getElementById('submit-votes').addEventListener('click', async () => {
     }
 });
 
-document.getElementById('skip-players').addEventListener('click', loadNewPlayers); 
+document.getElementById('skip-players').addEventListener('click', loadNewPlayers);
+
+// Add this function to startbenchcut.js
+async function updatePlayerValues(votedPlayers) {
+    console.log('Starting vote processing for players:', votedPlayers);
+
+    // Sort players by their vote (Start > Bench > Cut)
+    const sortedPlayers = [...votedPlayers].sort((a, b) => {
+        const voteOrder = { 'start': 2, 'bench': 1, 'cut': 0 };
+        return voteOrder[b.vote.toLowerCase()] - voteOrder[a.vote.toLowerCase()];
+    });
+
+    // Process each matchup and store final values
+    const finalValues = new Map();
+    
+    // Process matchups in order: Start vs Bench, Start vs Cut, Bench vs Cut
+    for (let i = 0; i < sortedPlayers.length - 1; i++) {
+        const playerA = sortedPlayers[i];
+        const playerB = sortedPlayers[i + 1];
+
+        console.log(`\nProcessing matchup: ${playerA.Name} (${playerA.vote}) vs ${playerB.Name} (${playerB.vote})`);
+        console.log(`Current values - ${playerA.Name}: ${playerA.Value}, ${playerB.Name}: ${playerB.Value}`);
+
+        // Calculate expected scores
+        const expectedA = calculateExpectedScore(playerA.Value, playerB.Value);
+        const expectedB = calculateExpectedScore(playerB.Value, playerA.Value);
+        console.log(`Expected scores - ${playerA.Name}: ${expectedA.toFixed(3)}, ${playerB.Name}: ${expectedB.toFixed(3)}`);
+
+        // Higher vote always wins (Start beats Bench, Bench beats Cut)
+        const newValueA = calculateNewValue(playerA.Value, expectedA, 1);
+        const newValueB = calculateNewValue(playerB.Value, expectedB, 0);
+        console.log(`New values - ${playerA.Name}: ${newValueA}, ${playerB.Name}: ${newValueB}`);
+
+        // Store the values
+        finalValues.set(playerA.id, {
+            id: playerA.id,
+            name: playerA.Name,
+            oldValue: playerA.Value,
+            newValue: newValueA
+        });
+        
+        finalValues.set(playerB.id, {
+            id: playerB.id,
+            name: playerB.Name,
+            oldValue: playerB.Value,
+            newValue: newValueB
+        });
+    }
+
+    // Convert final values to updates array
+    const updates = Array.from(finalValues.values());
+    console.log('\nFinal updates to be applied:', updates);
+
+    try {
+        // Update local data
+        updates.forEach(update => {
+            const player = ALL_PLAYERS.find(p => p.id === update.id);
+            if (player) {
+                console.log(`Updating local player ${update.name} (ID: ${update.id}) value from ${update.oldValue} to ${update.newValue}`);
+                player.Value = update.newValue;
+            }
+        });
+
+        // Send updates to server
+        console.log('Sending updates to server...');
+        const response = await fetch('/api/updatePlayerValues', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(updates)
+        });
+
+        if (!response.ok) {
+            throw new Error(`Server responded with status: ${response.status}`);
+        }
+
+        const responseData = await response.json();
+        console.log('Server response:', responseData);
+
+    } catch (error) {
+        console.error('Error updating player values:', error);
+    }
+} 
