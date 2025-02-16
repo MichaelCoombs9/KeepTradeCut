@@ -101,7 +101,7 @@
             </div>
         </div>
 
-        <!-- Progress bar and trade message below both teams -->
+        <!-- Add this after the team sections but before the buttons -->
         <div class="mt-8">
             <!-- Progress bar -->
             <div class="relative h-2 bg-gray-200 rounded-full overflow-hidden">
@@ -116,16 +116,16 @@
                     </svg>
                     <span class="trade-message"></span>
                 </div>
-                <div class="difference-message mt-1"></div>
+                <div class="difference-message mt-1 text-sm text-gray-600"></div>
             </div>
         </div>
 
-        <!-- Action Buttons -->
+        <!-- Buttons -->
         <div class="flex justify-center gap-4 mt-8">
-            <button class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">
+            <button class="px-4 py-2 bg-blue-500 text-white rounded" onclick="copyTradeURL()">
                 Copy Trade URL
             </button>
-            <button class="bg-gray-500 text-white px-6 py-2 rounded hover:bg-gray-600">
+            <button class="px-4 py-2 bg-gray-500 text-white rounded" onclick="clearCalculator()">
                 Clear Calculator
             </button>
         </div>

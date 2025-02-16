@@ -211,159 +211,7 @@ async function showKTCModal() {
 // Make handleVote available globally
 window.handleVote = handleVote;
 
-function initializeSearchBoxes() {
-    const searchInputs = document.querySelectorAll('.player-search');
-    
-    searchInputs.forEach(input => {
-        const dropdownContainer = document.createElement('div');
-        dropdownContainer.className = 'absolute w-full bg-white mt-1 rounded-lg shadow-lg border border-gray-200 z-50 hidden';
-        input.parentElement.appendChild(dropdownContainer);
-
-        input.addEventListener('input', debounce((e) => {
-            const searchTerm = e.target.value.toLowerCase();
-            if (searchTerm.length < 2) {
-                dropdownContainer.classList.add('hidden');
-                return;
-            }
-
-            const matches = ALL_PLAYERS.filter(player => 
-                player.Name.toLowerCase().includes(searchTerm) ||
-                player.Team.toLowerCase().includes(searchTerm)
-            ).slice(0, 5);
-
-            if (matches.length > 0) {
-                dropdownContainer.innerHTML = matches.map(player => `
-                    <div class="player-option p-3 hover:bg-gray-50 cursor-pointer flex items-center justify-between group"
-                         data-player-id="${player.Number}">
-                        <div class="flex items-center gap-3">
-                            <img src="${player.Headshot}" class="rounded-full w-10 h-10 object-cover">
-                            <div>
-                                <div class="font-medium text-gray-900">${player.Name}</div>
-                                <div class="text-sm text-gray-500">${player.Team} • ${player.Position}</div>
-                            </div>
-                        </div>
-                        <div class="text-sm font-medium ${player.trend === 'up' ? 'text-green-600' : player.trend === 'down' ? 'text-red-600' : 'text-gray-600'}">
-                            ${player.Value}
-                            ${player.trend === 'up' ? '↑' : player.trend === 'down' ? '↓' : ''}
-                        </div>
-                    </div>
-                `).join('');
-                dropdownContainer.classList.remove('hidden');
-            } else {
-                dropdownContainer.innerHTML = `
-                    <div class="p-3 text-gray-500 text-center">No players found</div>
-                `;
-                dropdownContainer.classList.remove('hidden');
-            }
-        }, 200));
-
-        // Handle click outside
-        document.addEventListener('click', (e) => {
-            if (!input.contains(e.target) && !dropdownContainer.contains(e.target)) {
-                dropdownContainer.classList.add('hidden');
-            }
-        });
-
-        // Handle player selection - Updated this part
-        dropdownContainer.addEventListener('click', (e) => {
-            const playerOption = e.target.closest('.player-option');
-            if (playerOption) {
-                const playerId = playerOption.dataset.playerId;
-                const player = ALL_PLAYERS.find(p => p.Number === playerId);
-                if (player) {
-                    addPlayerToTeam(player, input.closest('.team-section').dataset.team);
-                    input.value = '';
-                    dropdownContainer.classList.add('hidden');
-                }
-            }
-        });
-    });
-}
-
-function addPlayerToTeam(player, teamNumber) {
-    console.log('Adding player to team:', {
-        player,
-        teamNumber,
-        playerValue: player.Value
-    });
-
-    const teamContainer = document.querySelector(`[data-team="${teamNumber}"] .selected-players`);
-    const searchInput = document.querySelector(`[data-team="${teamNumber}"] .player-search`);
-    const suggestions = searchInput.parentNode.querySelector('.suggestions');
-    
-    const playerElement = document.createElement('div');
-    playerElement.className = 'flex items-center justify-between p-3 bg-white rounded-lg border border-gray-200 shadow-sm';
-    playerElement.dataset.playerId = player.id; // Store the player ID
-    playerElement.innerHTML = `
-        <div class="flex items-center gap-3">
-            <img src="${player.Headshot}" class="rounded-full w-10 h-10 object-cover">
-            <div>
-                <div class="font-medium text-gray-900">${player.Name}</div>
-                <div class="text-sm text-gray-500">${player.Team} • ${player.Position}</div>
-            </div>
-        </div>
-        <div class="flex items-center gap-3">
-            <div class="text-sm font-medium ${player.trend === 'up' ? 'text-green-600' : player.trend === 'down' ? 'text-red-600' : 'text-gray-600'}">
-                ${player.Value}
-                ${player.trend === 'up' ? '↑' : player.trend === 'down' ? '↓' : ''}
-            </div>
-            <button class="text-gray-400 hover:text-red-500" onclick="removePlayer(this, '${teamNumber}')">×</button>
-        </div>
-    `;
-    
-    teamContainer.appendChild(playerElement);
-    searchInput.value = '';
-    suggestions.innerHTML = '';
-    
-    // Update both pieces and values
-    updateTotalPieces(teamNumber);
-    updateTradeValues();
-}
-
-function updateTotalPieces(teamNumber) {
-    const players = Array.from(document.querySelector(`[data-team="${teamNumber}"] .selected-players`).children);
-    const count = players.length;
-    
-    const totalPiecesEl = document.querySelector(`.total-pieces-${teamNumber}`);
-    const breakdownEl = document.querySelector(`.pieces-breakdown-${teamNumber}`);
-    
-    if (count === 0) {
-        totalPiecesEl.style.display = 'none';
-        breakdownEl.style.display = 'none';
-        return;
-    }
-
-    // Show and update the elements
-    totalPiecesEl.style.display = 'block';
-    breakdownEl.style.display = 'block';
-    
-    // Update total pieces count
-    totalPiecesEl.textContent = `${count} Total Pieces`;
-    
-    // Get positions for breakdown
-    const positions = players.map(el => {
-        const positionText = el.querySelector('.text-gray-500').textContent;
-        return positionText.split('•')[1].trim();
-    });
-    
-    // Create position breakdown text
-    breakdownEl.textContent = positions.join(', ');
-}
-
-// Utility function for debouncing
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-// Update initialization
+// Update the document ready handler
 document.addEventListener('DOMContentLoaded', async () => {
     // Load players first
     const loaded = await loadPlayers();
@@ -379,49 +227,337 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     showKTCModal();
-    initializeSearchBoxes();
 });
 
-// Add this function back
-function createKTCModal() {
-    const modal = document.createElement('div');
-    modal.className = 'fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4';
-    modal.id = 'ktc-modal';
+// Update setupPlayerSearch to handle all search functionality
+function setupPlayerSearch(container) {
+    const searchInput = container.querySelector('.player-search');
+    const suggestions = document.createElement('div');
+    suggestions.className = 'absolute z-10 w-full bg-white border rounded-lg shadow-lg mt-1 suggestions';
+    searchInput.parentNode.appendChild(suggestions);
     
-    modal.innerHTML = `
-        <div class="bg-white rounded-xl shadow-xl w-full max-w-4xl mx-auto">
-            <div class="p-4 sm:p-6">
-                <div class="max-w-2xl mx-auto">
-                    <h2 class="text-xl sm:text-2xl font-bold text-center mb-2">Your Thoughts?</h2>
-                    <p class="text-center text-gray-600 text-sm mb-1">
-                        KTC's values are crowdsourced from users like you.
-                    </p>
-                    <p class="text-center text-gray-600 text-sm mb-3">
-                        <span class="font-medium">Start</span> the most valuable, 
-                        <span class="font-medium">Bench</span> the second in value, and 
-                        <span class="font-medium">Cut</span> the least valuable.
-                    </p>
-                    
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="playerCards">
-                        <!-- Player cards will be inserted here -->
-                    </div>
+    // Create a function to clear the search
+    const clearSearch = () => {
+        searchInput.value = '';
+        suggestions.innerHTML = '';
+    };
 
-                    <div class="mt-3 text-center">
-                        <button id="submit-ktc" 
-                                class="w-full max-w-md bg-blue-600 text-white px-8 py-2 rounded-lg 
-                                       hover:bg-blue-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed">
-                            Submit for Dynasty Baseball
-                        </button>
-                        <p class="mt-1 text-sm text-blue-600 hover:underline cursor-pointer" id="skip-players">
-                            I don't know all of these players
-                        </p>
+    // Handle click outside
+    document.addEventListener('click', (e) => {
+        if (!searchInput.contains(e.target) && !suggestions.contains(e.target)) {
+            clearSearch();
+        }
+    });
+
+    // Handle player selection
+    suggestions.addEventListener('click', function(e) {
+        const clickedOption = e.target.closest('.player-option');
+        if (!clickedOption) return;
+
+        const clickedId = clickedOption.dataset.playerId;
+        const selectedPlayer = ALL_PLAYERS.find(p => p.id === clickedId);
+        
+        if (selectedPlayer) {
+            // Clear search input and suggestions before adding player
+            clearSearch();
+            
+            // Add player to team
+            const teamNumber = container.dataset.team;
+            const teamContainer = document.querySelector(`[data-team="${teamNumber}"] .selected-players`);
+            
+            const playerElement = document.createElement('div');
+            playerElement.className = 'flex items-center justify-between p-3 bg-white rounded-lg border border-gray-200 shadow-sm';
+            playerElement.dataset.playerId = selectedPlayer.id;
+            playerElement.innerHTML = `
+                <div class="flex items-center gap-3">
+                    <img src="${selectedPlayer.Headshot}" class="rounded-full w-10 h-10 object-cover">
+                    <div>
+                        <div class="font-medium text-gray-900">${selectedPlayer.Name}</div>
+                        <div class="text-sm text-gray-500">${selectedPlayer.Team} • ${selectedPlayer.Position}</div>
                     </div>
                 </div>
+                <div class="flex items-center gap-3">
+                    <div class="text-sm font-medium ${selectedPlayer.trend === 'up' ? 'text-green-600' : selectedPlayer.trend === 'down' ? 'text-red-600' : 'text-gray-600'}">
+                        ${selectedPlayer.Value}
+                        ${selectedPlayer.trend === 'up' ? '↑' : selectedPlayer.trend === 'down' ? '↓' : ''}
+                    </div>
+                    <button class="text-gray-400 hover:text-red-500" onclick="removePlayer(this, '${teamNumber}')">×</button>
+                </div>
+            `;
+            
+            teamContainer.appendChild(playerElement);
+            
+            // Update after player is added
+            updateTotalPieces(teamNumber);
+            updateTradeValues();
+        }
+    });
+
+    // Handle search input
+    const debouncedSearch = debounce((e) => {
+        const searchTerm = e.target.value.toLowerCase().trim();
+        
+        if (searchTerm.length < 2) {
+            suggestions.innerHTML = '';
+            return;
+        }
+
+        const matches = ALL_PLAYERS.filter(player => {
+            const playerName = player.Name.toLowerCase();
+            const playerNameWords = playerName.split(' ');
+            
+            if (playerName === searchTerm) return true;
+            if (playerNameWords.some(word => word.startsWith(searchTerm))) return true;
+            if (playerName.startsWith(searchTerm)) return true;
+            if (searchTerm.length >= 3 && playerName.includes(searchTerm)) return true;
+            
+            return false;
+        }).slice(0, 5);
+
+        console.log('Search matches with full details:', matches.map(p => ({
+            id: p.id,
+            name: p.Name,
+            position: p.Position,
+            team: p.Team,
+            value: p.Value
+        })));
+
+        suggestions.innerHTML = matches.map(player => `
+            <div class="player-option p-3 hover:bg-gray-50 cursor-pointer flex items-center justify-between group" 
+                 data-player-id="${player.id}">
+                <div class="flex items-center gap-3">
+                    <img src="${player.Headshot}" 
+                         class="rounded-full w-10 h-10 object-cover"
+                         alt="${player.Name}">
+                    <div>
+                        <div class="font-medium text-gray-900">${player.Name}</div>
+                        <div class="text-sm text-gray-500">${player.Team} • ${player.Position}</div>
+                    </div>
+                </div>
+                <div class="text-sm font-medium ${player.trend === 'up' ? 'text-green-600' : player.trend === 'down' ? 'text-red-600' : 'text-gray-600'}">
+                    ${player.Value}
+                    ${player.trend === 'up' ? '↑' : player.trend === 'down' ? '↓' : ''}
+                </div>
             </div>
+        `).join('');
+    }, 200);
+
+    searchInput.addEventListener('input', debouncedSearch);
+}
+
+// Add these functions near the top of the file
+function calculateRawAdjustment(playerValue, topValue, maxValue) {
+    // Similar to the Python example but tweaked for our scale
+    return playerValue * (
+        0.1 + 
+        0.2 * Math.pow(playerValue / maxValue, 8) + 
+        0.1 * Math.pow(playerValue / topValue, 1.3) + 
+        0.1 * Math.pow(playerValue / (maxValue + 2000), 1.28)
+    );
+}
+
+function calculateTeamAdjustment(players, otherTeamPlayers) {
+    if (!players.length) return 0;
+    
+    // Only apply adjustment to team with fewer pieces
+    if (players.length >= otherTeamPlayers.length) {
+        return 0;
+    }
+
+    // Find the highest value player in the trade (from both teams)
+    const allValues = [...players, ...otherTeamPlayers].map(p => parseInt(p.Value));
+    const topValue = Math.max(...allValues);
+    
+    // Use the highest value in our dataset as maxValue
+    const maxValue = Math.max(...ALL_PLAYERS.map(p => parseInt(p.Value)));
+    
+    // Calculate total adjustment
+    return players.reduce((total, player) => {
+        return total + calculateRawAdjustment(
+            parseInt(player.Value), 
+            topValue, 
+            maxValue
+        );
+    }, 0);
+}
+
+function updateTradeValues() {
+    console.log('=== Starting updateTradeValues ===');
+    
+    const elements = {
+        tradeBar: document.querySelector('.trade-bar'),
+        tradeMessageContainer: document.querySelector('.trade-message-container'),
+        tradeMessage: document.querySelector('.trade-message'),
+        differenceMessage: document.querySelector('.difference-message'),
+        arrow: document.querySelector('.arrow-icon'),
+        team1Value: document.querySelector('.team-1-value'),
+        team2Value: document.querySelector('.team-2-value')
+    };
+
+    // Create trade message element if it doesn't exist
+    if (!elements.tradeMessage && elements.tradeMessageContainer) {
+        const messageSpan = document.createElement('span');
+        messageSpan.className = 'trade-message';
+        elements.tradeMessageContainer.querySelector('.flex').appendChild(messageSpan);
+        elements.tradeMessage = messageSpan;
+    }
+
+    // Verify required elements exist
+    if (!elements.tradeMessage || !elements.tradeMessageContainer) {
+        console.error('Missing required trade message elements');
+        return;
+    }
+
+    // Get and log players
+    const team1Players = Array.from(document.querySelector('[data-team="1"] .selected-players').children)
+        .map(el => {
+            const playerName = el.querySelector('.font-medium').textContent;
+            const player = ALL_PLAYERS.find(p => p.Name === playerName);
+            console.log('Team 1 player found:', { name: playerName, value: player?.Value });
+            return player;
+        }).filter(Boolean);
+
+    const team2Players = Array.from(document.querySelector('[data-team="2"] .selected-players').children)
+        .map(el => {
+            const playerName = el.querySelector('.font-medium').textContent;
+            const player = ALL_PLAYERS.find(p => p.Name === playerName);
+            console.log('Team 2 player found:', { name: playerName, value: player?.Value });
+            return player;
+        }).filter(Boolean);
+
+    console.log('Player counts:', {
+        team1: team1Players.length,
+        team2: team2Players.length
+    });
+
+    // Calculate raw values
+    const team1RawValue = team1Players.reduce((sum, p) => sum + parseInt(p.Value || 0), 0);
+    const team2RawValue = team2Players.reduce((sum, p) => sum + parseInt(p.Value || 0), 0);
+    
+    // Calculate adjustments
+    const team1Adjustment = Math.round(calculateTeamAdjustment(team1Players, team2Players));
+    const team2Adjustment = Math.round(calculateTeamAdjustment(team2Players, team1Players));
+    
+    // Calculate final values
+    const team1FinalValue = team1RawValue + team1Adjustment;
+    const team2FinalValue = team2RawValue + team2Adjustment;
+
+    // Update value displays FIRST
+    elements.team1Value.textContent = team1FinalValue.toLocaleString();
+    elements.team2Value.textContent = team2FinalValue.toLocaleString();
+
+    // Update adjustment displays
+    const valueAdjustment1 = document.querySelector('.value-adjustment-container-1');
+    const valueAdjustment2 = document.querySelector('.value-adjustment-container-2');
+
+    if (team1Adjustment > 0) {
+        valueAdjustment1.style.display = 'block';
+        valueAdjustment1.querySelector('.value-adjustment-1').textContent = `+${team1Adjustment.toLocaleString()}`;
+    } else {
+        valueAdjustment1.style.display = 'none';
+    }
+
+    if (team2Adjustment > 0) {
+        valueAdjustment2.style.display = 'block';
+        valueAdjustment2.querySelector('.value-adjustment-2').textContent = `+${team2Adjustment.toLocaleString()}`;
+    } else {
+        valueAdjustment2.style.display = 'none';
+    }
+
+    // Now handle the trade message container
+    // Calculate difference
+    const difference = Math.abs(team1FinalValue - team2FinalValue);
+    console.log('Trade difference:', { 
+        difference,
+        isFair: difference <= 200,
+        currentMessage: elements.tradeMessage.textContent,
+        currentBackground: elements.tradeMessageContainer.className
+    });
+
+    // Log current state before updates
+    console.log('Current UI state before updates:', {
+        messageText: elements.tradeMessage.textContent,
+        messageClass: elements.tradeMessage.className,
+        containerClass: elements.tradeMessageContainer.className,
+        barClass: elements.tradeBar.className,
+        barWidth: elements.tradeBar.style.width
+    });
+
+    // Reset ALL UI elements first
+    elements.tradeMessageContainer.style.display = 'block';
+    elements.tradeMessageContainer.innerHTML = `
+        <div class="flex items-center justify-center gap-2">
+            <svg class="w-5 h-5 arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path>
+            </svg>
+            <span class="trade-message"></span>
         </div>
+        <div class="difference-message mt-1 text-sm text-gray-600"></div>
     `;
 
-    return modal;
+    // Re-query elements after rebuilding HTML
+    elements.tradeMessage = elements.tradeMessageContainer.querySelector('.trade-message');
+    elements.differenceMessage = elements.tradeMessageContainer.querySelector('.difference-message');
+    elements.arrow = elements.tradeMessageContainer.querySelector('.arrow-icon');
+
+    // Hide elements by default
+    elements.differenceMessage.style.display = 'none';
+    elements.arrow.style.display = 'none';
+
+    // Update UI based on fairness
+    if (difference <= 200) {
+        console.log('Updating UI for fair trade');
+        elements.tradeMessageContainer.className = 'bg-blue-50 rounded p-4 mt-4 text-center trade-message-container';
+        elements.tradeMessage.className = 'text-blue-600';
+        elements.tradeMessage.textContent = 'Fair Trade';
+        elements.tradeBar.className = 'absolute inset-0 trade-bar transition-all duration-300 bg-blue-500';
+        elements.tradeBar.style.width = '50%';
+    } else {
+        console.log('Updating UI for unfair trade');
+        elements.tradeMessageContainer.className = 'bg-red-50 rounded p-4 mt-4 text-center trade-message-container';
+        elements.tradeBar.className = 'absolute inset-0 trade-bar transition-all duration-300 bg-red-500';
+        
+        const favoredTeam = team1FinalValue > team2FinalValue ? 1 : 2;
+        elements.tradeMessage.className = 'text-red-600';
+        elements.tradeMessage.textContent = `Favors Team ${favoredTeam}`;
+        
+        elements.differenceMessage.style.display = 'block';
+        elements.differenceMessage.textContent = 
+            `Add a player worth ${difference.toLocaleString()} to Team ${favoredTeam === 1 ? 2 : 1} to even trade`;
+        
+        elements.arrow.style.display = 'inline';
+        elements.arrow.style.transform = favoredTeam === 1 ? 'rotate(0deg)' : 'rotate(180deg)';
+        
+        const totalValue = team1FinalValue + team2FinalValue;
+        const team1Percentage = (team1FinalValue / totalValue) * 100;
+        elements.tradeBar.style.width = `${team1Percentage}%`;
+    }
+
+    // Log final state
+    console.log('Final UI state:', {
+        messageText: elements.tradeMessage.textContent,
+        messageClass: elements.tradeMessage.className,
+        containerClass: elements.tradeMessageContainer.className,
+        barClass: elements.tradeBar.className,
+        barWidth: elements.tradeBar.style.width
+    });
+    console.log('=== End updateTradeValues ===\n');
+}
+
+// Add this new function to handle player removal
+function removePlayer(button, teamNumber) {
+    const playerElement = button.closest('.flex').parentElement;
+    playerElement.remove();
+    
+    // Reset the team value if no players remain
+    const teamContainer = document.querySelector(`[data-team="${teamNumber}"] .selected-players`);
+    if (teamContainer.children.length === 0) {
+        document.querySelector(`.team-${teamNumber}-value`).textContent = '0';
+        document.querySelector(`.value-adjustment-container-${teamNumber}`).style.display = 'none';
+    }
+    
+    updateTotalPieces(teamNumber);
+    updateTradeValues();
 }
 
 // Add Elo rating constants
@@ -525,404 +661,87 @@ async function updatePlayerValues(votedPlayers) {
     }
 }
 
-// async function mergeRankingsIntoPlayers() {
-//     try {
-//         // Load both JSON files
-//         const playersResponse = await fetch('./data/players.json');
-//         const rankingsResponse = await fetch('./data/rankings.json');
-        
-//         const players = await playersResponse.json();
-//         const rankings = await rankingsResponse.json();
-
-//         // Create a map of player names to their rankings
-//         const rankingsMap = new Map(
-//             rankings.map(rank => [rank['PLAYER NAME'].toLowerCase(), rank['RK']])
-//         );
-
-//         // Add rankings to players
-//         const updatedPlayers = players.map(player => ({
-//             ...player,
-//             Rank: rankingsMap.get(player.Name.toLowerCase()) || null
-//         }));
-
-//         // Log stats
-//         const rankedPlayers = updatedPlayers.filter(p => p.Rank !== null);
-//         console.log(`Successfully ranked ${rankedPlayers.length} out of ${players.length} players`);
-
-//         // Sort by rank (null ranks at the end)
-//         const sortedPlayers = updatedPlayers.sort((a, b) => {
-//             if (a.Rank === null && b.Rank === null) return 0;
-//             if (a.Rank === null) return 1;
-//             if (b.Rank === null) return -1;
-//             return parseInt(a.Rank) - parseInt(b.Rank);
-//         });
-
-//         return sortedPlayers;
-
-//     } catch (error) {
-//         console.error('Error merging rankings:', error);
-//         return null;
-//     }
-// }
-
-// // Add this function to save the merged data
-// async function saveMergedPlayers() {
-//     const mergedPlayers = await mergeRankingsIntoPlayers();
-//     if (!mergedPlayers) {
-//         console.error('Failed to merge players');
-//         return;
-//     }
-
-//     // Log some sample data to verify
-//     console.log('First 5 ranked players:', mergedPlayers.slice(0, 5));
-//     console.log('Last 5 ranked players:', mergedPlayers.slice(-5));
-
-//     // In a real environment, you would save this to a file
-//     // For now, we'll log it to console in a format you can copy
-//     console.log(JSON.stringify(mergedPlayers, null, 2));
-// }
-
-// // Run it
-// saveMergedPlayers(); 
-
-// Update the search functionality to be more precise
-function setupPlayerSearch(container) {
-    const searchInput = container.querySelector('.player-search');
-    const suggestions = document.createElement('div');
-    suggestions.className = 'absolute z-10 w-full bg-white border rounded-lg shadow-lg mt-1 suggestions';
-    searchInput.parentNode.appendChild(suggestions);
-    
-    // Create a function to clear the search
-    const clearSearch = () => {
-        searchInput.value = '';
-        suggestions.innerHTML = '';
+// Utility function for debouncing
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
     };
-
-    suggestions.addEventListener('click', function(e) {
-        const clickedOption = e.target.closest('.player-option');
-        if (!clickedOption) return;
-
-        const clickedId = clickedOption.dataset.playerId;
-        const selectedPlayer = ALL_PLAYERS.find(p => p.id === clickedId);
-        
-        if (selectedPlayer) {
-            // Clear before adding player
-            clearSearch();
-            
-            // Add player to team
-            const teamNumber = container.dataset.team;
-            const teamContainer = document.querySelector(`[data-team="${teamNumber}"] .selected-players`);
-            
-            const playerElement = document.createElement('div');
-            playerElement.className = 'flex items-center justify-between p-3 bg-white rounded-lg border border-gray-200 shadow-sm';
-            playerElement.dataset.playerId = selectedPlayer.id; // Store the player ID
-            playerElement.innerHTML = `
-                <div class="flex items-center gap-3">
-                    <img src="${selectedPlayer.Headshot}" class="rounded-full w-10 h-10 object-cover">
-                    <div>
-                        <div class="font-medium text-gray-900">${selectedPlayer.Name}</div>
-                        <div class="text-sm text-gray-500">${selectedPlayer.Team} • ${selectedPlayer.Position}</div>
-                    </div>
-                </div>
-                <div class="flex items-center gap-3">
-                    <div class="text-sm font-medium ${selectedPlayer.trend === 'up' ? 'text-green-600' : selectedPlayer.trend === 'down' ? 'text-red-600' : 'text-gray-600'}">
-                        ${selectedPlayer.Value}
-                        ${selectedPlayer.trend === 'up' ? '↑' : selectedPlayer.trend === 'down' ? '↓' : ''}
-                    </div>
-                    <button class="text-gray-400 hover:text-red-500" onclick="removePlayer(this, '${teamNumber}')">×</button>
-                </div>
-            `;
-            
-            teamContainer.appendChild(playerElement);
-            
-            // Update after player is added
-            updateTotalPieces(teamNumber);
-            updateTradeValues();
-        }
-    });
-
-    // Also clear search when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!searchInput.contains(e.target) && !suggestions.contains(e.target)) {
-            clearSearch();
-        }
-    });
-
-    searchInput.addEventListener('input', (e) => {
-        const searchTerm = e.target.value.toLowerCase().trim();
-        
-        if (searchTerm.length < 2) {
-            suggestions.innerHTML = '';
-            return;
-        }
-
-        const matches = ALL_PLAYERS.filter(player => {
-            const playerName = player.Name.toLowerCase();
-            const playerNameWords = playerName.split(' ');
-            
-            if (playerName === searchTerm) return true;
-            if (playerNameWords.some(word => word.startsWith(searchTerm))) return true;
-            if (playerName.startsWith(searchTerm)) return true;
-            if (searchTerm.length >= 3 && playerName.includes(searchTerm)) return true;
-            
-            return false;
-        }).slice(0, 5);
-
-        console.log('Search matches with full details:', matches.map(p => ({
-            id: p.id,
-            name: p.Name,
-            position: p.Position,
-            team: p.Team,
-            value: p.Value
-        })));
-
-        suggestions.innerHTML = matches.map(player => `
-            <div class="player-option p-3 hover:bg-gray-50 cursor-pointer flex items-center justify-between group" 
-                 data-player-id="${player.id}">
-                <div class="flex items-center gap-3">
-                    <img src="${player.Headshot}" 
-                         class="rounded-full w-10 h-10 object-cover"
-                         alt="${player.Name}">
-                    <div>
-                        <div class="font-medium text-gray-900">${player.Name}</div>
-                        <div class="text-sm text-gray-500">${player.Team} • ${player.Position}</div>
-                    </div>
-                </div>
-                <div class="text-sm font-medium ${player.trend === 'up' ? 'text-green-600' : player.trend === 'down' ? 'text-red-600' : 'text-gray-600'}">
-                    ${player.Value}
-                    ${player.trend === 'up' ? '↑' : player.trend === 'down' ? '↓' : ''}
-                </div>
-            </div>
-        `).join('');
-    });
 }
 
-// Add these functions near the top of the file
-function calculateRawAdjustment(playerValue, topValue, maxValue) {
-    // Similar to the Python example but tweaked for our scale
-    return playerValue * (
-        0.1 + 
-        0.2 * Math.pow(playerValue / maxValue, 8) + 
-        0.1 * Math.pow(playerValue / topValue, 1.3) + 
-        0.1 * Math.pow(playerValue / (maxValue + 2000), 1.28)
-    );
-}
-
-function calculateTeamAdjustment(players) {
-    if (!players.length) return 0;
+function updateTotalPieces(teamNumber) {
+    const players = Array.from(document.querySelector(`[data-team="${teamNumber}"] .selected-players`).children);
+    const count = players.length;
     
-    // Find the highest value player in the trade
-    const allValues = players.map(p => parseInt(p.Value));
-    const topValue = Math.max(...allValues);
+    const totalPiecesEl = document.querySelector(`.total-pieces-${teamNumber}`);
+    const breakdownEl = document.querySelector(`.pieces-breakdown-${teamNumber}`);
     
-    // Use the highest value in our dataset as maxValue
-    const maxValue = Math.max(...ALL_PLAYERS.map(p => parseInt(p.Value)));
-    
-    // Calculate total adjustment
-    return players.reduce((total, player) => {
-        return total + calculateRawAdjustment(
-            parseInt(player.Value), 
-            topValue, 
-            maxValue
-        );
-    }, 0);
-}
-
-function updateTradeValues() {
-    // Get all required elements first and check if they exist
-    const elements = {
-        tradeBar: document.querySelector('.trade-bar'),
-        tradeMessageContainer: document.querySelector('.trade-message-container'),
-        tradeMessage: document.querySelector('.trade-message'),
-        differenceMessage: document.querySelector('.difference-message'),
-        arrow: document.querySelector('.arrow-icon'),
-        team1Value: document.querySelector('.team-1-value'),
-        team2Value: document.querySelector('.team-2-value')
-    };
-
-    // Check if essential elements exist (only the ones we need for basic functionality)
-    if (!elements.team1Value || !elements.team2Value) {
-        console.error('Missing essential elements for value display');
+    if (count === 0) {
+        totalPiecesEl.style.display = 'none';
+        breakdownEl.style.display = 'none';
         return;
     }
 
-    // Log all selected players in DOM
-    console.log('Team 1 DOM elements:', 
-        Array.from(document.querySelector('[data-team="1"] .selected-players').children)
-            .map(el => ({
-                name: el.querySelector('.font-medium').textContent,
-                valueText: el.querySelector('.text-sm.font-medium').textContent,
-                rawValueElement: el.querySelector('.text-sm.font-medium')
-            }))
-    );
-
-    console.log('Team 2 DOM elements:', 
-        Array.from(document.querySelector('[data-team="2"] .selected-players').children)
-            .map(el => ({
-                name: el.querySelector('.font-medium').textContent,
-                valueText: el.querySelector('.text-sm.font-medium').textContent,
-                rawValueElement: el.querySelector('.text-sm.font-medium')
-            }))
-    );
-
-    // Get players and calculate values
-    const team1Players = Array.from(
-        document.querySelector('[data-team="1"] .selected-players').children
-    ).map(el => {
-        const playerName = el.querySelector('.font-medium').textContent;
-        const valueEl = el.querySelector('.text-sm.font-medium');
-        console.log('Team 1 Player Element:', {
-            name: playerName,
-            valueElement: valueEl,
-            valueText: valueEl?.textContent,
-            fullElement: el.innerHTML
-        });
-        
-        const playerValue = valueEl?.textContent.trim().split('\n')[0];
-        const player = ALL_PLAYERS.find(p => p.Name === playerName);
-        console.log('Found player in ALL_PLAYERS:', player);
-        return player;
-    }).filter(Boolean);
-
-    const team2Players = Array.from(
-        document.querySelector('[data-team="2"] .selected-players').children
-    ).map(el => {
-        const playerName = el.querySelector('.font-medium').textContent;
-        const valueEl = el.querySelector('.text-sm.font-medium');
-        console.log('Team 2 Player Element:', {
-            name: playerName,
-            valueElement: valueEl,
-            valueText: valueEl?.textContent,
-            fullElement: el.innerHTML
-        });
-        
-        const playerValue = valueEl?.textContent.trim().split('\n')[0];
-        const player = ALL_PLAYERS.find(p => p.Name === playerName);
-        console.log('Found player in ALL_PLAYERS:', player);
-        return player;
-    }).filter(Boolean);
-
-    // Calculate values
-    const team1RawValue = team1Players.reduce((sum, p) => {
-        console.log('Team 1 adding value:', {
-            player: p.Name,
-            value: p.Value,
-            currentSum: sum
-        });
-        return sum + parseInt(p.Value || 0);
-    }, 0);
-
-    const team2RawValue = team2Players.reduce((sum, p) => {
-        console.log('Team 2 adding value:', {
-            player: p.Name,
-            value: p.Value,
-            currentSum: sum
-        });
-        return sum + parseInt(p.Value || 0);
-    }, 0);
-
-    console.log('Final Raw Values:', {
-        team1: team1RawValue,
-        team2: team2RawValue,
-        team1Players,
-        team2Players
-    });
-
-    // Calculate adjustments
-    const team1Adjustment = Math.round(calculateTeamAdjustment(team1Players));
-    const team2Adjustment = Math.round(calculateTeamAdjustment(team2Players));
+    // Show and update the elements
+    totalPiecesEl.style.display = 'block';
+    breakdownEl.style.display = 'block';
     
-    // Calculate final values
-    const team1FinalValue = team1RawValue + team1Adjustment;
-    const team2FinalValue = team2RawValue + team2Adjustment;
-
-    console.log('Final Values after adjustments:', {
-        team1: {
-            raw: team1RawValue,
-            adjustment: team1Adjustment,
-            final: team1FinalValue
-        },
-        team2: {
-            raw: team2RawValue,
-            adjustment: team2Adjustment,
-            final: team2FinalValue
-        }
+    // Update total pieces count
+    totalPiecesEl.textContent = `${count} Total Pieces`;
+    
+    // Get positions for breakdown
+    const positions = players.map(el => {
+        const positionText = el.querySelector('.text-gray-500').textContent;
+        return positionText.split('•')[1].trim();
     });
-
-    // Update the UI with the values
-    elements.team1Value.textContent = team1FinalValue.toLocaleString();
-    elements.team2Value.textContent = team2FinalValue.toLocaleString();
-
-    // Only proceed with trade message updates if all required elements exist
-    if (elements.tradeMessageContainer && elements.tradeMessage && elements.differenceMessage && elements.arrow) {
-        // Update value adjustments display
-        const valueAdjustment1 = document.querySelector('.value-adjustment-container-1');
-        const valueAdjustment2 = document.querySelector('.value-adjustment-container-2');
-        
-        if (team1Adjustment > 0) {
-            valueAdjustment1.style.display = 'block';
-            valueAdjustment1.querySelector('.value-adjustment-1').textContent = `+${team1Adjustment.toLocaleString()}`;
-        } else {
-            valueAdjustment1.style.display = 'none';
-        }
-
-        if (team2Adjustment > 0) {
-            valueAdjustment2.style.display = 'block';
-            valueAdjustment2.querySelector('.value-adjustment-2').textContent = `+${team2Adjustment.toLocaleString()}`;
-        } else {
-            valueAdjustment2.style.display = 'none';
-        }
-
-        // Handle trade fairness message
-        const difference = Math.abs(team1FinalValue - team2FinalValue);
-        
-        if (team1Players.length === 0 || team2Players.length === 0) {
-            elements.tradeMessageContainer.style.display = 'none';
-            return;
-        }
-
-        elements.tradeMessageContainer.style.display = 'block';
-        
-        if (difference <= 200) {
-            // Fair trade
-            elements.tradeMessageContainer.className = 'bg-blue-50 rounded p-4 mt-4 text-center trade-message-container';
-            elements.tradeMessage.className = 'text-blue-600';
-            elements.tradeMessage.textContent = 'Fair Trade';
-            elements.differenceMessage.style.display = 'none';
-            elements.arrow.style.display = 'none';
-            elements.tradeBar.className = 'absolute inset-0 trade-bar transition-all duration-300 bg-blue-500';
-        } else {
-            // Unfair trade
-            elements.tradeMessageContainer.className = 'bg-red-50 rounded p-4 mt-4 text-center trade-message-container';
-            const favoredTeam = team1FinalValue > team2FinalValue ? 1 : 2;
-            
-            elements.tradeMessage.className = 'text-red-600';
-            elements.tradeMessage.textContent = `Favors Team ${favoredTeam}`;
-            elements.differenceMessage.style.display = 'block';
-            elements.differenceMessage.textContent = 
-                `Add a player worth ${difference.toLocaleString()} to Team ${favoredTeam === 1 ? 2 : 1} to even trade`;
-            
-            elements.arrow.style.display = 'inline';
-            elements.arrow.style.transform = favoredTeam === 1 ? 'rotate(0deg)' : 'rotate(180deg)';
-            elements.tradeBar.className = 'absolute inset-0 trade-bar transition-all duration-300 bg-red-500';
-        }
-    } else {
-        console.warn('Trade message elements missing, skipping message updates');
-    }
+    
+    // Create position breakdown text
+    breakdownEl.textContent = positions.join(', ');
 }
 
-// Add this new function to handle player removal
-function removePlayer(button, teamNumber) {
-    const playerElement = button.closest('.flex').parentElement;
-    playerElement.remove();
+// Add this function back
+function createKTCModal() {
+    const modal = document.createElement('div');
+    modal.className = 'fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4';
+    modal.id = 'ktc-modal';
     
-    // Reset the team value if no players remain
-    const teamContainer = document.querySelector(`[data-team="${teamNumber}"] .selected-players`);
-    if (teamContainer.children.length === 0) {
-        document.querySelector(`.team-${teamNumber}-value`).textContent = '0';
-        document.querySelector(`.value-adjustment-container-${teamNumber}`).style.display = 'none';
-    }
-    
-    updateTotalPieces(teamNumber);
-    updateTradeValues();
+    modal.innerHTML = `
+        <div class="bg-white rounded-xl shadow-xl w-full max-w-4xl mx-auto">
+            <div class="p-4 sm:p-6">
+                <div class="max-w-2xl mx-auto">
+                    <h2 class="text-xl sm:text-2xl font-bold text-center mb-2">Your Thoughts?</h2>
+                    <p class="text-center text-gray-600 text-sm mb-1">
+                        KTC's values are crowdsourced from users like you.
+                    </p>
+                    <p class="text-center text-gray-600 text-sm mb-3">
+                        <span class="font-medium">Start</span> the most valuable, 
+                        <span class="font-medium">Bench</span> the second in value, and 
+                        <span class="font-medium">Cut</span> the least valuable.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="playerCards">
+                        <!-- Player cards will be inserted here -->
+                    </div>
+
+                    <div class="mt-3 text-center">
+                        <button id="submit-ktc" 
+                                class="w-full max-w-md bg-blue-600 text-white px-8 py-2 rounded-lg 
+                                       hover:bg-blue-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed">
+                            Submit for Dynasty Baseball
+                        </button>
+                        <p class="mt-1 text-sm text-blue-600 hover:underline cursor-pointer" id="skip-players">
+                            I don't know all of these players
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+
+    return modal;
 }
