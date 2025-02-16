@@ -8,10 +8,10 @@ async function loadRankings(positionFilter = 'Overall') {
             allPlayers = await response.json();
         }
 
-        // Filter and sort players
+        // Filter and sort players by Value
         let filteredPlayers = allPlayers
-            .filter(player => player.Rank) // Only show ranked players
-            .sort((a, b) => parseInt(a.Rank) - parseInt(b.Rank));
+            .filter(player => player.Value) // Only show players with value
+            .sort((a, b) => parseInt(b.Value) - parseInt(a.Value)); // Sort by value descending
 
         // Apply position filter
         if (positionFilter !== 'Overall') {
@@ -31,10 +31,10 @@ async function loadRankings(positionFilter = 'Overall') {
         }
 
         const tbody = document.getElementById('rankings-body');
-        tbody.innerHTML = filteredPlayers.map(player => `
+        tbody.innerHTML = filteredPlayers.map((player, index) => `
             <tr class="hover:bg-gray-50">
                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    ${player.Rank}
+                    ${index + 1}
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
                     <div class="flex items-center">
@@ -42,6 +42,16 @@ async function loadRankings(positionFilter = 'Overall') {
                         <div class="ml-4">
                             <div class="text-sm font-medium text-gray-900">${player.Name}</div>
                         </div>
+                    </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="flex items-center gap-1">
+                        <span class="text-sm text-gray-900">${player.Value}</span>
+                        <!-- Temporary random arrows, will be replaced with real logic later -->
+                        ${Math.random() > 0.5 ? 
+                            '<span class="text-green-600">↑</span>' : 
+                            '<span class="text-red-600">↓</span>'
+                        }
                     </div>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
