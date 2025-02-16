@@ -1,0 +1,43 @@
+(index):64 cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation
+(anonymous) @ (index):64
+(anonymous) @ (index):64
+app.js:39 First few players loaded: (3) [{…}, {…}, {…}]
+app.js:335 Players loaded: 1006
+app.js:63 Creating card for player: {id: '259', name: 'David Peterson', value: 7668}
+app.js:63 Creating card for player: {id: '194', name: 'Brendan Donovan', value: 8253}
+app.js:63 Creating card for player: {id: '829', name: 'Jose Fermin', value: 2538}
+app.js:404 Starting vote processing for players: (3) [{…}, {…}, {…}]
+app.js:420 
+Processing matchup: Brendan Donovan (Start) vs David Peterson (Bench)
+app.js:421 Current values - Brendan Donovan: 8253, David Peterson: 7668
+app.js:426 Expected scores - Brendan Donovan: 0.967, David Peterson: 0.033
+app.js:431 New values - Brendan Donovan: 8254, David Peterson: 7667
+app.js:420 
+Processing matchup: Brendan Donovan (Start) vs Jose Fermin (cut)
+app.js:421 Current values - Brendan Donovan: 8253, Jose Fermin: 2538
+app.js:426 Expected scores - Brendan Donovan: 1.000, Jose Fermin: 0.000
+app.js:431 New values - Brendan Donovan: 8253, Jose Fermin: 2538
+app.js:420 
+Processing matchup: David Peterson (Bench) vs Jose Fermin (cut)
+app.js:421 Current values - David Peterson: 7668, Jose Fermin: 2538
+app.js:426 Expected scores - David Peterson: 1.000, Jose Fermin: 0.000
+app.js:431 New values - David Peterson: 7668, Jose Fermin: 2538
+app.js:452 
+Final updates to be applied: (3) [{…}, {…}, {…}]
+app.js:460 Updating local player Brendan Donovan (ID: 194) value from 8253 to 8253
+app.js:460 Updating local player David Peterson (ID: 259) value from 7668 to 7668
+app.js:460 Updating local player Jose Fermin (ID: 829) value from 2538 to 2538
+app.js:468 Sending updates to server...
+app.js:469 
+        
+        
+       POST http://localhost:5500/api/updatePlayerValues net::ERR_ABORTED 405 (Method Not Allowed)
+updatePlayerValues @ app.js:469
+(anonymous) @ app.js:198
+app.js:485 Error updating player values: Error: Server responded with status: 405
+    at updatePlayerValues (app.js:478:19)
+    at async HTMLButtonElement.<anonymous> (app.js:198:13)
+updatePlayerValues @ app.js:485
+await in updatePlayerValues
+(anonymous) @ app.js:198
+app.js:611 Search matches for term: ky (5) [{…}, {…}, {…}, {…}, {…}]0: {id: '8', name: 'Kyle Tucker'}1: {id: '42', name: 'Kyle Schwarber'}2: {id: '243', name: 'Kyle Manzardo'}3: {id: '275', name: 'Kyle Harrison'}4: {id: '347', name: 'Kyle Higashioka'}length: 5[[Prototype]]: Array(0)
