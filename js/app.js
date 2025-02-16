@@ -100,31 +100,33 @@ async function getRandomPlayers(count = 3) {
 // Update the player card creation to use the new data structure
 function createPlayerCard(player, index) {
     return `
-        <div class="border rounded-lg p-6 bg-gray-50" data-player-id="${player.id}">
-            <div class="text-center">
+        <div class="border rounded-lg p-3 sm:p-6 bg-gray-50" data-player-id="${player.id}">
+            <div class="flex sm:block items-center sm:text-center">
                 <img src="${player.Headshot}" alt="${player.Name}" 
-                     class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-white shadow-lg
+                     class="w-16 h-16 sm:w-32 sm:h-32 sm:mx-auto rounded-full object-cover border-4 border-white shadow-lg
                             transform transition-transform duration-500 hover:scale-105">
-                <h3 class="text-xl font-bold mt-4 text-gray-900">${player.Name}</h3>
-                <p class="text-gray-500 mb-1">${player.Team} • ${player.Position}</p>
-                <p class="text-gray-400 text-sm mb-4">${player.Age} y/o • ${player.Hand}</p>
-                <div class="flex flex-col gap-2">
-                    <button onclick="handleVote(${player.id}, 'keep')" 
-                            class="w-full py-2 bg-[#98e5a7] rounded-lg transition-all duration-300 
-                                   transform hover:-translate-y-[2px] hover:shadow-lg">
-                        Keep
-                    </button>
-                    <button onclick="handleVote(${player.id}, 'trade')" 
-                            class="w-full py-2 bg-[#f3d676] rounded-lg transition-all duration-300
-                                   transform hover:-translate-y-[2px] hover:shadow-lg">
-                        Trade
-                    </button>
-                    <button onclick="handleVote(${player.id}, 'cut')" 
-                            class="w-full py-2 bg-[#f1a7a7] rounded-lg transition-all duration-300
-                                   transform hover:-translate-y-[2px] hover:shadow-lg">
-                        Cut
-                    </button>
+                <div class="ml-3 sm:ml-0">
+                    <h3 class="text-lg sm:text-xl font-bold sm:mt-4 text-gray-900">${player.Name}</h3>
+                    <p class="text-gray-500 text-sm mb-1">${player.Team} • ${player.Position}</p>
+                    <p class="text-gray-400 text-xs sm:text-sm mb-2 sm:mb-4">${player.Age} y/o • ${player.Hand}</p>
                 </div>
+            </div>
+            <div class="grid grid-cols-3 gap-2 mt-2">
+                <button onclick="handleVote(${player.id}, 'keep')" 
+                        class="py-2 bg-[#98e5a7] rounded-lg transition-all duration-300 
+                               transform hover:-translate-y-[2px] hover:shadow-lg text-sm">
+                    Keep
+                </button>
+                <button onclick="handleVote(${player.id}, 'trade')" 
+                        class="py-2 bg-[#f3d676] rounded-lg transition-all duration-300
+                               transform hover:-translate-y-[2px] hover:shadow-lg text-sm">
+                    Trade
+                </button>
+                <button onclick="handleVote(${player.id}, 'cut')" 
+                        class="py-2 bg-[#f1a7a7] rounded-lg transition-all duration-300
+                               transform hover:-translate-y-[2px] hover:shadow-lg text-sm">
+                    Cut
+                </button>
             </div>
         </div>
     `;
@@ -344,30 +346,30 @@ function createKTCModal() {
     modal.id = 'ktc-modal';
     
     modal.innerHTML = `
-        <div class="bg-white rounded-xl shadow-xl w-full max-w-4xl mx-auto overflow-y-auto max-h-[90vh]">
-            <div class="p-4 sm:p-8">
+        <div class="bg-white rounded-xl shadow-xl w-full max-w-4xl mx-auto h-[95vh] flex flex-col">
+            <div class="p-4 flex-1 overflow-y-auto">
                 <div class="max-w-2xl mx-auto">
-                    <h2 class="text-2xl sm:text-3xl font-bold text-center mb-4">Your Thoughts?</h2>
-                    <p class="text-center text-gray-600 mb-2">
+                    <h2 class="text-xl sm:text-3xl font-bold text-center mb-2">Your Thoughts?</h2>
+                    <p class="text-center text-gray-600 text-sm sm:text-base mb-1">
                         KTC's values are crowdsourced from users like you.
                     </p>
-                    <p class="text-center text-gray-600 mb-8">
+                    <p class="text-center text-gray-600 text-sm sm:text-base mb-4">
                         <span class="font-medium">Keep</span> the most valuable, 
                         <span class="font-medium">Trade</span> the second in value, and 
                         <span class="font-medium">Cut</span> the least valuable.
                     </p>
                     
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8" id="playerCards">
+                    <div class="grid grid-cols-1 gap-3 sm:gap-8" id="playerCards">
                         <!-- Player cards will be inserted here -->
                     </div>
 
-                    <div class="mt-8 text-center">
+                    <div class="mt-4 sm:mt-8 text-center">
                         <button id="submit-ktc" 
                                 class="w-full max-w-md bg-blue-600 text-white px-8 py-3 rounded-lg 
                                        hover:bg-blue-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed">
                             Submit for Dynasty Baseball
                         </button>
-                        <p class="mt-4 text-sm text-blue-600 hover:underline cursor-pointer" id="skip-players">
+                        <p class="mt-2 text-sm text-blue-600 hover:underline cursor-pointer" id="skip-players">
                             I don't know all of these players
                         </p>
                     </div>
