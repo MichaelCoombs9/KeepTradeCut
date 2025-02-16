@@ -533,6 +533,14 @@ function updateTradeValues() {
     elements.differenceMessage.style.display = 'none';
     elements.arrow.style.display = 'none';
 
+    // Create or get the players-to-even container
+    let playersToEvenContainer = document.querySelector('.players-to-even-container');
+    if (!playersToEvenContainer) {
+        playersToEvenContainer = document.createElement('div');
+        playersToEvenContainer.className = 'players-to-even-container mt-4 bg-blue-50 rounded-lg border border-blue-100';
+        elements.tradeMessageContainer.parentNode.insertBefore(playersToEvenContainer, elements.tradeMessageContainer.nextSibling);
+    }
+
     // Update UI based on fairness
     if (difference <= 200) {
         console.log('Updating UI for fair trade');
@@ -541,6 +549,7 @@ function updateTradeValues() {
         elements.tradeMessage.textContent = 'Fair Trade';
         elements.tradeBar.className = 'absolute inset-0 trade-bar transition-all duration-300 bg-blue-500';
         elements.tradeBar.style.width = '50%';
+        playersToEvenContainer.style.display = 'none';
     } else {
         console.log('Updating UI for unfair trade');
         elements.tradeMessageContainer.className = 'bg-red-50 rounded p-4 mt-4 text-center trade-message-container';
@@ -560,6 +569,48 @@ function updateTradeValues() {
         const totalValue = team1FinalValue + team2FinalValue;
         const team1Percentage = (team1FinalValue / totalValue) * 100;
         elements.tradeBar.style.width = `${team1Percentage}%`;
+
+        // Unfair trade - show suggested players
+        const targetValue = difference;
+
+        // Get IDs of players already in the trade
+        const existingPlayerIds = [...team1Players, ...team2Players].map(p => p.id);
+
+        // Find players close to the target value, excluding players already in the trade
+        const suggestedPlayers = ALL_PLAYERS
+            .filter(p => {
+                // Exclude players already in the trade
+                if (existingPlayerIds.includes(p.id)) return false;
+                
+                // Check if value is within 20% of target
+                return Math.abs(parseInt(p.Value) - targetValue) < targetValue * 0.2;
+            })
+            .sort((a, b) => Math.abs(parseInt(a.Value) - targetValue) - Math.abs(parseInt(b.Value) - targetValue))
+            .slice(0, 4); // Get top 4 closest matches
+
+        playersToEvenContainer.style.display = 'block';
+        playersToEvenContainer.innerHTML = `
+            <div class="p-4">
+                <div class="text-blue-600 font-medium mb-2">Players to Even Trade:</div>
+                <div class="space-y-2">
+                    ${suggestedPlayers.map(player => `
+                        <div class="flex items-center justify-between bg-white p-3 rounded-lg border border-gray-200">
+                            <div class="flex items-center gap-2">
+                                <img src="${player.Headshot}" class="w-8 h-8 rounded-full object-cover">
+                                <div>
+                                    <div class="font-medium">${player.Name}</div>
+                                    <div class="text-sm text-gray-500">${player.Team} • ${player.Position}</div>
+                                </div>
+                            </div>
+                            <div class="text-sm font-medium text-gray-600">${player.Value}</div>
+                        </div>
+                    `).join('')}
+                </div>
+                <div class="mt-2 text-center">
+                    <a href="/dynasty" class="text-blue-600 text-sm hover:underline">View in rankings</a>
+                </div>
+            </div>
+        `;
     }
 
     // Log final state
