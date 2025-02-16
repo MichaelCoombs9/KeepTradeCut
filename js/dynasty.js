@@ -47,11 +47,6 @@ async function loadRankings(positionFilter = 'Overall') {
                 <td class="px-6 py-4 whitespace-nowrap">
                     <div class="flex items-center gap-1">
                         <span class="text-sm text-gray-900">${player.Value}</span>
-                        <!-- Temporary random arrows, will be replaced with real logic later -->
-                        ${Math.random() > 0.5 ? 
-                            '<span class="text-green-600">↑</span>' : 
-                            '<span class="text-red-600">↓</span>'
-                        }
                     </div>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">

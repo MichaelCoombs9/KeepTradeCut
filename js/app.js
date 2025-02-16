@@ -241,10 +241,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                             <div class="text-sm text-gray-500">${player.Team} • ${player.Position}</div>
                         </div>
                     </div>
-                    <div class="text-sm font-medium ${player.trend === 'up' ? 'text-green-600' : player.trend === 'down' ? 'text-red-600' : 'text-gray-600'}">
-                        ${player.Value}
-                        ${player.trend === 'up' ? '↑' : player.trend === 'down' ? '↓' : ''}
-                    </div>
+                    <div class="text-sm font-medium text-gray-600">${player.Value}</div>
                 </div>
             `).join('');
         }
@@ -306,9 +303,8 @@ function setupPlayerSearch(container) {
                     </div>
                 </div>
                 <div class="flex items-center gap-3">
-                    <div class="text-sm font-medium ${selectedPlayer.trend === 'up' ? 'text-green-600' : selectedPlayer.trend === 'down' ? 'text-red-600' : 'text-gray-600'}">
+                    <div class="text-sm font-medium text-gray-600">
                         ${selectedPlayer.Value}
-                        ${selectedPlayer.trend === 'up' ? '↑' : selectedPlayer.trend === 'down' ? '↓' : ''}
                     </div>
                     <button class="text-gray-400 hover:text-red-500" onclick="removePlayer(this, '${teamNumber}')">×</button>
                 </div>
@@ -363,9 +359,8 @@ function setupPlayerSearch(container) {
                         <div class="text-sm text-gray-500">${player.Team} • ${player.Position}</div>
                     </div>
                 </div>
-                <div class="text-sm font-medium ${player.trend === 'up' ? 'text-green-600' : player.trend === 'down' ? 'text-red-600' : 'text-gray-600'}">
+                <div class="text-sm font-medium text-gray-600">
                     ${player.Value}
-                    ${player.trend === 'up' ? '↑' : player.trend === 'down' ? '↓' : ''}
                 </div>
             </div>
         `).join('');
