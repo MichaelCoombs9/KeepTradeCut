@@ -2809,14 +2809,6 @@
     },
     {
       "Age": "31",
-      "Team": "CWS",
-      "Name": "Paul DeJong",
-      "Position": "SS",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "439"
-    },
-    {
-      "Age": "31",
       "Team": "KC",
       "Name": "Paul DeJong",
       "Position": "SS",
@@ -3246,16 +3238,6 @@
       "Rank": "526"
     },
     {
-      "Number": "18",
-      "Hand": "R",
-      "Age": "36",
-      "Team": "STL",
-      "Name": "MILes Mikolas",
-      "Position": "SP",
-      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/a/a6fddfb0_mlbam.jpg",
-      "Rank": "526"
-    },
-    {
       "Number": "251",
       "Hand": "R",
       "Age": "28",
@@ -3300,24 +3282,6 @@
       "Rank": "532"
     },
     {
-      "Number": "6",
-      "Hand": "R",
-      "Age": "28",
-      "Team": "WSH",
-      "Name": "Jake Irvin",
-      "Position": "SP",
-      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/2/2f51c7ab_mlbam.jpg",
-      "Rank": "532"
-    },
-    {
-      "Age": "40",
-      "Team": "TOR",
-      "Name": "Justin Turner",
-      "Position": "1B",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "533"
-    },
-    {
       "Age": "40",
       "Team": "SEA",
       "Name": "Justin Turner",
@@ -3337,24 +3301,8 @@
     },
     {
       "Age": "29",
-      "Team": "TB",
-      "Name": "Amed RosARIo",
-      "Position": "2B",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "535"
-    },
-    {
-      "Age": "29",
-      "Team": "CIN",
-      "Name": "Amed RosARIo",
-      "Position": "2B",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "535"
-    },
-    {
-      "Age": "29",
       "Team": "LAD",
-      "Name": "Amed RosARIo",
+      "Name": "Amed Rosario",
       "Position": "2B",
       "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
       "Rank": "535"
@@ -3372,14 +3320,6 @@
     {
       "Age": "25",
       "Team": "CWS",
-      "Name": "Miguel Vargas",
-      "Position": "3B",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "540"
-    },
-    {
-      "Age": "25",
-      "Team": "LAD",
       "Name": "Miguel Vargas",
       "Position": "3B",
       "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
@@ -3407,15 +3347,7 @@
     },
     {
       "Age": "30",
-      "Team": "SEA",
-      "Name": "Ty France",
-      "Position": "1B",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "546"
-    },
-    {
-      "Age": "30",
-      "Team": "CIN",
+      "Team": "MIN",
       "Name": "Ty France",
       "Position": "1B",
       "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/5/55dca75f_mlbam.jpg",
@@ -3482,16 +3414,6 @@
       "Position": "SP",
       "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
       "Rank": "559"
-    },
-    {
-      "Number": "27",
-      "Hand": "L",
-      "Age": "25",
-      "Team": "WSH",
-      "Name": "Mitchell Parker",
-      "Position": "SP",
-      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/5/596325b0_mlbam.jpg",
-      "Rank": "560"
     },
     {
       "Number": "27",
@@ -3663,23 +3585,7 @@
     },
     {
       "Age": "36",
-      "Team": "CWS",
-      "Name": "Tommy Pham",
-      "Position": "OF",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "591"
-    },
-    {
-      "Age": "36",
       "Team": "KC",
-      "Name": "Tommy Pham",
-      "Position": "OF",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "591"
-    },
-    {
-      "Age": "36",
-      "Team": "STL",
       "Name": "Tommy Pham",
       "Position": "OF",
       "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
@@ -3752,14 +3658,6 @@
       "Rank": "605"
     },
     {
-      "Age": "27",
-      "Team": "BAL",
-      "Name": "Kyle Stowers",
-      "Position": "OF",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "605"
-    },
-    {
       "Age": "26",
       "Team": "TOR",
       "Name": "Will Wagner",
@@ -3773,14 +3671,6 @@
       "Name": "Joey Loperfido",
       "Position": "OF",
       "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/1/166068e5_mlbam.jpg",
-      "Rank": "609"
-    },
-    {
-      "Age": "25",
-      "Team": "HOU",
-      "Name": "Joey Loperfido",
-      "Position": "OF",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
       "Rank": "609"
     },
     {
@@ -3829,15 +3719,7 @@
     },
     {
       "Age": "33",
-      "Team": "DET",
-      "Name": "Gio Urshela",
-      "Position": "3B",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "617"
-    },
-    {
-      "Age": "33",
-      "Team": "ATL",
+      "Team": "OAK",
       "Name": "Gio Urshela",
       "Position": "3B",
       "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
@@ -3855,15 +3737,7 @@
     },
     {
       "Age": "30",
-      "Team": "DET",
-      "Name": "Carson Kelly",
-      "Position": "C",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "620"
-    },
-    {
-      "Age": "30",
-      "Team": "TEX",
+      "Team": "CHC",
       "Name": "Carson Kelly",
       "Position": "C",
       "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
@@ -3884,17 +3758,7 @@
       "Hand": "R",
       "Age": "34",
       "Team": "CHC",
-      "Name": "COLin Rea",
-      "Position": "SP",
-      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/9/972e9d50_mlbam.jpg",
-      "Rank": "623"
-    },
-    {
-      "Number": "20",
-      "Hand": "R",
-      "Age": "34",
-      "Team": "CHC",
-      "Name": "COLin Rea",
+      "Name": "Colin Rea",
       "Position": "SP",
       "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/9/972e9d50_mlbam.jpg",
       "Rank": "623"
@@ -4046,21 +3910,11 @@
       "Rank": "656"
     },
     {
-      "Number": "19",
-      "Hand": "R",
-      "Age": "28",
-      "Team": "NYM",
-      "Name": "Griffin Canning",
-      "Position": "SP",
-      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/1/148e6900_mlbam.jpg",
-      "Rank": "656"
-    },
-    {
       "Number": "284",
       "Hand": "R",
       "Age": "29",
       "Team": "PIT",
-      "Name": "COLin Holderman",
+      "Name": "Colin Holderman",
       "Position": "RP",
       "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
       "Rank": "657"
@@ -4156,14 +4010,6 @@
     {
       "Age": "34",
       "Team": "COL",
-      "Name": "Elias Diaz",
-      "Position": "C",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "675"
-    },
-    {
-      "Age": "34",
-      "Team": "SD",
       "Name": "Elias Diaz",
       "Position": "C",
       "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
@@ -4433,15 +4279,7 @@
     },
     {
       "Age": "29",
-      "Team": "BAL",
-      "Name": "Austin Hays",
-      "Position": "OF",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "760"
-    },
-    {
-      "Age": "29",
-      "Team": "PHI",
+      "Team": "CIN",
       "Name": "Austin Hays",
       "Position": "OF",
       "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
@@ -4947,14 +4785,6 @@
     },
     {
       "Age": "36",
-      "Team": "DET",
-      "Name": "Mark Canha",
-      "Position": "OF",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "939"
-    },
-    {
-      "Age": "36",
       "Team": "SF",
       "Name": "Mark Canha",
       "Position": "OF",
@@ -5050,7 +4880,7 @@
     {
       "Age": "25",
       "Team": "SD",
-      "Name": "Eguy RosARIo",
+      "Name": "Eguy Rosario",
       "Position": "3B",
       "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
       "Rank": "1007"
@@ -5181,15 +5011,7 @@
     },
     {
       "Age": "30",
-      "Team": "ATL",
-      "Name": "Ramon Laureano",
-      "Position": "OF",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "1044"
-    },
-    {
-      "Age": "30",
-      "Team": "CLE",
+      "Team": "BAL",
       "Name": "Ramon Laureano",
       "Position": "OF",
       "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
@@ -5597,14 +5419,6 @@
     },
     {
       "Age": "33",
-      "Team": "MIA",
-      "Name": "Christian Bethancourt",
-      "Position": "C",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "1153"
-    },
-    {
-      "Age": "33",
       "Team": "CHC",
       "Name": "Christian Bethancourt",
       "Position": "C",
@@ -5828,14 +5642,6 @@
       "Rank": "1206"
     },
     {
-      "Age": "33",
-      "Team": "BOS",
-      "Name": "Tyler Heineman",
-      "Position": "C",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "1206"
-    },
-    {
       "Number": "337",
       "Hand": "L",
       "Age": "29",
@@ -5938,22 +5744,6 @@
       "Rank": "1224"
     },
     {
-      "Age": "29",
-      "Team": "TEX",
-      "Name": "Derek Hill",
-      "Position": "OF",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "1224"
-    },
-    {
-      "Age": "29",
-      "Team": "SF",
-      "Name": "Derek Hill",
-      "Position": "OF",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "1224"
-    },
-    {
       "Age": "26",
       "Team": "PIT",
       "Name": "Billy Cook",
@@ -6014,14 +5804,6 @@
     {
       "Age": "27",
       "Team": "LAD",
-      "Name": "Taylor Trammell",
-      "Position": "OF",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "1236"
-    },
-    {
-      "Age": "27",
-      "Team": "NYY",
       "Name": "Taylor Trammell",
       "Position": "OF",
       "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
@@ -6106,14 +5888,6 @@
     {
       "Age": "35",
       "Team": "LAD",
-      "Name": "Jason Heyward",
-      "Position": "OF",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "1249"
-    },
-    {
-      "Age": "35",
-      "Team": "HOU",
       "Name": "Jason Heyward",
       "Position": "OF",
       "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
@@ -6916,18 +6690,10 @@
     {
       "Age": "24",
       "Team": "CHC",
-      "Name": "Alexander CanARIo",
+      "Name": "Alexander Canario",
       "Position": "OF",
       "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
       "Rank": "1356"
-    },
-    {
-      "Age": "29",
-      "Team": "TOR",
-      "Name": "Cavan Biggio",
-      "Position": "2B",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "1357"
     },
     {
       "Age": "29",
