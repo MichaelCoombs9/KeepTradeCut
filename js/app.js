@@ -211,7 +211,12 @@ async function showKTCModal() {
 // Make handleVote available globally
 window.handleVote = handleVote;
 
-// Update the document ready handler
+// Add this function to sort players by value
+function sortPlayersByValue(players) {
+    return [...players].sort((a, b) => parseInt(b.Value) - parseInt(a.Value));
+}
+
+// Update the document ready handler to include sorting
 document.addEventListener('DOMContentLoaded', async () => {
     // Load players first
     const loaded = await loadPlayers();
@@ -220,6 +225,30 @@ document.addEventListener('DOMContentLoaded', async () => {
         return;
     }
     console.log('Players loaded:', ALL_PLAYERS.length);
+
+    // Sort players by value for dynasty rankings
+    if (window.location.pathname.includes('dynasty')) {
+        const sortedPlayers = sortPlayersByValue(ALL_PLAYERS);
+        const container = document.querySelector('.player-rankings');
+        if (container) {
+            container.innerHTML = sortedPlayers.map((player, index) => `
+                <div class="flex items-center justify-between p-4 hover:bg-gray-50">
+                    <div class="flex items-center gap-4">
+                        <div class="text-gray-400 w-8">${index + 1}</div>
+                        <img src="${player.Headshot}" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <div class="font-medium text-gray-900">${player.Name}</div>
+                            <div class="text-sm text-gray-500">${player.Team} • ${player.Position}</div>
+                        </div>
+                    </div>
+                    <div class="text-sm font-medium ${player.trend === 'up' ? 'text-green-600' : player.trend === 'down' ? 'text-red-600' : 'text-gray-600'}">
+                        ${player.Value}
+                        ${player.trend === 'up' ? '↑' : player.trend === 'down' ? '↓' : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+    }
 
     // Initialize search for both team sections
     document.querySelectorAll('.team-section').forEach(container => {
