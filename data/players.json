@@ -618,16 +618,6 @@
       "Rank": "91"
     },
     {
-      "Number": "15",
-      "Hand": "R",
-      "Age": "28",
-      "Team": "MIL",
-      "Name": "Freddy Peralta",
-      "Position": "SP",
-      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/7/71ab5f47_mlbam.jpg",
-      "Rank": "91"
-    },
-    {
       "Number": "31",
       "Hand": "R",
       "Age": "25",
@@ -1126,30 +1116,12 @@
       "Rank": "168"
     },
     {
-      "Number": "8",
-      "Hand": "L",
-      "Age": "28",
-      "Team": "PHI",
-      "Name": "Cristopher Sanchez",
-      "Position": "SP",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "168"
-    },
-    {
       "Age": "23",
       "Team": "NYM",
       "Name": "Francisco Alvarez",
       "Position": "C",
       "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
       "Rank": "170"
-    },
-    {
-      "Age": "25",
-      "Team": "TB",
-      "Name": "Isaac Paredes",
-      "Position": "3B",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "171"
     },
     {
       "Age": "25",
@@ -1175,14 +1147,6 @@
       "Name": "Luis Arraez",
       "Position": "1B",
       "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/1/136fd76e_mlbam.jpg",
-      "Rank": "173"
-    },
-    {
-      "Age": "27",
-      "Team": "MIA",
-      "Name": "Luis Arraez",
-      "Position": "1B",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
       "Rank": "173"
     },
     {
@@ -1276,16 +1240,6 @@
       "Position": "OF",
       "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
       "Rank": "189"
-    },
-    {
-      "Number": "9",
-      "Hand": "R",
-      "Age": "26",
-      "Team": "ARI",
-      "Name": "Brandon Pfaadt",
-      "Position": "SP",
-      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/4/4ffb4f07_mlbam.jpg",
-      "Rank": "190"
     },
     {
       "Number": "9",
@@ -1420,7 +1374,7 @@
       "Team": "LAD",
       "Name": "Max Muncy",
       "Position": "3B",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
+      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/6/65e6cf19_mlbam.jpg",
       "Rank": "212"
     },
     {
@@ -1428,15 +1382,7 @@
       "Team": "SF",
       "Name": "Jorge Soler",
       "Position": "OF",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "213"
-    },
-    {
-      "Age": "32",
-      "Team": "ATL",
-      "Name": "Jorge Soler",
-      "Position": "OF",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
+      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/1/16ed1b92_mlbam.jpg",
       "Rank": "213"
     },
     {
@@ -1444,7 +1390,7 @@
       "Team": "TB",
       "Name": "Brandon Lowe",
       "Position": "2B",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
+      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/0/01b371eb_mlbam.jpg",
       "Rank": "214"
     },
     {
@@ -1470,15 +1416,7 @@
       "Team": "SEA",
       "Name": "Victor Robles",
       "Position": "OF",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "218"
-    },
-    {
-      "Age": "27",
-      "Team": "WSH",
-      "Name": "Victor Robles",
-      "Position": "OF",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
+      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/b/bab8e489_mlbam.jpg",
       "Rank": "218"
     },
     {
@@ -1668,15 +1606,7 @@
       "Team": "MIA",
       "Name": "Connor Norby",
       "Position": "3B",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "248"
-    },
-    {
-      "Age": "24",
-      "Team": "BAL",
-      "Name": "Connor Norby",
-      "Position": "3B",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
+      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/4/43d88135_mlbam.jpg",
       "Rank": "248"
     },
     {
@@ -1695,16 +1625,6 @@
       "Name": "Ranger Suarez",
       "Position": "SP",
       "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/4/409b8a70_mlbam.jpg",
-      "Rank": "250"
-    },
-    {
-      "Number": "29",
-      "Hand": "L",
-      "Age": "29",
-      "Team": "PHI",
-      "Name": "Ranger Suarez",
-      "Position": "SP",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
       "Rank": "250"
     },
     {
@@ -1736,7 +1656,7 @@
       "Team": "STL",
       "Name": "Lars Nootbaar",
       "Position": "OF",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
+      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/0/077f74b1_mlbam.jpg",
       "Rank": "255"
     },
     {
@@ -1752,7 +1672,7 @@
       "Team": "NYY",
       "Name": "Giancarlo Stanton",
       "Position": "DH",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
+      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/8/87f6986b_mlbam.jpg",
       "Rank": "261"
     },
     {
@@ -1812,7 +1732,7 @@
       "Team": "ARI",
       "Name": "Joc Pederson",
       "Position": "DH",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
+      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/c/cbfe7ac9_mlbam.jpg",
       "Rank": "269"
     },
     {
@@ -1875,14 +1795,6 @@
     },
     {
       "Age": "25",
-      "Team": "CHC",
-      "Name": "Christopher Morel",
-      "Position": "2B",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "282"
-    },
-    {
-      "Age": "25",
       "Team": "TB",
       "Name": "Christopher Morel",
       "Position": "2B",
@@ -1917,18 +1829,10 @@
     },
     {
       "Age": "32",
-      "Team": "MIA",
-      "Name": "Josh Bell",
-      "Position": "1B",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "288"
-    },
-    {
-      "Age": "32",
       "Team": "ARI",
       "Name": "Josh Bell",
       "Position": "1B",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
+      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/e/e36fd0ee_mlbam.jpg",
       "Rank": "288"
     },
     {
@@ -1972,16 +1876,6 @@
       "Position": "C",
       "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
       "Rank": "298"
-    },
-    {
-      "Number": "11",
-      "Hand": "R",
-      "Age": "29",
-      "Team": "PIT",
-      "Name": "Mitch Keller",
-      "Position": "SP",
-      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/f/fbd94e66_mlbam.jpg",
-      "Rank": "299"
     },
     {
       "Number": "11",
@@ -2046,21 +1940,11 @@
       "Rank": "306"
     },
     {
-      "Number": "14",
-      "Hand": "L",
-      "Age": "30",
-      "Team": "MIL",
-      "Name": "Nestor Cortes",
-      "Position": "SP",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "306"
-    },
-    {
       "Age": "28",
       "Team": "SF",
       "Name": "Thairo Estrada",
       "Position": "2B",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
+      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/f/f9854f9e_mlbam.jpg",
       "Rank": "308"
     },
     {
@@ -2166,16 +2050,6 @@
       "Rank": "323"
     },
     {
-      "Number": "13",
-      "Hand": "R",
-      "Age": "32",
-      "Team": "STL",
-      "Name": "Erick Fedde",
-      "Position": "SP",
-      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/4/49f9de62_mlbam.jpg",
-      "Rank": "323"
-    },
-    {
       "Age": "24",
       "Team": "CLE",
       "Name": "Kyle Manzardo",
@@ -2248,16 +2122,6 @@
       "Rank": "335"
     },
     {
-      "Number": "10",
-      "Hand": "R",
-      "Age": "28",
-      "Team": "CIN",
-      "Name": "Brady Singer",
-      "Position": "SP",
-      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/f/f9231d10_mlbam.jpg",
-      "Rank": "335"
-    },
-    {
       "Number": "276",
       "Hand": "R",
       "Age": "30",
@@ -2297,18 +2161,10 @@
     },
     {
       "Age": "28",
-      "Team": "CWS",
-      "Name": "Eloy Jimenez",
-      "Position": "DH",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "341"
-    },
-    {
-      "Age": "28",
       "Team": "BAL",
       "Name": "Eloy Jimenez",
       "Position": "DH",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
+      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/3/3847ab75_mlbam.jpg",
       "Rank": "341"
     },
     {
@@ -2506,16 +2362,6 @@
       "Rank": "366"
     },
     {
-      "Number": "30",
-      "Hand": "R",
-      "Age": "27",
-      "Team": "ARI",
-      "Name": "Ryne Nelson",
-      "Position": "SP",
-      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/0/0ad706b3_mlbam.jpg",
-      "Rank": "366"
-    },
-    {
       "Age": "24",
       "Team": "STL",
       "Name": "Nolan Gorman",
@@ -2539,14 +2385,6 @@
       "Name": "Danny Jansen",
       "Position": "C",
       "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/1/188dc647_mlbam.jpg",
-      "Rank": "371"
-    },
-    {
-      "Age": "29",
-      "Team": "BOS",
-      "Name": "Danny Jansen",
-      "Position": "C",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
       "Rank": "371"
     },
     {
@@ -2598,16 +2436,6 @@
       "Position": "SP",
       "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/0/05cbabce_mlbam.jpg",
       "Rank": "380"
-    },
-    {
-      "Number": "23",
-      "Hand": "R",
-      "Age": "33",
-      "Team": "CHC",
-      "Name": "Jameson Taillon",
-      "Position": "SP",
-      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/a/a9bc5cff_mlbam.jpg",
-      "Rank": "382"
     },
     {
       "Number": "23",
@@ -2732,16 +2560,6 @@
       "Rank": "397"
     },
     {
-      "Number": "28",
-      "Hand": "R",
-      "Age": "32",
-      "Team": "NYM",
-      "Name": "Frankie Montas",
-      "Position": "SP",
-      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/a/a654630c_mlbam.jpg",
-      "Rank": "397"
-    },
-    {
       "Age": "26",
       "Team": "PIT",
       "Name": "Jack Suwinski",
@@ -2798,16 +2616,6 @@
       "Position": "SS",
       "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
       "Rank": "405"
-    },
-    {
-      "Number": "26",
-      "Hand": "R",
-      "Age": "29",
-      "Team": "MIL",
-      "Name": "Aaron Civale",
-      "Position": "SP",
-      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/6/603a3487_mlbam.jpg",
-      "Rank": "406"
     },
     {
       "Number": "26",
@@ -2881,18 +2689,10 @@
     },
     {
       "Age": "31",
-      "Team": "WSH",
-      "Name": "Jesse Winker",
-      "Position": "OF",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "418"
-    },
-    {
-      "Age": "31",
       "Team": "NYM",
       "Name": "Jesse Winker",
       "Position": "OF",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
+      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/0/048070cd_mlbam.jpg",
       "Rank": "418"
     },
     {
@@ -2947,18 +2747,10 @@
     },
     {
       "Age": "29",
-      "Team": "TOR",
-      "Name": "Isiah Kiner-Falefa",
-      "Position": "SS",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "431"
-    },
-    {
-      "Age": "29",
       "Team": "PIT",
       "Name": "Isiah Kiner-Falefa",
       "Position": "SS",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
+      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/c/cee8d5c1_mlbam.jpg",
       "Rank": "431"
     },
     {
