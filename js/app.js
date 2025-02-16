@@ -21,7 +21,7 @@ async function loadPlayers() {
 
         let players = await response.json();
         
-        // Add missing fields and clean up data
+        // Add missing fields and clean up data, preserving existing IDs
         ALL_PLAYERS = players.map((player, index) => ({
             ...player,
             Number: player.Number || String(index + 1),
@@ -30,12 +30,17 @@ async function loadPlayers() {
             Team: player.Team || 'FA',
             Position: player.Position || 'Unknown',
             Headshot: player.Headshot || 'https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current',
-            id: String(index + 1),
-            // Use the actual Value from players.json
+            id: index.toString(), // Use array index as string ID
             value: player.Value,
-            // We'll determine trend based on Value changes later
             trend: player.Value > 9000 ? 'up' : player.Value < 5000 ? 'down' : 'stable'
         }));
+
+        // Log first few players to verify ID assignment
+        console.log('First few players loaded:', ALL_PLAYERS.slice(0, 3).map(p => ({
+            id: p.id,
+            name: p.Name,
+            value: p.Value
+        })));
 
         return true;
     } catch (error) {
@@ -54,6 +59,13 @@ async function getRandomPlayers(count = 3) {
 
 // Update the player card creation to use the new data structure
 function createPlayerCard(player, index) {
+    // At the start of the function, log the player data
+    console.log('Creating card for player:', {
+        id: player.id,
+        name: player.Name,
+        value: player.Value
+    });
+
     return `
         <div class="border rounded-lg p-3 bg-gray-50" data-player-id="${player.id}">
             <!-- Mobile Layout (horizontal) -->
@@ -123,6 +135,9 @@ function createPlayerCard(player, index) {
 const votes = new Map();
 
 function handleVote(playerId, vote) {
+    // Convert playerId to string if it isn't already
+    playerId = playerId.toString();
+    
     // Remove any existing votes for this player
     for (let [pid, v] of votes.entries()) {
         if (v === vote) {
@@ -140,14 +155,13 @@ function handleVote(playerId, vote) {
 function updateVoteUI() {
     document.querySelectorAll('[data-player-id]').forEach(card => {
         const playerId = card.dataset.playerId;
-        const currentVote = votes.get(parseInt(playerId));
+        const currentVote = votes.get(playerId); // Remove parseInt
         
         // Reset all buttons
         card.querySelectorAll('button').forEach(button => {
             const action = button.textContent.trim().toLowerCase();
             button.classList.remove('ring-2', 'ring-offset-2', 'ring-blue-500');
             
-            // Match the new button names
             if (currentVote && currentVote.toLowerCase() === action) {
                 button.classList.add('ring-2', 'ring-offset-2', 'ring-blue-500');
             }
@@ -172,10 +186,17 @@ async function showKTCModal() {
     container.innerHTML = players.map((player, index) => createPlayerCard(player, index)).join('');
 
     // Handle submit
-    document.getElementById('submit-ktc').addEventListener('click', () => {
+    document.getElementById('submit-ktc').addEventListener('click', async () => {
         if (votes.size === 3) {
-            // Here you would save the votes to your backend
-            console.log('Votes:', Object.fromEntries(votes));
+            // Get voted players with their votes
+            const votedPlayers = Array.from(votes.entries()).map(([playerId, vote]) => {
+                const player = ALL_PLAYERS.find(p => p.id === String(playerId));
+                return { ...player, vote };
+            });
+
+            // Update player values using Elo system
+            await updatePlayerValues(votedPlayers);
+
             modal.remove();
         }
     });
@@ -355,6 +376,106 @@ function createKTCModal() {
     return modal;
 }
 
+// Add Elo rating constants
+const K_FACTOR = 32; // Standard K-factor, can be adjusted
+const ELO_SCALE = 400; // Standard Elo scale divisor
+
+// Calculate expected score using Elo formula
+function calculateExpectedScore(valueA, valueB) {
+    return 1 / (1 + Math.pow(10, (valueB - valueA) / ELO_SCALE));
+}
+
+// Calculate new value based on Elo formula
+function calculateNewValue(oldValue, expectedScore, actualScore) {
+    return Math.round(oldValue + K_FACTOR * (actualScore - expectedScore));
+}
+
+// Update player values based on Start/Bench/Cut voting
+async function updatePlayerValues(votedPlayers) {
+    console.log('Starting vote processing for players:', votedPlayers);
+
+    // Sort players by their vote (Start > Bench > Cut)
+    const sortedPlayers = [...votedPlayers].sort((a, b) => {
+        const voteOrder = { 'start': 2, 'bench': 1, 'cut': 0 };
+        return voteOrder[b.vote.toLowerCase()] - voteOrder[a.vote.toLowerCase()];
+    });
+
+    // Process each matchup and store final values
+    const finalValues = new Map(); // Store the final value for each player
+    
+    for (let i = 0; i < sortedPlayers.length; i++) {
+        for (let j = i + 1; j < sortedPlayers.length; j++) {
+            const playerA = sortedPlayers[i];
+            const playerB = sortedPlayers[j];
+
+            console.log(`\nProcessing matchup: ${playerA.Name} (${playerA.vote}) vs ${playerB.Name} (${playerB.vote})`);
+            console.log(`Current values - ${playerA.Name}: ${playerA.Value}, ${playerB.Name}: ${playerB.Value}`);
+
+            // Calculate expected scores
+            const expectedA = calculateExpectedScore(playerA.Value, playerB.Value);
+            const expectedB = calculateExpectedScore(playerB.Value, playerA.Value);
+            console.log(`Expected scores - ${playerA.Name}: ${expectedA.toFixed(3)}, ${playerB.Name}: ${expectedB.toFixed(3)}`);
+
+            // Calculate new values
+            const newValueA = calculateNewValue(playerA.Value, expectedA, 1);
+            const newValueB = calculateNewValue(playerB.Value, expectedB, 0);
+            console.log(`New values - ${playerA.Name}: ${newValueA}, ${playerB.Name}: ${newValueB}`);
+
+            // Store the most recent value for each player
+            finalValues.set(playerA.id, {
+                id: playerA.id,
+                name: playerA.Name,
+                oldValue: playerA.Value,
+                newValue: newValueA
+            });
+            
+            finalValues.set(playerB.id, {
+                id: playerB.id,
+                name: playerB.Name,
+                oldValue: playerB.Value,
+                newValue: newValueB
+            });
+        }
+    }
+
+    // Convert final values to updates array
+    const updates = Array.from(finalValues.values());
+    console.log('\nFinal updates to be applied:', updates);
+
+    // Apply updates to players.json
+    try {
+        // Update local data
+        updates.forEach(update => {
+            const player = ALL_PLAYERS.find(p => p.id === update.id || p.Name === update.name);
+            if (player) {
+                console.log(`Updating local player ${update.name} (ID: ${update.id}) value from ${update.oldValue} to ${update.newValue}`);
+                player.Value = update.newValue;
+            } else {
+                console.log(`Could not find player with id ${update.id} or name ${update.name}`);
+            }
+        });
+
+        // Send updates to server
+        console.log('Sending updates to server...');
+        const response = await fetch('/api/updatePlayerValues', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(updates)
+        });
+
+        if (!response.ok) {
+            throw new Error(`Server responded with status: ${response.status}`);
+        }
+
+        const responseData = await response.json();
+        console.log('Server response:', responseData);
+
+    } catch (error) {
+        console.error('Error updating player values:', error);
+    }
+}
 
 // async function mergeRankingsIntoPlayers() {
 //     try {
