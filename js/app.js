@@ -22,69 +22,24 @@ async function loadPlayers() {
         let players = await response.json();
         
         // Add missing fields and clean up data
-        players = players.map((player, index) => ({
-            Number: player.Number || String(index + 1),  // Use index+1 if Number is missing
-            Hand: player.Hand || '-',                    // Use '-' if Hand is missing
-            Age: player.Age || '??',                     // Use '??' if Age is missing
-            Team: player.Team || 'FA',                   // Use 'FA' if Team is missing
-            Name: player.Name,
-            Position: player.Position || 'Unknown',      // Use 'Unknown' if Position is missing
-            Headshot: player.Headshot || 'https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current'
-        }));
-
-        // Remove duplicates based on Name (since Number might be auto-generated)
-        const uniquePlayers = Array.from(new Map(players.map(player => [player.Name, player])).values());
-        console.log(`Loaded ${uniquePlayers.length} unique players`);
-        
-        ALL_PLAYERS = uniquePlayers.map(player => ({
+        ALL_PLAYERS = players.map((player, index) => ({
             ...player,
-            id: player.Number,
-            value: Math.floor(Math.random() * 2000) + 8000,
-            trend: ['up', 'down', 'stable'][Math.floor(Math.random() * 3)]
+            Number: player.Number || String(index + 1),
+            Hand: player.Hand || '-',
+            Age: player.Age || '??',
+            Team: player.Team || 'FA',
+            Position: player.Position || 'Unknown',
+            Headshot: player.Headshot || 'https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current',
+            id: String(index + 1),
+            // Use the actual Value from players.json
+            value: player.Value,
+            // We'll determine trend based on Value changes later
+            trend: player.Value > 9000 ? 'up' : player.Value < 5000 ? 'down' : 'stable'
         }));
 
         return true;
     } catch (error) {
         console.error('Error loading players:', error);
-        // Fallback to some sample data if loading fails
-        ALL_PLAYERS = [
-            {
-                "Number": "1",
-                "Hand": "R",
-                "Age": "28",
-                "Team": "SF",
-                "Name": "Logan Webb",
-                "Position": "Pitcher",
-                "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/a/af25c562_mlbam.jpg",
-                "id": "1",
-                "value": 9500,
-                "trend": "up"
-            },
-            {
-                "Number": "2",
-                "Hand": "R",
-                "Age": "34",
-                "Team": "Phi",
-                "Name": "Zack Wheeler",
-                "Position": "Pitcher",
-                "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/c/ceefd163_mlbam.jpg",
-                "id": "2",
-                "value": 9300,
-                "trend": "stable"
-            },
-            {
-                "Number": "3",
-                "Hand": "R",
-                "Age": "31",
-                "Team": "Phi",
-                "Name": "Aaron Nola",
-                "Position": "Pitcher",
-                "Headshot": "http://cdn.ssref.net/scripts/image_resize.cgi?min=200&url=https://www.baseball-reference.com/req/202412180/images/headshots/6/62b4d109_mlbam.jpg",
-                "id": "3",
-                "value": 9100,
-                "trend": "down"
-            }
-        ];
         return false;
     }
 }
@@ -267,8 +222,8 @@ function initializeSearchBoxes() {
                             </div>
                         </div>
                         <div class="text-sm font-medium ${player.trend === 'up' ? 'text-green-600' : player.trend === 'down' ? 'text-red-600' : 'text-gray-600'}">
-                            ${player.value || ''}
-                            ${player.trend ? (player.trend === 'up' ? '↑' : player.trend === 'down' ? '↓' : '') : ''}
+                            ${player.Value}
+                            ${player.trend === 'up' ? '↑' : player.trend === 'down' ? '↓' : ''}
                         </div>
                     </div>
                 `).join('');
