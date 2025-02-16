@@ -8190,22 +8190,6 @@
       "Rank": "1515"
     },
     {
-      "Age": "26",
-      "Team": "MIA",
-      "Name": "Cristian Pache",
-      "Position": "OF",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "1515"
-    },
-    {
-      "Age": "26",
-      "Team": "BAL",
-      "Name": "Cristian Pache",
-      "Position": "OF",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": "1515"
-    },
-    {
       "Number": "37",
       "Hand": "R",
       "Age": "26",
@@ -8303,7 +8287,7 @@
       "Name": "Eury Pérez",
       "Position": "SP",
       "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/6/6677ec75_mlbam.jpg",
-      "Rank": null
+      "Rank": "355"
     },
     {
       "Number": "176",
@@ -8521,7 +8505,7 @@
       "Name": "Luis Garcia Jr",
       "Position": "2B",
       "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/4/4b862729_mlbam.jpg",
-      "Rank": null
+      "Rank": "479"
     },
     {
       "Age": "38",
@@ -8537,29 +8521,21 @@
       "Name": "Cedric Mullins",
       "Position": "OF",
       "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/2/24bf4355_mlbam.jpg",
-      "Rank": null
+      "Rank": "195"
     },
     {
       "Age": "27",
       "Team": "CWS",
-      "Name": "Luis Robert",
+      "Name": "Luis Robert Jr",
       "Position": "OF",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": null
+      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/c/c115568b_mlbam.jpg",
+      "Rank": "83"
     },
     {
       "Age": "33",
       "Team": "LAD",
       "Name": "Enrique Hernandez",
       "Position": "3B",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": null
-    },
-    {
-      "Age": "25",
-      "Team": "CWS",
-      "Name": "LeNYM Sosa",
-      "Position": "2B",
       "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
       "Rank": null
     },
@@ -8600,7 +8576,7 @@
       "Team": "CHC",
       "Name": "Patrick Wisdom",
       "Position": "3B",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
+      "Headshot": "https://www.baseball-reference.com/req/202412180/images/headshots/0/04a4f5bc_mlbam.jpg",
       "Rank": null
     },
     {
@@ -8926,14 +8902,6 @@
     {
       "Age": "26",
       "Team": "PHI",
-      "Name": "Buddy Kennedy",
-      "Position": "3B",
-      "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
-      "Rank": null
-    },
-    {
-      "Age": "26",
-      "Team": "DET",
       "Name": "Buddy Kennedy",
       "Position": "3B",
       "Headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/generic/headshot/67/current",
