@@ -376,38 +376,70 @@ function setupPlayerSearch(container) {
 
 // Add these functions near the top of the file
 function calculateRawAdjustment(playerValue, topValue, maxValue) {
-    // Similar to the Python example but tweaked for our scale
+    // Make the adjustment more aggressive by increasing multipliers
     return playerValue * (
-        0.1 + 
-        0.2 * Math.pow(playerValue / maxValue, 8) + 
-        0.1 * Math.pow(playerValue / topValue, 1.3) + 
-        0.1 * Math.pow(playerValue / (maxValue + 2000), 1.28)
+        0.15 + // Base multiplier increased from 0.1 to 0.15
+        0.25 * Math.pow(playerValue / maxValue, 6) + // Reduced exponent and increased multiplier
+        0.15 * Math.pow(playerValue / topValue, 1.3) + // Increased from 0.1 to 0.15
+        0.15 * Math.pow(playerValue / (maxValue + 2000), 1.28) // Increased from 0.1 to 0.15
     );
 }
 
 function calculateTeamAdjustment(players, otherTeamPlayers) {
-    if (!players.length) return 0;
+    console.log('Calculating adjustment for team:', {
+        teamPlayerCount: players.length,
+        otherTeamPlayerCount: otherTeamPlayers.length,
+        teamPlayers: players.map(p => ({ name: p.Name, value: p.Value })),
+        otherTeamPlayers: otherTeamPlayers.map(p => ({ name: p.Name, value: p.Value }))
+    });
+
+    if (!players.length) {
+        console.log('No players in team, returning 0 adjustment');
+        return 0;
+    }
     
     // Only apply adjustment to team with fewer pieces
     if (players.length >= otherTeamPlayers.length) {
+        console.log('Team has equal or more pieces, returning 0 adjustment');
         return 0;
     }
 
-    // Find the highest value player in the trade (from both teams)
+    // Find the highest value player in the trade
     const allValues = [...players, ...otherTeamPlayers].map(p => parseInt(p.Value));
     const topValue = Math.max(...allValues);
-    
-    // Use the highest value in our dataset as maxValue
     const maxValue = Math.max(...ALL_PLAYERS.map(p => parseInt(p.Value)));
     
-    // Calculate total adjustment
-    return players.reduce((total, player) => {
-        return total + calculateRawAdjustment(
+    console.log('Adjustment parameters:', {
+        topValue,
+        maxValue,
+        pieceDifference: otherTeamPlayers.length - players.length
+    });
+
+    // Add multiplier based on piece difference
+    const pieceDifferenceMultiplier = 1 + ((otherTeamPlayers.length - players.length) * 0.15);
+    
+    // Calculate total adjustment with piece difference multiplier
+    const totalAdjustment = players.reduce((total, player) => {
+        const baseAdjustment = calculateRawAdjustment(
             parseInt(player.Value), 
             topValue, 
             maxValue
         );
+        const finalAdjustment = baseAdjustment * pieceDifferenceMultiplier;
+        
+        console.log('Player adjustment:', {
+            player: player.Name,
+            value: player.Value,
+            baseAdjustment,
+            multiplier: pieceDifferenceMultiplier,
+            finalAdjustment
+        });
+        
+        return total + finalAdjustment;
     }, 0);
+
+    console.log('Final team adjustment:', totalAdjustment);
+    return totalAdjustment;
 }
 
 function updateTradeValues() {
@@ -459,38 +491,58 @@ function updateTradeValues() {
         team2: team2Players.length
     });
 
-    // Calculate raw values
+    // Calculate raw values and adjustments
     const team1RawValue = team1Players.reduce((sum, p) => sum + parseInt(p.Value || 0), 0);
     const team2RawValue = team2Players.reduce((sum, p) => sum + parseInt(p.Value || 0), 0);
     
-    // Calculate adjustments
+    console.log('Calculating team adjustments...');
     const team1Adjustment = Math.round(calculateTeamAdjustment(team1Players, team2Players));
+    console.log('Team 1 adjustment calculated:', team1Adjustment);
+
     const team2Adjustment = Math.round(calculateTeamAdjustment(team2Players, team1Players));
-    
+    console.log('Team 2 adjustment calculated:', team2Adjustment);
+
     // Calculate final values
     const team1FinalValue = team1RawValue + team1Adjustment;
     const team2FinalValue = team2RawValue + team2Adjustment;
 
-    // Update value displays FIRST
+    console.log('Final values after adjustments:', {
+        team1: {
+            raw: team1RawValue,
+            adjustment: team1Adjustment,
+            final: team1FinalValue
+        },
+        team2: {
+            raw: team2RawValue,
+            adjustment: team2Adjustment,
+            final: team2FinalValue
+        }
+    });
+
+    // Update value displays
     elements.team1Value.textContent = team1FinalValue.toLocaleString();
     elements.team2Value.textContent = team2FinalValue.toLocaleString();
 
-    // Update adjustment displays
+    // Always update adjustment displays (don't just check if > 0)
     const valueAdjustment1 = document.querySelector('.value-adjustment-container-1');
     const valueAdjustment2 = document.querySelector('.value-adjustment-container-2');
 
+    // Team 1 adjustment
     if (team1Adjustment > 0) {
         valueAdjustment1.style.display = 'block';
         valueAdjustment1.querySelector('.value-adjustment-1').textContent = `+${team1Adjustment.toLocaleString()}`;
     } else {
         valueAdjustment1.style.display = 'none';
+        valueAdjustment1.querySelector('.value-adjustment-1').textContent = '';
     }
 
+    // Team 2 adjustment
     if (team2Adjustment > 0) {
         valueAdjustment2.style.display = 'block';
         valueAdjustment2.querySelector('.value-adjustment-2').textContent = `+${team2Adjustment.toLocaleString()}`;
     } else {
         valueAdjustment2.style.display = 'none';
+        valueAdjustment2.querySelector('.value-adjustment-2').textContent = '';
     }
 
     // Now handle the trade message container
