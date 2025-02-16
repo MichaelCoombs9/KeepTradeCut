@@ -112,15 +112,15 @@ function createPlayerCard(player, index) {
                     </div>
                 </div>
                 <div class="grid grid-cols-3 gap-2 mt-3">
-                    <button onclick="handleVote(${player.id}, 'keep')" 
+                    <button onclick="handleVote(${player.id}, 'Start')" 
                             class="py-2 bg-[#98e5a7] rounded-lg transition-all duration-300 
                                    transform hover:-translate-y-[2px] hover:shadow-lg text-sm font-medium">
-                        Keep
+                        Start
                     </button>
-                    <button onclick="handleVote(${player.id}, 'trade')" 
+                    <button onclick="handleVote(${player.id}, 'Bench')" 
                             class="py-2 bg-[#f3d676] rounded-lg transition-all duration-300
                                    transform hover:-translate-y-[2px] hover:shadow-lg text-sm font-medium">
-                        Trade
+                        Bench
                     </button>
                     <button onclick="handleVote(${player.id}, 'cut')" 
                             class="py-2 bg-[#f1a7a7] rounded-lg transition-all duration-300
@@ -143,15 +143,15 @@ function createPlayerCard(player, index) {
                     </div>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <button onclick="handleVote(${player.id}, 'keep')" 
+                    <button onclick="handleVote(${player.id}, 'Start')" 
                             class="py-2 bg-[#98e5a7] rounded-lg transition-all duration-300 
                                    transform hover:-translate-y-[2px] hover:shadow-lg text-sm font-medium">
-                        Keep
+                        Start
                     </button>
-                    <button onclick="handleVote(${player.id}, 'trade')" 
+                    <button onclick="handleVote(${player.id}, 'Bench')" 
                             class="py-2 bg-[#f3d676] rounded-lg transition-all duration-300
                                    transform hover:-translate-y-[2px] hover:shadow-lg text-sm font-medium">
-                        Trade
+                        Bench
                     </button>
                     <button onclick="handleVote(${player.id}, 'cut')" 
                             class="py-2 bg-[#f1a7a7] rounded-lg transition-all duration-300
@@ -187,27 +187,14 @@ function updateVoteUI() {
         const playerId = card.dataset.playerId;
         const currentVote = votes.get(parseInt(playerId));
         
+        // Reset all buttons
         card.querySelectorAll('button').forEach(button => {
-            const buttonType = button.textContent.toLowerCase().trim();
+            const action = button.textContent.trim().toLowerCase();
+            button.classList.remove('ring-2', 'ring-offset-2', 'ring-blue-500');
             
-            if (currentVote) {
-                if (buttonType === currentVote) {
-                    button.classList.remove('opacity-40', 'scale-95');
-                    button.classList.add('border-2', 'border-blue-500', 'scale-100');
-                    // Add pulse animation when selected
-                    button.animate([
-                        { transform: 'scale(1)', boxShadow: '0 0 0 0 rgba(59, 130, 246, 0.5)' },
-                        { transform: 'scale(1.02)', boxShadow: '0 0 0 10px rgba(59, 130, 246, 0)' }
-                    ], {
-                        duration: 600,
-                        easing: 'ease-out'
-                    });
-                } else {
-                    button.classList.add('opacity-40', 'scale-95');
-                    button.classList.remove('border-2', 'border-blue-500', 'scale-100');
-                }
-            } else {
-                button.classList.remove('opacity-40', 'scale-95', 'border-2', 'border-blue-500', 'scale-100');
+            // Match the new button names
+            if (currentVote && currentVote.toLowerCase() === action) {
+                button.classList.add('ring-2', 'ring-offset-2', 'ring-blue-500');
             }
         });
     });
@@ -386,8 +373,8 @@ function createKTCModal() {
                         KTC's values are crowdsourced from users like you.
                     </p>
                     <p class="text-center text-gray-600 text-sm mb-3">
-                        <span class="font-medium">Keep</span> the most valuable, 
-                        <span class="font-medium">Trade</span> the second in value, and 
+                        <span class="font-medium">Start</span> the most valuable, 
+                        <span class="font-medium">Bench</span> the second in value, and 
                         <span class="font-medium">Cut</span> the least valuable.
                     </p>
                     
