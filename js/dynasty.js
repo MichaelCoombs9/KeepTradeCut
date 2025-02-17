@@ -3,7 +3,9 @@ let allPlayers = []; // Store all players globally
 async function loadRankings(positionFilter = 'Overall') {
     try {
         if (allPlayers.length === 0) {
-            const response = await fetch('./data/players.json');
+            // const response = await fetch('./data/players.json');
+            const response = await fetch('/api/players');
+
             if (!response.ok) throw new Error('Failed to load players');
             allPlayers = await response.json();
         }

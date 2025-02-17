@@ -3,19 +3,9 @@ let ALL_PLAYERS = [];
 
 async function loadPlayers() {
     try {
-        const paths = ['/data/players.json', './data/players.json', '../data/players.json', 'players.json'];
-        
-        let response;
-        for (const path of paths) {
-            try {
-                response = await fetch(path);
-                if (response.ok) break;
-            } catch (e) {
-                console.log(`Tried path ${path}: ${e.message}`);
-            }
-        }
+        const response = await fetch('/api/players');
 
-        if (!response || !response.ok) {
+        if (!response.ok) {
             throw new Error('Could not load players data');
         }
 
