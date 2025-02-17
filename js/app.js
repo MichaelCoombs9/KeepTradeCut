@@ -194,7 +194,7 @@ async function showKTCModal() {
     // Handle skip
     document.getElementById('skip-players').addEventListener('click', () => {
         modal.remove();
-        showKTCModal(); // Show new players
+        //showKTCModal(); // Show new players
     });
 }
 
