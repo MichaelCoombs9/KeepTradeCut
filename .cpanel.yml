@@ -1,4 +1,5 @@
-deployment:
+---deployment:
   tasks:
-    - export DEPLOYPATH=/home/your_user/public_html
-    - /bin/cp -r * $DEPLOYPATH/
+    - export DEPLOYPATH=/home/s7u44iu2/public_html
+    - /bin/rsync -avz --exclude='.git' --exclude='.cpanel.yml' ./ $DEPLOYPATH/
+
