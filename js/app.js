@@ -964,8 +964,8 @@ function initializeSocialMenu() {
 }
 
 // Ensure this function runs after the DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-    console.log("🟢 DOM fully loaded. Initializing menu...");
-    initializeSocialMenu();
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     console.log("🟢 DOM fully loaded. Initializing menu...");
+//     initializeSocialMenu();
+// });
 
