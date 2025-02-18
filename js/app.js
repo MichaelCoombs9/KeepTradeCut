@@ -243,6 +243,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     showKTCModal();
+    
+    initializeSocialMenu();
 });
 
 // Update setupPlayerSearch to handle all search functionality
@@ -833,7 +835,7 @@ function createKTCModal() {
                 <div class="max-w-2xl mx-auto">
                     <h2 class="text-xl sm:text-2xl font-bold text-center mb-2">Your Thoughts?</h2>
                     <p class="text-center text-gray-600 text-sm mb-1">
-                        KTC's values are crowdsourced from users like you.
+                        SBC's values are crowdsourced from users like you.
                     </p>
                     <p class="text-center text-gray-600 text-sm mb-3">
                         <span class="font-medium">Start</span> the most valuable, 
@@ -862,3 +864,108 @@ function createKTCModal() {
 
     return modal;
 }
+
+// Add this function to handle the hamburger menu
+// function initializeSocialMenu() {
+//     const hamburgerButton = document.querySelector('.hamburger-button');
+//     const socialMenu = document.querySelector('.social-menu');
+    
+//     if (hamburgerButton && socialMenu) {
+//         // Add click event to both the button and the entire document
+//         hamburgerButton.addEventListener('click', (e) => {
+//             e.stopPropagation(); // Prevent event from bubbling up
+            
+//             // Toggle menu visibility
+//             socialMenu.classList.toggle('translate-x-full');
+//             socialMenu.classList.toggle('translate-x-0');
+//             hamburgerButton.classList.toggle('open');
+            
+//             console.log('Menu clicked:', {
+//                 isVisible: socialMenu.classList.contains('translate-x-0'),
+//                 classes: socialMenu.classList.toString()
+//             });
+//         });
+
+//         // Close menu when clicking outside
+//         document.addEventListener('click', (e) => {
+//             if (!socialMenu.contains(e.target) && !hamburgerButton.contains(e.target)) {
+//                 socialMenu.classList.add('translate-x-full');
+//                 socialMenu.classList.remove('translate-x-0');
+//                 hamburgerButton.classList.remove('open');
+//             }
+//         });
+//     // } else {
+//     //     console.error('Social menu elements not found:', {
+//     //         buttonFound: !!hamburgerButton,
+//     //         menuFound: !!socialMenu
+//     //     });
+//     }
+// }
+
+// // Make sure the function is called after DOM is loaded
+// document.addEventListener('DOMContentLoaded', () => {
+//     initializeSocialMenu();
+//     // console.log('Social menu initialized');
+// });
+
+function initializeSocialMenu() {
+    const hamburgerButton = document.querySelector('.hamburger-button');
+    const socialMenu = document.querySelector('.social-menu');
+
+    if (hamburgerButton && socialMenu) {
+        console.log("✅ Social menu initialized.");
+
+        // Toggle menu on button click
+        hamburgerButton.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevents bubbling up
+            const isOpen = socialMenu.classList.contains('translate-x-0');
+
+            console.log(`🔘 Hamburger menu clicked. Current state: ${isOpen ? "OPEN" : "CLOSED"}`);
+
+            // First, close all menus to avoid conflicts
+            document.querySelectorAll('.social-menu').forEach(menu => {
+                console.log("🔄 Closing other menus...");
+                menu.classList.add('translate-x-full');
+                menu.classList.remove('translate-x-0');
+            });
+
+            // Toggle only this menu
+            if (!isOpen) {
+                console.log("📂 Opening menu...");
+                socialMenu.classList.remove('translate-x-full');
+                socialMenu.classList.add('translate-x-0');
+            } else {
+                console.log("📪 Closing menu...");
+                socialMenu.classList.add('translate-x-full');
+                socialMenu.classList.remove('translate-x-0');
+            }
+
+            hamburgerButton.classList.toggle('open');
+            console.log(`📌 Menu new state: ${socialMenu.classList.contains('translate-x-0') ? "OPEN" : "CLOSED"}`);
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            console.log("🖱️ Click detected on document.");
+
+            if (!socialMenu.contains(e.target) && !hamburgerButton.contains(e.target)) {
+                console.log("❌ Click was outside menu & button. Closing menu.");
+                socialMenu.classList.add('translate-x-full');
+                socialMenu.classList.remove('translate-x-0');
+                hamburgerButton.classList.remove('open');
+            } else {
+                console.log("✅ Click was inside menu or button. Ignoring.");
+            }
+        });
+    } else {
+        console.error("⚠️ Error: Social menu elements not found!");
+        console.error(`hamburgerButton found: ${!!hamburgerButton}, socialMenu found: ${!!socialMenu}`);
+    }
+}
+
+// Ensure this function runs after the DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("🟢 DOM fully loaded. Initializing menu...");
+    initializeSocialMenu();
+});
+

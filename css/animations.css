@@ -60,4 +60,36 @@
 
 .button-hover:active {
     transform: scale(0.95);
+}
+
+/* Add these styles */
+.hamburger-button {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.hamburger-button.open {
+    transform: rotate(90deg);
+}
+
+.social-icon {
+    color: #4B5563;
+    transition: all 0.2s ease-in-out;
+}
+
+.social-icon:hover {
+    color: #2563EB;
+    transform: scale(1.1);
+}
+
+.social-menu {
+    transition: transform 0.3s ease-in-out;
+    top: 0; /* Start from the very top */
+}
+
+@media (max-width: 640px) {
+    .social-menu {
+        width: 100%;
+        max-width: 300px;
+    }
 } 

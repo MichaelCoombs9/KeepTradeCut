@@ -302,4 +302,33 @@ async function updatePlayerValues(votedPlayers) {
     } catch (error) {
         console.error('Error updating player values:', error);
     }
-} 
+}
+
+// Add at the end of the file
+function initializeSocialMenu() {
+    const hamburgerButton = document.querySelector('.hamburger-button');
+    const socialMenu = document.querySelector('.social-menu');
+    
+    if (hamburgerButton && socialMenu) {
+        hamburgerButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            socialMenu.classList.toggle('translate-x-full');
+            socialMenu.classList.toggle('translate-x-0');
+            hamburgerButton.classList.toggle('open');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!socialMenu.contains(e.target) && !hamburgerButton.contains(e.target)) {
+                socialMenu.classList.add('translate-x-full');
+                socialMenu.classList.remove('translate-x-0');
+                hamburgerButton.classList.remove('open');
+            }
+        });
+    }
+}
+
+// Add to your existing DOMContentLoaded event listener
+document.addEventListener('DOMContentLoaded', () => {
+    // ... existing initialization code ...
+    initializeSocialMenu();
+}); 
