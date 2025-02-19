@@ -64,6 +64,55 @@ function calculateNewValue(oldValue, expectedScore, actualScore) {
     return Math.round(oldValue + K_FACTOR * (actualScore - expectedScore));
 }
 
+// Save submission function using /api/submissions endpoint
+async function saveSubmission(players, votes) {
+    try {
+        console.log('Players:', players);
+        console.log('Votes:', votes);
+        // Map votes to player names, normalizing vote case
+        const votedPlayers = Array.from(votes.entries()).map(([id, vote]) => {
+            const player = players.find(p => p.id === id);
+            return {
+                id: id,
+                name: player.Name,
+                vote: vote.toLowerCase()
+            };
+        });
+        console.log('Mapped voted players:', votedPlayers);
+        const timestamp = new Date().toISOString();
+        const submission = {
+            timestamp,
+            player_1: players[0].Name,
+            player_2: players[1].Name,
+            player_3: players[2].Name,
+            keep: votedPlayers.find(p => p.vote === 'start')?.name,
+            trade: votedPlayers.find(p => p.vote === 'bench')?.name,
+            cut: votedPlayers.find(p => p.vote === 'cut')?.name
+        };
+        console.log('Created submission:', submission);
+        if (!submission.player_1 || !submission.player_2 || !submission.player_3 ||
+            !submission.keep || !submission.trade || !submission.cut) {
+            console.error('Missing data in submission:', submission);
+            throw new Error('Missing player data in submission');
+        }
+        const response = await fetch('/api/submissions', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(submission)
+        });
+        if (response.ok) {
+            console.log('Submission saved successfully.');
+            return true;
+        } else {
+            console.error(`Failed to save submission. Status: ${response.status}`);
+            return false;
+        }
+    } catch (error) {
+        console.error('Error saving submission:', error);
+        return false;
+    }
+}
+
 // Load players and initialize the page
 async function initialize() {
     const loaded = await loadPlayers();
@@ -224,7 +273,7 @@ document.getElementById('submit-votes').addEventListener('click', async () => {
 
 document.getElementById('skip-players').addEventListener('click', loadNewPlayers);
 
-// Add this function to startbenchcut.js
+// Update player values function (original implementation)
 async function updatePlayerValues(votedPlayers) {
     console.log('Starting vote processing for players:', votedPlayers);
 
@@ -307,7 +356,7 @@ async function updatePlayerValues(votedPlayers) {
     }
 }
 
-// Add at the end of the file
+// Add at the end of the file: Social menu initialization
 function initializeSocialMenu() {
     const hamburgerButton = document.querySelector('.hamburger-button');
     const socialMenu = document.querySelector('.social-menu');
@@ -330,8 +379,7 @@ function initializeSocialMenu() {
     }
 }
 
-// Add to your existing DOMContentLoaded event listener
+// Add social menu initialization after DOM content is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // ... existing initialization code ...
     initializeSocialMenu();
-}); 
+});

@@ -177,40 +177,74 @@ function updateSubmitButton() {
     submitBtn.disabled = !isComplete;
 }
 
-// Add this function to handle saving submissions
+// Updated saveSubmission function to use the /api/submissions endpoint
 async function saveSubmission(players, votes) {
-    try {
-        const timestamp = new Date().toISOString();
-        const submission = {
-            timestamp,
-            player_1: players[0].Name,
-            player_2: players[1].Name,
-            player_3: players[2].Name,
-            keep: players.find(p => votes.get(p.id) === 'Start').Name,
-            trade: players.find(p => votes.get(p.id) === 'Bench').Name,
-            cut: players.find(p => votes.get(p.id) === 'Cut').Name
-        };
+  try {
+    // Debug log to see what we're receiving
+    console.log('Players:', players);
+    console.log('Votes:', votes);
 
-        // Send submission to server
-        const response = await fetch('/api/submissions', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(submission)
-        });
+    // Map votes to player names, normalizing vote case
+    const votedPlayers = Array.from(votes.entries()).map(([id, vote]) => {
+      const player = players.find(p => p.id === id);
+      return {
+        id: id,
+        name: player.Name,
+        vote: vote.toLowerCase()
+      };
+    });
 
-        if (!response.ok) {
-            throw new Error('Failed to save submission');
-        }
+    console.log('Mapped voted players:', votedPlayers);
 
-        console.log('Submission saved:', submission);
-        return true;
-    } catch (error) {
-        console.error('Error saving submission:', error);
-        return false;
+    const timestamp = new Date().toISOString();
+    const submission = {
+      timestamp,
+      player_1: players[0].Name,
+      player_2: players[1].Name,
+      player_3: players[2].Name,
+      keep: votedPlayers.find(p => p.vote === 'start')?.name,
+      trade: votedPlayers.find(p => p.vote === 'bench')?.name,
+      cut: votedPlayers.find(p => p.vote === 'cut')?.name
+    };
+
+    console.log('Created submission:', submission);
+
+    // Verify we have all required data
+    if (!submission.player_1 || !submission.player_2 || !submission.player_3 ||
+        !submission.keep || !submission.trade || !submission.cut) {
+      console.error('Missing data in submission:', {
+        player_1: submission.player_1,
+        player_2: submission.player_2,
+        player_3: submission.player_3,
+        keep: submission.keep,
+        trade: submission.trade,
+        cut: submission.cut
+      });
+      throw new Error('Missing player data in submission');
     }
+
+    // Send the submission to the server via POST request
+    const response = await fetch('/api/submissions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(submission)
+    });
+
+    if (response.ok) {
+      console.log('Submission saved successfully.');
+      return true;
+    } else {
+      console.error(`Failed to save submission. Status: ${response.status}`);
+      return false;
+    }
+  } catch (error) {
+    console.error('Error saving submission:', error);
+    return false;
+  }
 }
+
 
 // Update the KTC modal submission handler
 async function showKTCModal() {
