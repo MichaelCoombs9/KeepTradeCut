@@ -3,23 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynasty Rankings - StartBenchCut</title>
+    <title>Value Changes - StartBenchCut</title>
     <link rel="icon" type="image/x-icon" href="/assets/sbc_logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/animations.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1725745865654110"
      crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/animations.css">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MGX390QR59"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-MGX390QR59');
-</script>
 </head>
-<body class="bg-gray-50">
+<body class="bg-slate-50 min-h-screen">
     <!-- Banner -->
     <div class="bg-[#3b82f6] text-white text-center py-2 px-4">
         <p class="text-sm">
@@ -39,9 +30,9 @@
                     </a>
                     <div class="hidden md:flex ml-10 items-center space-x-4">
                         <a href="index.html" class="text-gray-500 hover:text-gray-700">Trade Calculator</a>
-                        <a href="dynasty.html" class="text-blue-600 font-medium">Dynasty Rankings</a>
+                        <a href="dynasty.html" class="text-gray-500 hover:text-gray-700">Dynasty Rankings</a>
                         <a href="startbenchcut.html" class="text-gray-500 hover:text-gray-700">Start/Bench/Cut</a>
-                        <a href="risers-fallers.html" class="text-gray-500 hover:text-gray-700">Risers & Fallers</a>
+                        <a href="risers-fallers.html" class="text-blue-600 font-medium">Risers & Fallers</a>
                     </div>
                 </div>
                 <button class="hamburger-button w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-50 transition-all">
@@ -53,76 +44,46 @@
             <div class="md:hidden border-t border-gray-200 py-2">
                 <div class="flex flex-wrap gap-4 py-2">
                     <a href="index.html" class="text-gray-500 hover:text-gray-700">Trade Calculator</a>
-                    <a href="dynasty.html" class="text-blue-600 font-medium">Dynasty Rankings</a>
+                    <a href="dynasty.html" class="text-gray-500 hover:text-gray-700">Dynasty Rankings</a>
                     <a href="startbenchcut.html" class="text-gray-500 hover:text-gray-700">Start/Bench/Cut</a>
-                    <a href="risers-fallers.html" class="text-gray-500 hover:text-gray-700">Risers & Fallers</a>
+                    <a href="risers-fallers.html" class="text-blue-600 font-medium">Risers & Fallers</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h1 class="text-3xl font-bold text-gray-900 mb-8">Dynasty Rankings</h1>
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-6">Value Changes</h1>
         
-        <!-- Filter Options - Make scrollable on mobile -->
-        <div class="mb-6 border-b border-gray-200 overflow-x-auto">
-            <nav class="flex space-x-8 min-w-max px-4" aria-label="Position filters">
-                <button class="filter-btn border-b-2 border-blue-600 text-blue-600 py-4 px-1 text-sm font-medium" data-position="Overall">
-                    Overall
-                </button>
-                <button class="filter-btn border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 py-4 px-1 text-sm font-medium" data-position="Batters">
-                    Batters
-                </button>
-                <button class="filter-btn border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 py-4 px-1 text-sm font-medium" data-position="Pitchers">
-                    Pitchers
-                </button>
-                <button class="filter-btn border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 py-4 px-1 text-sm font-medium" data-position="1B">
-                    1B
-                </button>
-                <button class="filter-btn border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 py-4 px-1 text-sm font-medium" data-position="2B">
-                    2B
-                </button>
-                <button class="filter-btn border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 py-4 px-1 text-sm font-medium" data-position="3B">
-                    3B
-                </button>
-                <button class="filter-btn border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 py-4 px-1 text-sm font-medium" data-position="SS">
-                    SS
-                </button>
-                <button class="filter-btn border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 py-4 px-1 text-sm font-medium" data-position="C">
-                    C
-                </button>
-                <button class="filter-btn border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 py-4 px-1 text-sm font-medium" data-position="OF">
-                    OF
-                </button>
-                <button class="filter-btn border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 py-4 px-1 text-sm font-medium" data-position="SP">
-                    SP
-                </button>
-                <button class="filter-btn border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 py-4 px-1 text-sm font-medium" data-position="RP">
-                    RP
-                </button>
-            </nav>
+        <!-- Filters -->
+        <div class="mb-6 flex flex-wrap gap-4">
+            <select id="positionFilter" class="px-4 py-2 border rounded-lg">
+                <option value="all">All Positions</option>
+                <option value="C">Catcher</option>
+                <option value="1B">First Base</option>
+                <option value="2B">Second Base</option>
+                <option value="3B">Third Base</option>
+                <option value="SS">Shortstop</option>
+                <option value="OF">Outfield</option>
+                <option value="SP">Starting Pitcher</option>
+                <option value="RP">Relief Pitcher</option>
+                <option value="DH">Designated Hitter</option>
+            </select>
+
+            <select id="sortOrder" class="px-4 py-2 border rounded-lg">
+                <option value="risers">Biggest Risers</option>
+                <option value="fallers">Biggest Fallers</option>
+            </select>
+
+            <div id="dateInfo" class="text-gray-600 py-2">
+                Comparing values from <span id="compareDate" class="font-semibold"></span>
+            </div>
         </div>
 
-        <div class="bg-white rounded-lg shadow -mx-4 sm:mx-0">
-            <!-- Rankings Table -->
-            <div class="overflow-x-auto">
-                <table class="min-w-full divide-y divide-gray-200">
-                    <thead class="bg-gray-50">
-                        <tr>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Rank</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Player</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Value</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Position</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Team</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Age</th>
-                        </tr>
-                    </thead>
-                    <tbody class="bg-white divide-y divide-gray-200" id="rankings-body">
-                        <!-- Rankings will be inserted here by JavaScript -->
-                    </tbody>
-                </table>
-            </div>
+        <!-- Players Grid -->
+        <div id="playersGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Player cards will be inserted here -->
         </div>
     </main>
 
@@ -147,6 +108,7 @@
         </a>
     </div>
 
+    <!-- Ad Banner -->
     <div class="fixed bottom-0 w-full bg-white border-t z-40">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1725745865654110"
              crossorigin="anonymous"></script>
@@ -162,6 +124,6 @@
         </script>
     </div>
 
-    <script src="js/dynasty.js"></script>
+    <script src="js/risers-fallers.js"></script>
 </body>
-</html> 
+</html>
