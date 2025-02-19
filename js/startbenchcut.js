@@ -211,6 +211,9 @@ document.getElementById('submit-votes').addEventListener('click', async () => {
             return { ...player, vote };
         });
 
+        // Save submission before updating values
+        await saveSubmission(votedPlayers, votes);
+
         // Update player values
         await updatePlayerValues(votedPlayers);
 

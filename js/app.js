@@ -3,7 +3,17 @@ let ALL_PLAYERS = [];
 
 async function loadPlayers() {
     try {
-        const response = await fetch('/api/players');
+                const paths = ['/data/players.json', './data/players.json', '../data/players.json', 'players.json'];
+        
+        let response;
+        for (const path of paths) {
+            try {
+                response = await fetch(path);
+                if (response.ok) break;
+            } catch (e) {
+                console.log(`Tried path ${path}: ${e.message}`);
+            }
+        }
 
         if (!response.ok) {
             throw new Error('Could not load players data');
@@ -167,6 +177,42 @@ function updateSubmitButton() {
     submitBtn.disabled = !isComplete;
 }
 
+// Add this function to handle saving submissions
+async function saveSubmission(players, votes) {
+    try {
+        const timestamp = new Date().toISOString();
+        const submission = {
+            timestamp,
+            player_1: players[0].Name,
+            player_2: players[1].Name,
+            player_3: players[2].Name,
+            keep: players.find(p => votes.get(p.id) === 'Start').Name,
+            trade: players.find(p => votes.get(p.id) === 'Bench').Name,
+            cut: players.find(p => votes.get(p.id) === 'Cut').Name
+        };
+
+        // Send submission to server
+        const response = await fetch('/api/submissions', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(submission)
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to save submission');
+        }
+
+        console.log('Submission saved:', submission);
+        return true;
+    } catch (error) {
+        console.error('Error saving submission:', error);
+        return false;
+    }
+}
+
+// Update the KTC modal submission handler
 async function showKTCModal() {
     const modal = createKTCModal();
     document.body.appendChild(modal);
@@ -178,11 +224,13 @@ async function showKTCModal() {
     // Handle submit
     document.getElementById('submit-ktc').addEventListener('click', async () => {
         if (votes.size === 3) {
-            // Get voted players with their votes
             const votedPlayers = Array.from(votes.entries()).map(([playerId, vote]) => {
                 const player = ALL_PLAYERS.find(p => p.id === String(playerId));
                 return { ...player, vote };
             });
+
+            // Save submission before updating values
+            await saveSubmission(votedPlayers, votes);
 
             // Update player values using Elo system
             await updatePlayerValues(votedPlayers);
@@ -866,95 +914,53 @@ function createKTCModal() {
 }
 
 // Add this function to handle the hamburger menu
-// function initializeSocialMenu() {
-//     const hamburgerButton = document.querySelector('.hamburger-button');
-//     const socialMenu = document.querySelector('.social-menu');
-    
-//     if (hamburgerButton && socialMenu) {
-//         // Add click event to both the button and the entire document
-//         hamburgerButton.addEventListener('click', (e) => {
-//             e.stopPropagation(); // Prevent event from bubbling up
-            
-//             // Toggle menu visibility
-//             socialMenu.classList.toggle('translate-x-full');
-//             socialMenu.classList.toggle('translate-x-0');
-//             hamburgerButton.classList.toggle('open');
-            
-//             console.log('Menu clicked:', {
-//                 isVisible: socialMenu.classList.contains('translate-x-0'),
-//                 classes: socialMenu.classList.toString()
-//             });
-//         });
-
-//         // Close menu when clicking outside
-//         document.addEventListener('click', (e) => {
-//             if (!socialMenu.contains(e.target) && !hamburgerButton.contains(e.target)) {
-//                 socialMenu.classList.add('translate-x-full');
-//                 socialMenu.classList.remove('translate-x-0');
-//                 hamburgerButton.classList.remove('open');
-//             }
-//         });
-//     // } else {
-//     //     console.error('Social menu elements not found:', {
-//     //         buttonFound: !!hamburgerButton,
-//     //         menuFound: !!socialMenu
-//     //     });
-//     }
-// }
-
-// // Make sure the function is called after DOM is loaded
-// document.addEventListener('DOMContentLoaded', () => {
-//     initializeSocialMenu();
-//     // console.log('Social menu initialized');
-// });
-
 function initializeSocialMenu() {
     const hamburgerButton = document.querySelector('.hamburger-button');
     const socialMenu = document.querySelector('.social-menu');
 
     if (hamburgerButton && socialMenu) {
-        console.log("✅ Social menu initialized.");
+        // console.log("✅ Social menu initialized.");
 
         // Toggle menu on button click
         hamburgerButton.addEventListener('click', (e) => {
             e.stopPropagation(); // Prevents bubbling up
             const isOpen = socialMenu.classList.contains('translate-x-0');
 
-            console.log(`🔘 Hamburger menu clicked. Current state: ${isOpen ? "OPEN" : "CLOSED"}`);
+            // console.log(`🔘 Hamburger menu clicked. Current state: ${isOpen ? "OPEN" : "CLOSED"}`);
 
             // First, close all menus to avoid conflicts
             document.querySelectorAll('.social-menu').forEach(menu => {
-                console.log("🔄 Closing other menus...");
+                // console.log("🔄 Closing other menus...");
                 menu.classList.add('translate-x-full');
                 menu.classList.remove('translate-x-0');
             });
 
             // Toggle only this menu
             if (!isOpen) {
-                console.log("📂 Opening menu...");
+                // console.log("📂 Opening menu...");
                 socialMenu.classList.remove('translate-x-full');
                 socialMenu.classList.add('translate-x-0');
             } else {
-                console.log("📪 Closing menu...");
+                // console.log("📪 Closing menu...");
                 socialMenu.classList.add('translate-x-full');
                 socialMenu.classList.remove('translate-x-0');
             }
 
             hamburgerButton.classList.toggle('open');
-            console.log(`📌 Menu new state: ${socialMenu.classList.contains('translate-x-0') ? "OPEN" : "CLOSED"}`);
+            // console.log(`📌 Menu new state: ${socialMenu.classList.contains('translate-x-0') ? "OPEN" : "CLOSED"}`);
         });
 
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
-            console.log("🖱️ Click detected on document.");
+            // console.log("🖱️ Click detected on document.");
 
             if (!socialMenu.contains(e.target) && !hamburgerButton.contains(e.target)) {
-                console.log("❌ Click was outside menu & button. Closing menu.");
+                // console.log("❌ Click was outside menu & button. Closing menu.");
                 socialMenu.classList.add('translate-x-full');
                 socialMenu.classList.remove('translate-x-0');
                 hamburgerButton.classList.remove('open');
             } else {
-                console.log("✅ Click was inside menu or button. Ignoring.");
+                // console.log("✅ Click was inside menu or button. Ignoring.");
             }
         });
     } else {
@@ -962,10 +968,3 @@ function initializeSocialMenu() {
         console.error(`hamburgerButton found: ${!!hamburgerButton}, socialMenu found: ${!!socialMenu}`);
     }
 }
-
-// Ensure this function runs after the DOM is ready
-// document.addEventListener('DOMContentLoaded', () => {
-//     console.log("🟢 DOM fully loaded. Initializing menu...");
-//     initializeSocialMenu();
-// });
-
