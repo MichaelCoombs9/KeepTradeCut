@@ -444,72 +444,112 @@ function setupPlayerSearch(container) {
 }
 
 // Add these functions near the top of the file
+// function calculateRawAdjustment(playerValue, topValue, maxValue) {
+//     // Make the adjustment more aggressive by increasing multipliers
+//     return playerValue * (
+//         0.15 + // Base multiplier increased from 0.1 to 0.15
+//         0.25 * Math.pow(playerValue / maxValue, 6) + // Reduced exponent and increased multiplier
+//         0.15 * Math.pow(playerValue / topValue, 1.3) + // Increased from 0.1 to 0.15
+//         0.15 * Math.pow(playerValue / (maxValue + 2000), 1.28) // Increased from 0.1 to 0.15
+//     );
+// }
+
+// function calculateTeamAdjustment(players, otherTeamPlayers) {
+//     console.log('Calculating adjustment for team:', {
+//         teamPlayerCount: players.length,
+//         otherTeamPlayerCount: otherTeamPlayers.length,
+//         teamPlayers: players.map(p => ({ name: p.Name, value: p.Value })),
+//         otherTeamPlayers: otherTeamPlayers.map(p => ({ name: p.Name, value: p.Value }))
+//     });
+
+//     if (!players.length) {
+//         console.log('No players in team, returning 0 adjustment');
+//         return 0;
+//     }
+    
+//     // Only apply adjustment to team with fewer pieces
+//     if (players.length >= otherTeamPlayers.length) {
+//         console.log('Team has equal or more pieces, returning 0 adjustment');
+//         return 0;
+//     }
+
+//     // Find the highest value player in the trade
+//     const allValues = [...players, ...otherTeamPlayers].map(p => parseInt(p.Value));
+//     const topValue = Math.max(...allValues);
+//     const maxValue = Math.max(...ALL_PLAYERS.map(p => parseInt(p.Value)));
+    
+//     console.log('Adjustment parameters:', {
+//         topValue,
+//         maxValue,
+//         pieceDifference: otherTeamPlayers.length - players.length
+//     });
+
+//     // Add multiplier based on piece difference
+//     const pieceDifferenceMultiplier = 1 + ((otherTeamPlayers.length - players.length) * 0.15);
+    
+//     // Calculate total adjustment with piece difference multiplier
+//     const totalAdjustment = players.reduce((total, player) => {
+//         const baseAdjustment = calculateRawAdjustment(
+//             parseInt(player.Value), 
+//             topValue, 
+//             maxValue
+//         );
+//         const finalAdjustment = baseAdjustment * pieceDifferenceMultiplier;
+        
+//         console.log('Player adjustment:', {
+//             player: player.Name,
+//             value: player.Value,
+//             baseAdjustment,
+//             multiplier: pieceDifferenceMultiplier,
+//             finalAdjustment
+//         });
+        
+//         return total + finalAdjustment;
+//     }, 0);
+
+//     console.log('Final team adjustment:', totalAdjustment);
+//     return totalAdjustment;
+// }
+
+// Lower the multipliers so we don't get huge boosts.
 function calculateRawAdjustment(playerValue, topValue, maxValue) {
-    // Make the adjustment more aggressive by increasing multipliers
-    return playerValue * (
-        0.15 + // Base multiplier increased from 0.1 to 0.15
-        0.25 * Math.pow(playerValue / maxValue, 6) + // Reduced exponent and increased multiplier
-        0.15 * Math.pow(playerValue / topValue, 1.3) + // Increased from 0.1 to 0.15
-        0.15 * Math.pow(playerValue / (maxValue + 2000), 1.28) // Increased from 0.1 to 0.15
-    );
+  const base = 0.1;
+  const term1 = 0.1 * Math.pow(playerValue / maxValue, 4);   // lowered exponent & multiplier
+  const term2 = 0.1 * Math.pow(playerValue / topValue, 1.2); 
+  const term3 = 0.1 * Math.pow(playerValue / (maxValue + 2000), 1.2);
+  
+  // Overall scaling factor (reduce further if results are still too big)
+  const S = 0.3;
+
+  return playerValue * (base + term1 + term2 + term3) * S;
 }
 
 function calculateTeamAdjustment(players, otherTeamPlayers) {
-    console.log('Calculating adjustment for team:', {
-        teamPlayerCount: players.length,
-        otherTeamPlayerCount: otherTeamPlayers.length,
-        teamPlayers: players.map(p => ({ name: p.Name, value: p.Value })),
-        otherTeamPlayers: otherTeamPlayers.map(p => ({ name: p.Name, value: p.Value }))
-    });
+  // If this team has no players, no adjustment applies
+  if (!players.length) return 0;
 
-    if (!players.length) {
-        console.log('No players in team, returning 0 adjustment');
-        return 0;
-    }
-    
-    // Only apply adjustment to team with fewer pieces
-    if (players.length >= otherTeamPlayers.length) {
-        console.log('Team has equal or more pieces, returning 0 adjustment');
-        return 0;
-    }
+  // If both sides have the same or fewer pieces, no adjustment
+  if (players.length >= otherTeamPlayers.length) return 0;
 
-    // Find the highest value player in the trade
-    const allValues = [...players, ...otherTeamPlayers].map(p => parseInt(p.Value));
-    const topValue = Math.max(...allValues);
-    const maxValue = Math.max(...ALL_PLAYERS.map(p => parseInt(p.Value)));
-    
-    console.log('Adjustment parameters:', {
-        topValue,
-        maxValue,
-        pieceDifference: otherTeamPlayers.length - players.length
-    });
+  // Now we know this side has fewer pieces. We'll apply a stud premium.
+  const pieceDiff = otherTeamPlayers.length - players.length;
+  // This multiplier grows with the piece difference (e.g. 1-for-2 vs. 1-for-3)
+  const pieceDifferenceMultiplier = 1 + (pieceDiff * 0.15);
 
-    // Add multiplier based on piece difference
-    const pieceDifferenceMultiplier = 1 + ((otherTeamPlayers.length - players.length) * 0.15);
-    
-    // Calculate total adjustment with piece difference multiplier
-    const totalAdjustment = players.reduce((total, player) => {
-        const baseAdjustment = calculateRawAdjustment(
-            parseInt(player.Value), 
-            topValue, 
-            maxValue
-        );
-        const finalAdjustment = baseAdjustment * pieceDifferenceMultiplier;
-        
-        console.log('Player adjustment:', {
-            player: player.Name,
-            value: player.Value,
-            baseAdjustment,
-            multiplier: pieceDifferenceMultiplier,
-            finalAdjustment
-        });
-        
-        return total + finalAdjustment;
-    }, 0);
+  // Get reference values for the trade
+  const allValues = [...players, ...otherTeamPlayers].map(p => parseInt(p.Value));
+  const topValue = Math.max(...allValues);
+  const maxValue = Math.max(...ALL_PLAYERS.map(p => parseInt(p.Value)));
 
-    console.log('Final team adjustment:', totalAdjustment);
-    return totalAdjustment;
+  // Sum up the raw adjustments for each player on the fewer-piece side
+  const baseAdjSum = players.reduce((sum, player) => {
+    return sum + calculateRawAdjustment(parseInt(player.Value), topValue, maxValue);
+  }, 0);
+
+  // Final adjustment
+  return Math.round(baseAdjSum * pieceDifferenceMultiplier);
 }
+// END
 
 function updateTradeValues() {
     console.log('=== Starting updateTradeValues ===');

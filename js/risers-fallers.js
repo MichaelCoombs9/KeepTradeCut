@@ -159,36 +159,66 @@ async function getHistoricalValues(player, basePath) {
     return { values, dates };
 }
 
-function createSparkline(values, width = 100, height = 40, color = '#10B981') {
+function createSparkline(values, width = 120, height = 50, color = '#3b82f6') {
+    // If fewer than 2 points, skip
     if (values.length < 2) return '';
-    
+
     const min = Math.min(...values);
     const max = Math.max(...values);
-    const range = max - min;
-    
-    const points = values.map((value, index) => {
-        const x = (index / (values.length - 1)) * width;
-        const y = height - ((value - min) / range) * height;
-        return `${x},${y}`;
-    }).join(' ');
-    
+    const range = (max - min) || 1;
+
+    // Convert data points to [x, y]
+    const coords = values.map((val, i) => {
+        const x = (i / (values.length - 1)) * width;
+        const y = height - ((val - min) / range) * height;
+        return [x, y];
+    });
+
+    const linePoints = coords.map(p => p.join(',')).join(' ');
+    const areaPoints = [
+        ...coords,
+        [coords[coords.length - 1][0], height],
+        [coords[0][0], height]
+    ].map(p => p.join(',')).join(' ');
+
+    const [lastX, lastY] = coords[coords.length - 1];
+
     return `
         <svg width="${width}" height="${height}" class="sparkline">
-            <polyline
-                fill="none"
-                stroke="${color}"
-                stroke-width="2"
-                points="${points}"
-            />
+            <defs>
+                <linearGradient id="sparklineGradient" x1="0" y1="0" x2="0" y2="1">
+                    <!-- Stronger fill at the top -->
+                    <stop offset="0%" stop-color="${color}" stop-opacity="1" />
+                    <stop offset="100%" stop-color="${color}" stop-opacity="0" />
+                </linearGradient>
+            </defs>
+
+            <!-- Filled area -->
+            <polygon 
+                fill="url(#sparklineGradient)"
+                points="${areaPoints}"
+            ></polygon>
+
+            <!-- Main line -->
+            <polyline 
+                fill="none" 
+                stroke="${color}" 
+                stroke-width="2" 
+                points="${linePoints}" 
+            ></polyline>
+
+            <!-- Circle at last data point -->
             <circle 
-                cx="${width}"
-                cy="${height - ((values[values.length-1] - min) / range) * height}"
+                cx="${lastX}"
+                cy="${lastY}"
                 r="3"
                 fill="${color}"
             />
         </svg>
     `;
 }
+
+
 
 async function calculateValueChanges() {
     const processedPlayers = [];
@@ -238,6 +268,7 @@ function renderPlayers(position = 'all', sortBy = 'risers') {
     });
     
     filteredPlayers = filteredPlayers.slice(0, 50);
+
     
     const grid = document.getElementById('playersGrid');
     grid.innerHTML = filteredPlayers.map(player => `
@@ -253,7 +284,7 @@ function renderPlayers(position = 'all', sortBy = 'risers') {
                     </div>
                     <div class="text-right flex items-center gap-2">
                         <div class="trend-graph">
-                            ${createSparkline(player.historicalValues || [player.oldValue, player.Value], 60, 30, 
+                            ${createSparkline(player.historicalValues || [player.oldValue, player.Value], 300, 100, 
                                 player.valueChange > 0 ? '#10B981' : '#EF4444')}
                         </div>
                         <div>

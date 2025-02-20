@@ -8,7 +8,7 @@
       "Rank": "1",
       "Number": null,
       "Hand": null,
-      "Value": 5000,
+      "Value": 4000,
       "id": "0"
     },
     {
@@ -20,7 +20,7 @@
       "Rank": "2",
       "Number": null,
       "Hand": null,
-      "Value": 4500,
+      "Value": 4000,
       "id": "1"
     },
     {
@@ -44,7 +44,7 @@
       "Rank": "4",
       "Number": "167",
       "Hand": "R",
-      "Value": 9602,
+      "Value": 9200,
       "id": "3"
     },
     {
