@@ -549,7 +549,241 @@ function calculateTeamAdjustment(players, otherTeamPlayers) {
   // Final adjustment
   return Math.round(baseAdjSum * pieceDifferenceMultiplier);
 }
-// END
+// END CalcRawAdjust & CalcTeamAdjust
+
+// function updateTradeValues() {
+//     console.log('=== Starting updateTradeValues ===');
+    
+//     const elements = {
+//         tradeBar: document.querySelector('.trade-bar'),
+//         tradeMessageContainer: document.querySelector('.trade-message-container'),
+//         tradeMessage: document.querySelector('.trade-message'),
+//         differenceMessage: document.querySelector('.difference-message'),
+//         arrow: document.querySelector('.arrow-icon'),
+//         team1Value: document.querySelector('.team-1-value'),
+//         team2Value: document.querySelector('.team-2-value')
+//     };
+
+//     // Create trade message element if it doesn't exist
+//     if (!elements.tradeMessage && elements.tradeMessageContainer) {
+//         const messageSpan = document.createElement('span');
+//         messageSpan.className = 'trade-message';
+//         elements.tradeMessageContainer.querySelector('.flex').appendChild(messageSpan);
+//         elements.tradeMessage = messageSpan;
+//     }
+
+//     // Verify required elements exist
+//     if (!elements.tradeMessage || !elements.tradeMessageContainer) {
+//         console.error('Missing required trade message elements');
+//         return;
+//     }
+
+//     // Get and log players
+//     const team1Players = Array.from(document.querySelector('[data-team="1"] .selected-players').children)
+//         .map(el => {
+//             const playerName = el.querySelector('.font-medium').textContent;
+//             const player = ALL_PLAYERS.find(p => p.Name === playerName);
+//             console.log('Team 1 player found:', { name: playerName, value: player?.Value });
+//             return player;
+//         }).filter(Boolean);
+
+//     const team2Players = Array.from(document.querySelector('[data-team="2"] .selected-players').children)
+//         .map(el => {
+//             const playerName = el.querySelector('.font-medium').textContent;
+//             const player = ALL_PLAYERS.find(p => p.Name === playerName);
+//             console.log('Team 2 player found:', { name: playerName, value: player?.Value });
+//             return player;
+//         }).filter(Boolean);
+
+//     console.log('Player counts:', {
+//         team1: team1Players.length,
+//         team2: team2Players.length
+//     });
+
+//     // Calculate raw values and adjustments
+//     const team1RawValue = team1Players.reduce((sum, p) => sum + parseInt(p.Value || 0), 0);
+//     const team2RawValue = team2Players.reduce((sum, p) => sum + parseInt(p.Value || 0), 0);
+    
+//     console.log('Calculating team adjustments...');
+//     const team1Adjustment = Math.round(calculateTeamAdjustment(team1Players, team2Players));
+//     console.log('Team 1 adjustment calculated:', team1Adjustment);
+
+//     const team2Adjustment = Math.round(calculateTeamAdjustment(team2Players, team1Players));
+//     console.log('Team 2 adjustment calculated:', team2Adjustment);
+
+//     // Calculate final values
+//     const team1FinalValue = team1RawValue + team1Adjustment;
+//     const team2FinalValue = team2RawValue + team2Adjustment;
+
+//     console.log('Final values after adjustments:', {
+//         team1: {
+//             raw: team1RawValue,
+//             adjustment: team1Adjustment,
+//             final: team1FinalValue
+//         },
+//         team2: {
+//             raw: team2RawValue,
+//             adjustment: team2Adjustment,
+//             final: team2FinalValue
+//         }
+//     });
+
+//     // Update value displays
+//     elements.team1Value.textContent = team1FinalValue.toLocaleString();
+//     elements.team2Value.textContent = team2FinalValue.toLocaleString();
+
+//     // Always update adjustment displays (don't just check if > 0)
+//     const valueAdjustment1 = document.querySelector('.value-adjustment-container-1');
+//     const valueAdjustment2 = document.querySelector('.value-adjustment-container-2');
+
+//     // Team 1 adjustment
+//     if (team1Adjustment > 0) {
+//         valueAdjustment1.style.display = 'block';
+//         valueAdjustment1.querySelector('.value-adjustment-1').textContent = `+${team1Adjustment.toLocaleString()}`;
+//     } else {
+//         valueAdjustment1.style.display = 'none';
+//         valueAdjustment1.querySelector('.value-adjustment-1').textContent = '';
+//     }
+
+//     // Team 2 adjustment
+//     if (team2Adjustment > 0) {
+//         valueAdjustment2.style.display = 'block';
+//         valueAdjustment2.querySelector('.value-adjustment-2').textContent = `+${team2Adjustment.toLocaleString()}`;
+//     } else {
+//         valueAdjustment2.style.display = 'none';
+//         valueAdjustment2.querySelector('.value-adjustment-2').textContent = '';
+//     }
+
+//     // Now handle the trade message container
+//     // Calculate difference
+//     const difference = Math.abs(team1FinalValue - team2FinalValue);
+//     console.log('Trade difference:', { 
+//         difference,
+//         isFair: difference <= 200,
+//         currentMessage: elements.tradeMessage.textContent,
+//         currentBackground: elements.tradeMessageContainer.className
+//     });
+
+//     // Log current state before updates
+//     console.log('Current UI state before updates:', {
+//         messageText: elements.tradeMessage.textContent,
+//         messageClass: elements.tradeMessage.className,
+//         containerClass: elements.tradeMessageContainer.className,
+//         barClass: elements.tradeBar.className,
+//         barWidth: elements.tradeBar.style.width
+//     });
+
+//     // Reset ALL UI elements first
+//     elements.tradeMessageContainer.style.display = 'block';
+//     elements.tradeMessageContainer.innerHTML = `
+//         <div class="flex items-center justify-center gap-2">
+//             <svg class="w-5 h-5 arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+//                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path>
+//             </svg>
+//             <span class="trade-message"></span>
+//         </div>
+//         <div class="difference-message mt-1 text-sm text-gray-600"></div>
+//     `;
+
+//     // Re-query elements after rebuilding HTML
+//     elements.tradeMessage = elements.tradeMessageContainer.querySelector('.trade-message');
+//     elements.differenceMessage = elements.tradeMessageContainer.querySelector('.difference-message');
+//     elements.arrow = elements.tradeMessageContainer.querySelector('.arrow-icon');
+
+//     // Hide elements by default
+//     elements.differenceMessage.style.display = 'none';
+//     elements.arrow.style.display = 'none';
+
+//     // Create or get the players-to-even container
+//     let playersToEvenContainer = document.querySelector('.players-to-even-container');
+//     if (!playersToEvenContainer) {
+//         playersToEvenContainer = document.createElement('div');
+//         playersToEvenContainer.className = 'players-to-even-container mt-4 bg-blue-50 rounded-lg border border-blue-100';
+//         elements.tradeMessageContainer.parentNode.insertBefore(playersToEvenContainer, elements.tradeMessageContainer.nextSibling);
+//     }
+
+//     // Update UI based on fairness
+//     if (difference <= 200) {
+//         console.log('Updating UI for fair trade');
+//         elements.tradeMessageContainer.className = 'bg-blue-50 rounded p-4 mt-4 text-center trade-message-container';
+//         elements.tradeMessage.className = 'text-blue-600';
+//         elements.tradeMessage.textContent = 'Fair Trade';
+//         elements.tradeBar.className = 'absolute inset-0 trade-bar transition-all duration-300 bg-blue-500';
+//         elements.tradeBar.style.width = '50%';
+//         playersToEvenContainer.style.display = 'none';
+//     } else {
+//         console.log('Updating UI for unfair trade');
+//         elements.tradeMessageContainer.className = 'bg-red-50 rounded p-4 mt-4 text-center trade-message-container';
+//         elements.tradeBar.className = 'absolute inset-0 trade-bar transition-all duration-300 bg-red-500';
+        
+//         const favoredTeam = team1FinalValue > team2FinalValue ? 1 : 2;
+//         elements.tradeMessage.className = 'text-red-600';
+//         elements.tradeMessage.textContent = `Favors Team ${favoredTeam}`;
+        
+//         elements.differenceMessage.style.display = 'block';
+//         elements.differenceMessage.textContent = 
+//             `Add a player worth ${difference.toLocaleString()} to Team ${favoredTeam === 1 ? 2 : 1} to even trade`;
+        
+//         elements.arrow.style.display = 'inline';
+//         elements.arrow.style.transform = favoredTeam === 1 ? 'rotate(0deg)' : 'rotate(180deg)';
+        
+//         const totalValue = team1FinalValue + team2FinalValue;
+//         const team1Percentage = (team1FinalValue / totalValue) * 100;
+//         elements.tradeBar.style.width = `${team1Percentage}%`;
+
+//         // Unfair trade - show suggested players
+//         const targetValue = difference;
+
+//         // Get IDs of players already in the trade
+//         const existingPlayerIds = [...team1Players, ...team2Players].map(p => p.id);
+
+//         // Find players close to the target value, excluding players already in the trade
+//         const suggestedPlayers = ALL_PLAYERS
+//             .filter(p => {
+//                 // Exclude players already in the trade
+//                 if (existingPlayerIds.includes(p.id)) return false;
+                
+//                 // Check if value is within 20% of target
+//                 return Math.abs(parseInt(p.Value) - targetValue) < targetValue * 0.2;
+//             })
+//             .sort((a, b) => Math.abs(parseInt(a.Value) - targetValue) - Math.abs(parseInt(b.Value) - targetValue))
+//             .slice(0, 4); // Get top 4 closest matches
+
+//         playersToEvenContainer.style.display = 'block';
+//         playersToEvenContainer.innerHTML = `
+//             <div class="p-4">
+//                 <div class="text-blue-600 font-medium mb-2">Players to Even Trade:</div>
+//                 <div class="space-y-2">
+//                     ${suggestedPlayers.map(player => `
+//                         <div class="flex items-center justify-between bg-white p-3 rounded-lg border border-gray-200">
+//                             <div class="flex items-center gap-2">
+//                                 <img src="${player.Headshot}" class="w-8 h-8 rounded-full object-cover">
+//                                 <div>
+//                                     <div class="font-medium">${player.Name}</div>
+//                                     <div class="text-sm text-gray-500">${player.Team} • ${player.Position}</div>
+//                                 </div>
+//                             </div>
+//                             <div class="text-sm font-medium text-gray-600">${player.Value}</div>
+//                         </div>
+//                     `).join('')}
+//                 </div>
+//                 <div class="mt-2 text-center">
+//                     <a href="/dynasty" class="text-blue-600 text-sm hover:underline">View in rankings</a>
+//                 </div>
+//             </div>
+//         `;
+//     }
+
+//     // Log final state
+//     console.log('Final UI state:', {
+//         messageText: elements.tradeMessage.textContent,
+//         messageClass: elements.tradeMessage.className,
+//         containerClass: elements.tradeMessageContainer.className,
+//         barClass: elements.tradeBar.className,
+//         barWidth: elements.tradeBar.style.width
+//     });
+//     console.log('=== End updateTradeValues ===\n');
+// }
 
 function updateTradeValues() {
     console.log('=== Starting updateTradeValues ===');
@@ -600,10 +834,11 @@ function updateTradeValues() {
         team2: team2Players.length
     });
 
-    // Calculate raw values and adjustments
+    // Calculate raw values
     const team1RawValue = team1Players.reduce((sum, p) => sum + parseInt(p.Value || 0), 0);
     const team2RawValue = team2Players.reduce((sum, p) => sum + parseInt(p.Value || 0), 0);
-    
+
+    // Calculate adjustments
     console.log('Calculating team adjustments...');
     const team1Adjustment = Math.round(calculateTeamAdjustment(team1Players, team2Players));
     console.log('Team 1 adjustment calculated:', team1Adjustment);
@@ -628,11 +863,11 @@ function updateTradeValues() {
         }
     });
 
-    // Update value displays
+    // Update displayed final values
     elements.team1Value.textContent = team1FinalValue.toLocaleString();
     elements.team2Value.textContent = team2FinalValue.toLocaleString();
 
-    // Always update adjustment displays (don't just check if > 0)
+    // Update adjustment displays
     const valueAdjustment1 = document.querySelector('.value-adjustment-container-1');
     const valueAdjustment2 = document.querySelector('.value-adjustment-container-2');
 
@@ -654,8 +889,7 @@ function updateTradeValues() {
         valueAdjustment2.querySelector('.value-adjustment-2').textContent = '';
     }
 
-    // Now handle the trade message container
-    // Calculate difference
+    // For fairness checks, use final (adjusted) difference
     const difference = Math.abs(team1FinalValue - team2FinalValue);
     console.log('Trade difference:', { 
         difference,
@@ -663,6 +897,9 @@ function updateTradeValues() {
         currentMessage: elements.tradeMessage.textContent,
         currentBackground: elements.tradeMessageContainer.className
     });
+
+    // Also compute raw difference for "Add a player worth..." logic
+    const differenceRaw = Math.abs(team1RawValue - team2RawValue);
 
     // Log current state before updates
     console.log('Current UI state before updates:', {
@@ -673,7 +910,7 @@ function updateTradeValues() {
         barWidth: elements.tradeBar.style.width
     });
 
-    // Reset ALL UI elements first
+    // Reset UI container
     elements.tradeMessageContainer.style.display = 'block';
     elements.tradeMessageContainer.innerHTML = `
         <div class="flex items-center justify-center gap-2">
@@ -702,6 +939,9 @@ function updateTradeValues() {
         elements.tradeMessageContainer.parentNode.insertBefore(playersToEvenContainer, elements.tradeMessageContainer.nextSibling);
     }
 
+    // Determine favored team based on final (adjusted) values
+    const favoredTeam = team1FinalValue > team2FinalValue ? 1 : 2;
+
     // Update UI based on fairness
     if (difference <= 200) {
         console.log('Updating UI for fair trade');
@@ -716,38 +956,39 @@ function updateTradeValues() {
         elements.tradeMessageContainer.className = 'bg-red-50 rounded p-4 mt-4 text-center trade-message-container';
         elements.tradeBar.className = 'absolute inset-0 trade-bar transition-all duration-300 bg-red-500';
         
-        const favoredTeam = team1FinalValue > team2FinalValue ? 1 : 2;
         elements.tradeMessage.className = 'text-red-600';
         elements.tradeMessage.textContent = `Favors Team ${favoredTeam}`;
         
         elements.differenceMessage.style.display = 'block';
+        // Use the raw difference for "Add a player worth X..."
         elements.differenceMessage.textContent = 
-            `Add a player worth ${difference.toLocaleString()} to Team ${favoredTeam === 1 ? 2 : 1} to even trade`;
+            `Add a player worth ${differenceRaw.toLocaleString()} to Team ${favoredTeam === 1 ? 2 : 1} to even trade`;
         
         elements.arrow.style.display = 'inline';
         elements.arrow.style.transform = favoredTeam === 1 ? 'rotate(0deg)' : 'rotate(180deg)';
         
+        // For the progress bar, still use final values
         const totalValue = team1FinalValue + team2FinalValue;
         const team1Percentage = (team1FinalValue / totalValue) * 100;
         elements.tradeBar.style.width = `${team1Percentage}%`;
 
-        // Unfair trade - show suggested players
-        const targetValue = difference;
+        // Unfair trade - show suggested players based on raw difference
+        const targetValue = differenceRaw;
 
         // Get IDs of players already in the trade
         const existingPlayerIds = [...team1Players, ...team2Players].map(p => p.id);
 
-        // Find players close to the target value, excluding players already in the trade
+        // Find players close to the raw difference, excluding players already in the trade
         const suggestedPlayers = ALL_PLAYERS
             .filter(p => {
-                // Exclude players already in the trade
                 if (existingPlayerIds.includes(p.id)) return false;
-                
-                // Check if value is within 20% of target
+                // Check if value is within 20% of the raw difference
                 return Math.abs(parseInt(p.Value) - targetValue) < targetValue * 0.2;
             })
-            .sort((a, b) => Math.abs(parseInt(a.Value) - targetValue) - Math.abs(parseInt(b.Value) - targetValue))
-            .slice(0, 4); // Get top 4 closest matches
+            .sort((a, b) => 
+                Math.abs(parseInt(a.Value) - targetValue) - Math.abs(parseInt(b.Value) - targetValue)
+            )
+            .slice(0, 4);
 
         playersToEvenContainer.style.display = 'block';
         playersToEvenContainer.innerHTML = `
@@ -784,6 +1025,9 @@ function updateTradeValues() {
     });
     console.log('=== End updateTradeValues ===\n');
 }
+
+// END updateTradeValues
+
 
 // Add this new function to handle player removal
 function removePlayer(button, teamNumber) {
