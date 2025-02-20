@@ -1,6 +1,8 @@
 let currentPlayers = [];
 let snapshotPlayers = [];
 let valueChanges = [];
+let snapshotDate = null;
+let snapshotCache = {}; // Cache for snapshot files
 
 async function initialize() {
     try {
@@ -18,7 +20,7 @@ async function initialize() {
         snapshotPlayers = await loadSnapshotData();
         
         // Calculate value changes
-        calculateValueChanges();
+        await calculateValueChanges();
         
         // Update UI
         updateDateInfo();
@@ -55,64 +57,166 @@ async function loadCurrentPlayers() {
     throw new Error('Could not load current players data');
 }
 
+async function getSnapshot(dateStr, basePath) {
+    const key = `${basePath}/${dateStr}.json`;
+    if (snapshotCache.hasOwnProperty(key)) {
+        return snapshotCache[key];
+    }
+    try {
+        const response = await fetch(key);
+        if (response.ok) {
+            const data = await response.json();
+            snapshotCache[key] = data;
+            return data;
+        } else {
+            snapshotCache[key] = null;
+            return null;
+        }
+    } catch (e) {
+        snapshotCache[key] = null;
+        return null;
+    }
+}
+
 async function loadSnapshotData() {
-    // Try to load the most recent snapshot within 30 days
     const paths = ['/data/snapshots', './data/snapshots', '../data/snapshots', 'snapshots'];
+    const now = new Date();
+    // Use today's local midnight
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
     
     for (const basePath of paths) {
         try {
-            // First try to load the snapshot directly
-            const today = new Date();
-            const thirtyDaysAgo = new Date(today.setDate(today.getDate() - 30));
+            let foundSnapshots = [];
+            let daysBack = 0;
             
-            // Try each date from today back to 30 days ago
-            for (let d = new Date(); d >= thirtyDaysAgo; d.setDate(d.getDate() - 1)) {
-                const dateStr = d.toISOString().split('T')[0];
-                const snapshotPath = `${basePath}/${dateStr}.json`;
+            while (daysBack < 30) {
+                const checkDate = new Date(today);
+                checkDate.setDate(checkDate.getDate() - daysBack);
+                // Skip if the checkDate is in the future relative to now
+                if (checkDate > now) {
+                    daysBack++;
+                    continue;
+                }
+                const dateStr = checkDate.toISOString().split('T')[0];
                 
                 try {
-                    const response = await fetch(snapshotPath);
+                    const response = await fetch(`${basePath}/${dateStr}.json`);
                     if (response.ok) {
+                        console.log(`Found snapshot for ${dateStr}`);
                         const data = await response.json();
-                        return data;
+                        foundSnapshots.push({ date: dateStr, data });
+                    } else {
+                        console.log(`No snapshot found for ${dateStr}, stopping search`);
+                        break;
                     }
                 } catch (e) {
-                    continue; // Try next date
+                    console.log(`Error loading snapshot for ${dateStr}, stopping search`);
+                    break;
                 }
+                daysBack++;
             }
             
-            // If no snapshot found in last 30 days, try the oldest available
-            const response = await fetch(`${basePath}/2025-02-19.json`);
-            if (response.ok) {
-                return await response.json();
+            if (foundSnapshots.length > 0) {
+                console.log(`Found ${foundSnapshots.length} snapshots`);
+                foundSnapshots.sort((a, b) => a.date.localeCompare(b.date));
+                snapshotDate = foundSnapshots[0].date; // store snapshot date globally
+                return foundSnapshots[0].data;
             }
         } catch (e) {
             console.log(`Tried base path ${basePath}: ${e.message}`);
+            continue;
         }
     }
     throw new Error('Could not load snapshot data');
 }
 
-function calculateValueChanges() {
-    valueChanges = currentPlayers.map(currentPlayer => {
-        const snapshotPlayer = snapshotPlayers.find(p => p.id === currentPlayer.id);
-        if (!snapshotPlayer) return null;
+async function getHistoricalValues(player, basePath) {
+    const values = [];
+    const dates = [];
+    // Start from the snapshotDate if set; otherwise default to today
+    const startDate = snapshotDate ? new Date(snapshotDate) : new Date();
+    let daysBack = 0;
+    
+    while (daysBack < 30) {
+        const checkDate = new Date(startDate);
+        checkDate.setDate(checkDate.getDate() - daysBack);
+        const dateStr = checkDate.toISOString().split('T')[0];
+        
+        const data = await getSnapshot(dateStr, basePath);
+        if (data === null) {
+            // No snapshot available for this date, break the loop.
+            break;
+        } else {
+            const historicalPlayer = data.find(p => p.id === player.id);
+            if (historicalPlayer) {
+                values.push(historicalPlayer.Value);
+                dates.push(dateStr);
+            }
+        }
+        daysBack++;
+    }
+    
+    return { values, dates };
+}
 
+function createSparkline(values, width = 100, height = 40, color = '#10B981') {
+    if (values.length < 2) return '';
+    
+    const min = Math.min(...values);
+    const max = Math.max(...values);
+    const range = max - min;
+    
+    const points = values.map((value, index) => {
+        const x = (index / (values.length - 1)) * width;
+        const y = height - ((value - min) / range) * height;
+        return `${x},${y}`;
+    }).join(' ');
+    
+    return `
+        <svg width="${width}" height="${height}" class="sparkline">
+            <polyline
+                fill="none"
+                stroke="${color}"
+                stroke-width="2"
+                points="${points}"
+            />
+            <circle 
+                cx="${width}"
+                cy="${height - ((values[values.length-1] - min) / range) * height}"
+                r="3"
+                fill="${color}"
+            />
+        </svg>
+    `;
+}
+
+async function calculateValueChanges() {
+    const processedPlayers = [];
+    
+    for (const currentPlayer of currentPlayers) {
+        const snapshotPlayer = snapshotPlayers.find(p => p.id === currentPlayer.id);
+        if (!snapshotPlayer) continue;
+        
         const valueChange = currentPlayer.Value - snapshotPlayer.Value;
         const percentChange = ((valueChange / snapshotPlayer.Value) * 100).toFixed(1);
-
-        return {
+        
+        const { values } = await getHistoricalValues(currentPlayer, '/data/snapshots');
+        
+        processedPlayers.push({
             ...currentPlayer,
             valueChange,
             percentChange,
-            oldValue: snapshotPlayer.Value
-        };
-    }).filter(player => player !== null);
+            oldValue: snapshotPlayer.Value,
+            historicalValues: values
+        });
+    }
+    
+    valueChanges = processedPlayers;
 }
 
 function updateDateInfo() {
-    const snapshotDate = new Date(snapshotPlayers[0]?.timestamp || '2025-02-19');
-    const formattedDate = snapshotDate.toLocaleDateString('en-US', {
+    const snapshotDateObj = snapshotDate ? new Date(snapshotDate) : new Date('2025-02-19');
+    const formattedDate = snapshotDateObj.toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'long',
         day: 'numeric'
@@ -123,22 +227,18 @@ function updateDateInfo() {
 function renderPlayers(position = 'all', sortBy = 'risers') {
     let filteredPlayers = valueChanges;
     
-    // Apply position filter
     if (position !== 'all') {
         filteredPlayers = filteredPlayers.filter(p => p.Position === position);
     }
     
-    // Apply sorting
     filteredPlayers.sort((a, b) => {
         return sortBy === 'risers' 
             ? b.valueChange - a.valueChange 
             : a.valueChange - b.valueChange;
     });
     
-    // Take top 50 players
     filteredPlayers = filteredPlayers.slice(0, 50);
     
-    // Render to grid
     const grid = document.getElementById('playersGrid');
     grid.innerHTML = filteredPlayers.map(player => `
         <div class="bg-white rounded-lg shadow-md p-4 flex items-center gap-4">
@@ -151,13 +251,19 @@ function renderPlayers(position = 'all', sortBy = 'risers') {
                         <h3 class="font-bold">${player.Name}</h3>
                         <p class="text-sm text-gray-600">${player.Position} | ${player.Team} | Age: ${player.Age}</p>
                     </div>
-                    <div class="text-right">
-                        <p class="font-bold ${player.valueChange > 0 ? 'text-green-600' : 'text-red-600'}">
-                            ${player.valueChange > 0 ? '+' : ''}${player.valueChange}
-                        </p>
-                        <p class="text-sm text-gray-600">
-                            ${player.valueChange > 0 ? '+' : ''}${player.percentChange}%
-                        </p>
+                    <div class="text-right flex items-center gap-2">
+                        <div class="trend-graph">
+                            ${createSparkline(player.historicalValues || [player.oldValue, player.Value], 60, 30, 
+                                player.valueChange > 0 ? '#10B981' : '#EF4444')}
+                        </div>
+                        <div>
+                            <p class="font-bold ${player.valueChange > 0 ? 'text-green-600' : 'text-red-600'}">
+                                ${player.valueChange > 0 ? '+' : ''}${player.valueChange}
+                            </p>
+                            <p class="text-sm text-gray-600">
+                                ${player.valueChange > 0 ? '+' : ''}${player.percentChange}%
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div class="mt-2 text-sm text-gray-600">
@@ -204,4 +310,5 @@ function initializeSocialMenu() {
 }
 
 // Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', initialize); 
+document.addEventListener('DOMContentLoaded', initialize);
+
